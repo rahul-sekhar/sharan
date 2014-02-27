@@ -1,0 +1,13 @@
+#banner {
+  background-color: $yellow;
+  padding: 10px 0;
+
+  h1 {
+    margin: 0;
+
+    a {
+      display: block;
+      @include replace-text-with-dimensions('logo.png')
+    }
+  }
+}

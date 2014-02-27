@@ -1,0 +1,35 @@
+@mixin whitney-book {
+  font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin whitney-medium {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin whitney-semibold {
+  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin sentinel-book {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin sentinel-medium {
+  font-family: 'Sentinel SSm 5r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin sentinel-semibold {
+  font-family: 'Sentinel SSm 6r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 600;
+  font-style: normal;
+}

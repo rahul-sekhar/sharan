@@ -1,0 +1,26 @@
+#content-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $blue;
+
+  p {
+    text-align: right;
+    line-height: 29px;
+    color: $near-white;
+    @include whitney-medium;
+    font-size: 13px;
+  }
+
+  .credit {
+    @include sentinel-semibold;
+    font-size: 15px;
+  }
+
+  .credit-seperator {
+    @include sentinel-book;
+    font-size: 15px;
+  }
+}

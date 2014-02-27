@@ -1,0 +1,7 @@
+*.log
+
+cache
+.sass-cache
+config/sensitive.rb
+
+.DS_Store
