@@ -1,3 +1,54 @@
-#main-nav ul ul{
-  background-color: black;
+#main-nav .dropdown {
+  background-color: #333;
+  @include clearfix;
+  position: absolute;
+  left: 0;
+  top: $banner-height + $banner-padding;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 70px;
+  display: none;
+
+  .placeholder-container {
+    width: 30%;
+    float: left;
+  }
+
+  .placeholder {
+    width: 196px;
+    height: 132px;
+    background-color: #666;
+  }
+
+  ul {
+    text-transform: none;
+    color: #999;
+    line-height: 150%;
+
+    float: left;
+    width: 23%;
+    padding-left: 40px;
+  }
+
+  li {
+    float: none;
+    border-left: none;
+    padding: 1px 0;
+
+    a {
+      @include link-colors(white);
+    }
+  }
+}
+
+#main-nav li:hover {
+  background: image-url('nav-arrow.png') no-repeat center bottom;
+
+  .dropdown {
+    display: block;
+  }
+}
+
+#main-nav li li:hover {
+  background: none;
 }

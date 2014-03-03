@@ -420,10 +420,15 @@ body {
 }
 
 #banner {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: #fed970;
-  padding: 10px 0;
+  height: 66px;
+  padding-top: 10px;
 }
 #banner h1 {
+  float: left;
   margin: 0;
 }
 #banner h1 a {
@@ -439,9 +444,7 @@ body {
 }
 
 #main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
 }
 #main-nav ul {
   margin: 0;
@@ -457,9 +460,8 @@ body {
 }
 #main-nav li {
   float: left;
-  margin-right: 0;
   border-left: 1px solid #fcebac;
-  padding: 0 20px;
+  padding: 0 20px 16.5px 20px;
 }
 #main-nav li:first-child {
   border-left: none;
@@ -469,8 +471,53 @@ body {
   color: #333333;
 }
 
-#main-nav ul ul {
-  background-color: black;
+#main-nav .dropdown {
+  background-color: #333;
+  overflow: hidden;
+  *zoom: 1;
+  position: absolute;
+  left: 0;
+  top: 56px;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 70px;
+  display: none;
+}
+#main-nav .dropdown .placeholder-container {
+  width: 30%;
+  float: left;
+}
+#main-nav .dropdown .placeholder {
+  width: 196px;
+  height: 132px;
+  background-color: #666;
+}
+#main-nav .dropdown ul {
+  text-transform: none;
+  color: #999;
+  line-height: 150%;
+  float: left;
+  width: 23%;
+  padding-left: 40px;
+}
+#main-nav .dropdown li {
+  float: none;
+  border-left: none;
+  padding: 1px 0;
+}
+#main-nav .dropdown li a {
+  color: white;
+}
+
+#main-nav li:hover {
+  background: url('../images/nav-arrow.png?1393832215') no-repeat center bottom;
+}
+#main-nav li:hover .dropdown {
+  display: block;
+}
+
+#main-nav li li:hover {
+  background: none;
 }
 
 #content-info {

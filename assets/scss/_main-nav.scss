@@ -1,12 +1,12 @@
+$nav-margin: ($banner-height - 33px) / 2;
+
 #main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
 
   ul {
     @include reset-list;
     line-height: 33px;
-    margin-top: (image-height('logo.png') - 33px) / 2;
+    margin-top: $nav-margin;
 
     @include whitney-medium;
     text-transform: uppercase;
@@ -15,9 +15,8 @@
 
   li {
     float: left;
-    margin-right: 0;
     border-left: 1px solid $light-yellow;
-    padding: 0 20px;
+    padding: 0 20px $banner-padding + $nav-margin 20px;
 
     &:first-child {
       border-left: none;

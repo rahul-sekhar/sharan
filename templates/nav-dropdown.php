@@ -1,5 +1,9 @@
 <?php if (get_sub_field('sections')): ?>
   <div class="dropdown">
+    <div class="placeholder-container">
+      <div class="placeholder"></div>
+    </div>
+
     <?php while (has_sub_field('sections')): ?>
       <ul>
         <li class="name"><?php the_sub_field('name'); ?></li>
