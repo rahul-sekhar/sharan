@@ -599,7 +599,12 @@ body {
 
 .page-content {
   margin-left: 220px;
+  margin-right: 300px;
   padding-bottom: 40px;
+}
+
+.page-sidebar {
+  float: right;
 }
 
 .page-nav h3 {
@@ -633,4 +638,9 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 36px;
+}
+
+.page-sidebar {
+  background-color: #ecece4;
+  width: 225px;
 }
