@@ -6,6 +6,9 @@ html {
 body {
   height: 100%;
   text-rendering: optimizeLegibility;
+
+  @include whitney-book;
+  font-size: 15px;
 }
 
 // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -15,4 +18,12 @@ body {
 
 #wrapper {
   padding-top: $banner-full-height;
+  min-height: 100%;
+  margin-bottom: -1 * $footer-height;
+
+  &::after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
 }

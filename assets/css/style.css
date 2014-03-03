@@ -405,6 +405,10 @@ html {
 body {
   height: 100%;
   text-rendering: optimizeLegibility;
+  font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
 }
 
 *, *:before, *:after {
@@ -415,6 +419,13 @@ body {
 
 #wrapper {
   padding-top: 66px;
+  min-height: 100%;
+  margin-bottom: -29px;
+}
+#wrapper::after {
+  content: "";
+  display: block;
+  height: 29px;
 }
 
 .container {
@@ -526,14 +537,12 @@ body {
 }
 
 #content-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #1899cb;
 }
 #content-info p {
+  margin: 0;
   text-align: right;
   line-height: 29px;
   color: #ecece4;
@@ -553,4 +562,75 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
+}
+
+#breadcrumbs {
+  margin-bottom: 50px;
+}
+#breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  *zoom: 1;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  color: #333;
+  line-height: 45px;
+  border-bottom: 1px solid #ccc;
+}
+#breadcrumbs li {
+  float: left;
+  margin-right: 5px;
+}
+#breadcrumbs li:before {
+  content: '>';
+}
+#breadcrumbs li:first-child:before {
+  content: none;
+}
+
+.page-nav {
+  float: left;
+  width: 180px;
+}
+
+.page-content {
+  margin-left: 220px;
+  padding-bottom: 40px;
+}
+
+.page-nav h3 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+.page-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  margin-top: 22px;
+}
+.page-nav li {
+  line-height: 22px;
+}
+.page-nav a {
+  color: #0084c9;
+  text-decoration: none;
+}
+
+.page-content h2 {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
 }

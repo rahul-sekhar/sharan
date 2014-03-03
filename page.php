@@ -3,7 +3,9 @@
 
   <?php get_template_part('templates/navigation', 'page'); ?>
 
-  <?php get_template_part('templates/content', 'page'); ?>
-
   <?php get_template_part('templates/sidebar', 'page'); ?>
+
+  <div class="page-content">
+    <?php get_template_part('templates/content', 'page'); ?>
+  </div>
 <?php endwhile; ?>

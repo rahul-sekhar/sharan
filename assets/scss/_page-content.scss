@@ -1,0 +1,6 @@
+.page-content {
+  h2 {
+    @include sentinel-book;
+    font-size: 36px;
+  }
+}

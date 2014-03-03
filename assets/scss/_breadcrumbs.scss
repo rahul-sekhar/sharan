@@ -1,0 +1,27 @@
+#breadcrumbs {
+  margin-bottom: 50px;
+  ol {
+    @include reset-list;
+    @include clearfix;
+
+    @include whitney-medium;
+    font-size: 14px;
+    color: #333;
+
+    line-height: 45px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  li {
+    float: left;
+    margin-right: 5px;
+
+    &:before {
+      content: '>';
+    }
+
+    &:first-child:before {
+      content: none;
+    }
+  }
+}

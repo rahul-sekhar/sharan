@@ -6,9 +6,10 @@ $yellow: #FED970;
 $light-yellow: #FCEBAC;
 
 $blue: #1899CB;
+$darker-blue: #0084C9;
 
 
-// Z Index
+// Z Indices
 $banner-z-index: 100;
 
 
@@ -16,3 +17,5 @@ $banner-z-index: 100;
 $banner-height: image-height('logo.png');
 $banner-padding: 10px;
 $banner-full-height: $banner-height + 2 * $banner-padding;
+
+$footer-height: 29px;

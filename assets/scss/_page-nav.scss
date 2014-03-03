@@ -1,0 +1,25 @@
+.page-nav {
+  h3 {
+    @include whitney-medium;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  ul {
+    @include reset-list;
+
+    @include whitney-medium;
+    font-size: 14px;
+    margin-top: 22px;
+  }
+
+  li {
+    line-height: 22px;
+  }
+
+  a {
+    @include link-colors($darker-blue);
+    text-decoration: none;
+  }
+}

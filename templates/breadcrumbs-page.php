@@ -1,4 +1,4 @@
-<nav class="breadcrumbs">
+<nav id="breadcrumbs">
   <ol>
     <?php foreach(sharan_get_breadcrumbs() as $breadcrumb) : ?>
       <li>
