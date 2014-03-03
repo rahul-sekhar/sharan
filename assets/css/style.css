@@ -413,6 +413,10 @@ body {
   box-sizing: border-box;
 }
 
+#wrapper {
+  padding-top: 66px;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -426,6 +430,7 @@ body {
   background-color: #fed970;
   height: 66px;
   padding-top: 10px;
+  z-index: 100;
 }
 #banner h1 {
   float: left;

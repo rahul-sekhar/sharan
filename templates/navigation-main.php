@@ -5,7 +5,7 @@
         <li>
           <a href="#"><?php the_sub_field('name'); ?></a>
 
-          <?php get_template_part('templates/nav-dropdown'); ?>
+          <?php get_template_part('templates/navigation', 'dropdown'); ?>
         </li>
       <?php endwhile; ?>
     </ul>

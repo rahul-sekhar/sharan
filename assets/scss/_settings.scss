@@ -1,3 +1,4 @@
+// Colors
 $body-black: #333;
 $near-white: #ECECE4;
 
@@ -5,3 +6,13 @@ $yellow: #FED970;
 $light-yellow: #FCEBAC;
 
 $blue: #1899CB;
+
+
+// Z Index
+$banner-z-index: 100;
+
+
+// Settings
+$banner-height: image-height('logo.png');
+$banner-padding: 10px;
+$banner-full-height: $banner-height + 2 * $banner-padding;

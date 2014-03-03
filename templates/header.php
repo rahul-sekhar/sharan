@@ -4,6 +4,6 @@
       <a href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
     </h1>
 
-    <?php get_template_part('templates/main-nav'); ?>
+    <?php get_template_part('templates/navigation', 'main'); ?>
   </div>
 </header>

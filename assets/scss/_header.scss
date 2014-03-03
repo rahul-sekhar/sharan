@@ -1,13 +1,11 @@
-$banner-height: image-height('logo.png');
-$banner-padding: 10px;
-
 #banner {
   position: fixed;
   width: 100%;
   top: 0;
   background-color: $yellow;
-  height: $banner-height + 2 * $banner-padding;
+  height: $banner-full-height;
   padding-top: $banner-padding;
+  z-index: $banner-z-index;
 
   h1 {
     float: left;
