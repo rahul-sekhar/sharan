@@ -469,6 +469,10 @@ body {
   color: #333333;
 }
 
+#main-nav ul ul {
+  background-color: black;
+}
+
 #content-info {
   position: absolute;
   bottom: 0;
