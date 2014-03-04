@@ -395,6 +395,7 @@ th {
 .dropdown-container .dropdown-title {
   cursor: pointer;
   color: #0084c9;
+  font-size: 15px;
 }
 .dropdown-container .dropdown-content :first-child {
   margin-top: 0;
