@@ -1,0 +1,16 @@
+.dropdown-container {
+  .dropdown-title {
+    cursor: pointer;
+    color: $darker-blue;
+  }
+
+  .dropdown-content {
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

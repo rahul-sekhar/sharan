@@ -1,0 +1,36 @@
+@import "compass";
+@import "normalize";
+
+@import "functions";
+@import "settings";
+@import "fonts";
+@import "content";
+
+@import "dropdowns";
+
+@import "layout";
+
+body {
+  max-width: 504px;
+  @include content-styles;
+}
+
+.dropdown-container {
+  background-color: #eee;
+  position: relative;
+
+  &:before {
+    content: 'Dropdown';
+    position: absolute;
+    font-size: 10px;
+    text-transform: lowercase;
+    color: #999;
+    line-height: 12px;
+    top: -12px;
+    right: 0;
+  }
+
+  .dropdown-title {
+    cursor: text;
+  }
+}

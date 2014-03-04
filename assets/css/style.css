@@ -514,6 +514,17 @@ input {
   position: relative;
 }
 
+.dropdown-container .dropdown-title {
+  cursor: pointer;
+  color: #0084c9;
+}
+.dropdown-container .dropdown-content :first-child {
+  margin-top: 0;
+}
+.dropdown-container .dropdown-content :last-child {
+  margin-bottom: 0;
+}
+
 #banner {
   position: fixed;
   width: 100%;
