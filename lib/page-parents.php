@@ -21,7 +21,13 @@ class PageAncestors {
   }
 
   function page_nav() {
-    return $this->nav_parent_items()[0];
+    $nav_parent_items = $this->nav_parent_items();
+
+    if ($nav_parent_items) {
+      return $nav_parent_items[0];
+    } else {
+      return [];
+    }
   }
 
   function breadcrumbs() {
@@ -32,10 +38,13 @@ class PageAncestors {
   private function nav_parents() {
     $nav_parent_items = $this->nav_parent_items();
 
-    return [
-      array('name' => $nav_parent_items[0]['name'], 'url' => null),
-      array('name' => $nav_parent_items[1]['name'], 'url' => null)
-    ];
+    $nav_convert = function ($nav_item) {
+      return array('name' => $nav_item['name'], 'url' => null);
+    };
+
+    $nav_parents = array_map($nav_convert, $nav_parent_items);
+
+    return $nav_parents;
   }
 
   private function nav_parent_items() {
