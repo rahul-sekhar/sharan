@@ -639,6 +639,16 @@ body {
   font-style: normal;
   font-size: 36px;
 }
+.page-content p {
+  line-height: 130%;
+  margin: 24px 0;
+}
+.page-content h3, .page-content h4, .page-content h5, .page-content h6 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+}
 
 .page-sidebar {
   background-color: #ecece4;

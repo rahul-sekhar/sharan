@@ -3,4 +3,14 @@
     @include sentinel-book;
     font-size: 36px;
   }
+
+  p {
+    line-height: 130%;
+    margin: 24px 0;
+  }
+
+  h3, h4, h5, h6 {
+    @include whitney-medium;
+    font-size: 17px;
+  }
 }
