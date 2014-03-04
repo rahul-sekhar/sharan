@@ -19,3 +19,4 @@ require_once locate_template('/lib/relative-urls.php');     // Root relative URL
 require_once locate_template('/lib/scripts.php');           // Scripts and stylesheets
 require_once locate_template('/lib/hide-admin-panel.php');  // Hide the admin panel
 require_once locate_template('/lib/page-parents.php');      // Getting the parent nav items for a page
+require_once locate_template('/lib/tinymce.php');           // Customize the TinyMCE editor

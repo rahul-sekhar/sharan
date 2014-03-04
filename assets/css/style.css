@@ -719,9 +719,29 @@ input {
   font-style: normal;
   font-size: 36px;
 }
-.page-content p {
+.page-content p, .page-content ul, .page-content ol {
   line-height: 130%;
   margin: 24px 0;
+}
+.page-content p strong, .page-content p b, .page-content ul strong, .page-content ul b, .page-content ol strong, .page-content ol b {
+  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: normal;
+}
+.page-content p strong em, .page-content p strong i, .page-content p b em, .page-content p b i, .page-content ul strong em, .page-content ul strong i, .page-content ul b em, .page-content ul b i, .page-content ol strong em, .page-content ol strong i, .page-content ol b em, .page-content ol b i {
+  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: italic;
+}
+.page-content p em, .page-content p i, .page-content ul em, .page-content ul i, .page-content ol em, .page-content ol i {
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: italic;
+}
+.page-content p em strong, .page-content p em b, .page-content p i strong, .page-content p i b, .page-content ul em strong, .page-content ul em b, .page-content ul i strong, .page-content ul i b, .page-content ol em strong, .page-content ol em b, .page-content ol i strong, .page-content ol i b {
+  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: italic;
 }
 .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';

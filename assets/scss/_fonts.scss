@@ -4,6 +4,12 @@
   font-style: normal;
 }
 
+@mixin whitney-book-italic {
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: italic;
+}
+
 @mixin whitney-medium {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
@@ -14,6 +20,12 @@
   font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 600;
   font-style: normal;
+}
+
+@mixin whitney-semibold-italic {
+  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: italic;
 }
 
 @mixin sentinel-book {

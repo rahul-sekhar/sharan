@@ -1,0 +1,32 @@
+@mixin content-styles {
+  h2 {
+    @include sentinel-book;
+    font-size: 36px;
+  }
+
+  p, ul, ol {
+    line-height: 130%;
+    margin: 24px 0;
+
+    strong, b {
+      @include whitney-semibold;
+
+      em, i {
+        @include whitney-semibold-italic;
+      }
+    }
+
+    em, i {
+      @include whitney-book-italic;
+
+      strong, b {
+        @include whitney-semibold-italic;
+      }
+    }
+  }
+
+  h3, h4, h5, h6 {
+    @include whitney-medium;
+    font-size: 17px;
+  }
+}
