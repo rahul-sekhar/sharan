@@ -44,7 +44,7 @@ class PageAncestors {
 
     $nav = get_field('main_nav', 'options');
     // Loop through nav items
-    foreach ($nav as $nav_item) :
+    if ($nav) : foreach ($nav as $nav_item) :
 
       // Loop through sections
       if ($nav_item['sections']) : foreach ($nav_item['sections'] as $section) :
@@ -60,7 +60,7 @@ class PageAncestors {
 
       endforeach; endif; // End section loop
 
-    endforeach; // End nav item loop
+    endforeach; endif; // End nav item loop
 
     // Standby
     return [];
