@@ -1,4 +1,96 @@
+$sidebar-padding: 15px;
+$sidebar-width: 225px;
+
 .page-sidebar {
   background-color: $near-white;
-  width: 225px;
+  width: $sidebar-width;
+  padding: $sidebar-padding;
+  padding-bottom: 40px;
+  @include whitney-medium;
+  font-size: 14px;
+  color: $body-black;
+
+  img {
+    border: 1px solid #999;
+    margin: -1 * $sidebar-padding;
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #subscribe-form {
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+
+  #subscribe-email {
+    border: 1px solid $grey;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 8px;
+    width: 100%;
+
+    @include border-radius(4px);
+    @include placeholder-color(#666);
+  }
+
+  .subscribe-email-box {
+    position: relative;
+    margin-top: 10px;
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 30px;
+      border: none;
+      background-color: $grey;
+      color: white;
+      font-size: 12px;
+
+      @include border-radius(4px);
+    }
+  }
+
+  .support {
+    margin-bottom: 40px;
+
+    a {
+      @include link-colors($blue);
+      display: block;
+      margin-bottom: 10px;
+      @include sentinel-medium;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+  }
+
+  .social {
+    ul {
+      @include reset-list;
+      @include clearfix;
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    li {
+      float: left;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      @include link-colors(#777)
+    }
+  }
 }

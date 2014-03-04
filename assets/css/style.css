@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 Site Name: Sharan
 Author: Rahul Sekhar
@@ -397,6 +398,79 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../icons/fontello.eot?28076067");
+  src: url("../icons/fontello.eot?28076067#iefix") format("embedded-opentype"), url("../icons/fontello.woff?28076067") format("woff"), url("../icons/fontello.ttf?28076067") format("truetype"), url("../icons/fontello.svg?28076067#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?28076067#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-ok:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-gplus:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-tumblr:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-youtube:before {
+  content: '\e804';
+}
+
+/* '' */
 html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -409,6 +483,12 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
+}
+
+input {
+  font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: normal;
 }
 
 *, *:before, *:after {
@@ -653,4 +733,107 @@ body {
 .page-sidebar {
   background-color: #ecece4;
   width: 225px;
+  padding: 15px;
+  padding-bottom: 40px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  color: #333333;
+}
+.page-sidebar img {
+  border: 1px solid #999;
+  margin: -15px;
+  margin-bottom: 15px;
+}
+.page-sidebar p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.page-sidebar label {
+  display: block;
+  margin-bottom: 5px;
+}
+.page-sidebar #subscribe-form {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.page-sidebar #subscribe-email {
+  border: 1px solid #b8b8ae;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 6px 8px;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.page-sidebar #subscribe-email::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #666666;
+}
+.page-sidebar #subscribe-email:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666666;
+}
+.page-sidebar #subscribe-email::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666666;
+}
+.page-sidebar #subscribe-email:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #666666;
+}
+.page-sidebar .subscribe-email-box {
+  position: relative;
+  margin-top: 10px;
+}
+.page-sidebar .subscribe-email-box button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  border: none;
+  background-color: #b8b8ae;
+  color: white;
+  font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.page-sidebar .support {
+  margin-bottom: 40px;
+}
+.page-sidebar .support a {
+  color: #1899cb;
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Sentinel SSm 5r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+.page-sidebar .social ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 15px;
+  font-size: 20px;
+}
+.page-sidebar .social li {
+  float: left;
+  margin-right: 10px;
+}
+.page-sidebar .social a {
+  text-decoration: none;
+  color: #777777;
 }
