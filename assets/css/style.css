@@ -690,7 +690,7 @@ input {
 }
 
 .page-content {
-  margin-left: 220px;
+  margin-left: 240px;
   margin-right: 300px;
   padding-bottom: 40px;
 }
@@ -770,7 +770,7 @@ input {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
-  font-size: 14px;
+  font-size: 13px;
   color: #333333;
 }
 .page-sidebar img {
@@ -792,7 +792,7 @@ input {
 }
 .page-sidebar #subscribe-email {
   border: 1px solid #b8b8ae;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 16px;
   padding: 6px 8px;
   width: 100%;
@@ -850,7 +850,7 @@ input {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: 13px;
+  font-size: 12px;
 }
 .page-sidebar .social ul {
   margin: 0;
@@ -859,7 +859,7 @@ input {
   overflow: hidden;
   *zoom: 1;
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .page-sidebar .social li {
   float: left;
