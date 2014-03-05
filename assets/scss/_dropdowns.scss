@@ -3,6 +3,19 @@
     color: $darker-blue;
     font-size: 15px;
     margin-bottom: 0;
+
+    a:after {
+      content: '\e806';
+      @include font-icon;
+      text-align: left;
+      width: auto;
+      margin-left: 0.4em;
+      @include transition(transform 200ms linear);
+    }
+
+    &.expanded a:after {
+      content: '\e807';
+    }
   }
 
   .dropdown-content {
@@ -15,4 +28,9 @@
       margin-bottom: 0;
     }
   }
+}
+
+.csstransforms3d .dropdown-container .dropdown-title.expanded a:after {
+  content: '\e806';
+  @include transform(rotate(90deg));
 }

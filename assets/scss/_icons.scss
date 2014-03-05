@@ -19,7 +19,7 @@
 }
 */
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+@mixin font-icon {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -50,9 +50,15 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  @include font-icon;
+}
+
 .icon-ok:before { content: '\e800'; } /* '' */
 .icon-facebook:before { content: '\e802'; } /* '' */
 .icon-gplus:before { content: '\e803'; } /* '' */
 .icon-tumblr:before { content: '\e805'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
 .icon-youtube:before { content: '\e804'; } /* '' */
+.icon-down-open-mini:before { content: '\e807'; } /* '' */
+.icon-right-open-mini:before { content: '\e806'; } /* '' */

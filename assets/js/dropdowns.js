@@ -9,6 +9,9 @@ jQuery(function ($) {
 
   containers.on('click', '.dropdown-title a', function (e) {
     e.preventDefault();
-    $(this).parent('.dropdown-title').next('.dropdown-content').slideToggle();
+
+    var title = $(this).parent('.dropdown-title')
+    title.next('.dropdown-content').slideToggle();
+    title.toggleClass('expanded');
   });
 });

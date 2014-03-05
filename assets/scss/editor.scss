@@ -4,33 +4,15 @@
 @import "functions";
 @import "settings";
 @import "fonts";
+@import "icons";
 
 @import "general-content";
 @import "content";
 
 @import "dropdowns";
+@import "editor-dropdowns";
 
 body {
   max-width: 580px;
   @include content-styles;
-}
-
-.dropdown-container {
-  background-color: #eee;
-  position: relative;
-
-  &:before {
-    content: 'Dropdown';
-    position: absolute;
-    font-size: 10px;
-    text-transform: lowercase;
-    color: #999;
-    line-height: 12px;
-    top: -12px;
-    right: 0;
-  }
-
-  .dropdown-title {
-    cursor: text;
-  }
 }
