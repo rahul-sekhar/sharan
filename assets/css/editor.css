@@ -655,5 +655,8 @@ body h4, body h5, body h6 {
   font-weight: 500;
   font-style: normal;
   font-size: inherit;
-  margin: 24px 0;
+  margin: 24px 0 12px 0;
+}
+body h4 + p, body h5 + p, body h6 + p {
+  margin-top: 12px;
 }

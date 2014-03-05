@@ -834,7 +834,10 @@ a {
   font-weight: 500;
   font-style: normal;
   font-size: inherit;
-  margin: 24px 0;
+  margin: 24px 0 12px 0;
+}
+.page-content h4 + p, .page-content h5 + p, .page-content h6 + p {
+  margin-top: 12px;
 }
 
 .page-sidebar {
