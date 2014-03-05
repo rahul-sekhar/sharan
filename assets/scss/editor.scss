@@ -4,11 +4,11 @@
 @import "functions";
 @import "settings";
 @import "fonts";
+
+@import "layout-for-content";
 @import "content";
 
 @import "dropdowns";
-
-@import "layout";
 
 body {
   max-width: 580px;

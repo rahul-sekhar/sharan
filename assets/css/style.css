@@ -473,11 +473,29 @@ th {
 /* '' */
 html {
   height: 100%;
-  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
 }
 
 body {
   height: 100%;
+}
+
+#wrapper {
+  padding-top: 66px;
+  min-height: 100%;
+  margin-bottom: -29px;
+}
+#wrapper::after {
+  content: "";
+  display: block;
+  height: 29px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
   text-rendering: optimizeLegibility;
   font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 400;
@@ -497,17 +515,6 @@ input {
   box-sizing: border-box;
 }
 
-#wrapper {
-  padding-top: 66px;
-  min-height: 100%;
-  margin-bottom: -29px;
-}
-#wrapper::after {
-  content: "";
-  display: block;
-  height: 29px;
-}
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -518,6 +525,10 @@ input {
   cursor: pointer;
   color: #0084c9;
   font-size: 15px;
+  margin-bottom: 0;
+}
+.dropdown-container .dropdown-content {
+  padding-top: 16px;
 }
 .dropdown-container .dropdown-content :first-child {
   margin-top: 0;
@@ -760,6 +771,7 @@ input {
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
+  margin: 16px 0;
 }
 
 .page-sidebar {

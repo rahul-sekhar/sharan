@@ -392,25 +392,11 @@ th {
   padding: 0;
 }
 
-.dropdown-container .dropdown-title {
-  cursor: pointer;
-  color: #0084c9;
-  font-size: 15px;
-}
-.dropdown-container .dropdown-content :first-child {
-  margin-top: 0;
-}
-.dropdown-container .dropdown-content :last-child {
-  margin-bottom: 0;
-}
-
 html {
-  height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  height: 100%;
   text-rendering: optimizeLegibility;
   font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 400;
@@ -430,15 +416,20 @@ input {
   box-sizing: border-box;
 }
 
-#wrapper {
-  padding-top: 66px;
-  min-height: 100%;
-  margin-bottom: -29px;
+.dropdown-container .dropdown-title {
+  cursor: pointer;
+  color: #0084c9;
+  font-size: 15px;
+  margin-bottom: 0;
 }
-#wrapper::after {
-  content: "";
-  display: block;
-  height: 29px;
+.dropdown-container .dropdown-content {
+  padding-top: 16px;
+}
+.dropdown-container .dropdown-content :first-child {
+  margin-top: 0;
+}
+.dropdown-container .dropdown-content :last-child {
+  margin-bottom: 0;
 }
 
 body {
@@ -479,6 +470,7 @@ body h3, body h4, body h5, body h6 {
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
+  margin: 16px 0;
 }
 
 .dropdown-container {

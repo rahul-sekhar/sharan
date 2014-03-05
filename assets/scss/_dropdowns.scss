@@ -3,9 +3,11 @@
     cursor: pointer;
     color: $darker-blue;
     font-size: 15px;
+    margin-bottom: 0;
   }
 
   .dropdown-content {
+    padding-top: 16px;
     :first-child {
       margin-top: 0;
     }
