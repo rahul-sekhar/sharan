@@ -528,10 +528,10 @@ input {
   margin-bottom: 0;
 }
 .dropdown-container .dropdown-content {
-  padding-top: 16px;
+  border-top: 1px solid transparent;
 }
 .dropdown-container .dropdown-content :first-child {
-  margin-top: 0;
+  margin-top: 15px;
 }
 .dropdown-container .dropdown-content :last-child {
   margin-bottom: 0;
