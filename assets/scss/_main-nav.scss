@@ -15,15 +15,18 @@ $nav-margin: ($banner-height - 33px) / 2;
 
   li {
     float: left;
-    border-left: 1px solid $light-yellow;
-    padding: 0 20px $banner-padding + $nav-margin 20px;
-
-    &:first-child {
-      border-left: none;
-    }
+    padding-bottom: $banner-padding + $nav-margin;
   }
 
   a {
     @include link-colors($body-black);
+    display: block;
+    padding: 0 20px;
+
+    border-left: 1px solid $light-yellow;
+  }
+
+  li:first-child a {
+    border-left: none;
   }
 }

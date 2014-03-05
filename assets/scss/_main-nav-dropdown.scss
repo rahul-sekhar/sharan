@@ -32,11 +32,13 @@
 
   li {
     float: none;
-    border-left: none;
     padding: 1px 0;
 
     a {
       @include link-colors(white);
+      display: inline;
+      border-left: none;
+      padding: 0;
     }
   }
 }

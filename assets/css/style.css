@@ -637,14 +637,16 @@ a {
 }
 #main-nav li {
   float: left;
-  border-left: 1px solid #fcebac;
-  padding: 0 20px 16.5px 20px;
-}
-#main-nav li:first-child {
-  border-left: none;
+  padding-bottom: 16.5px;
 }
 #main-nav a {
   color: #333333;
+  display: block;
+  padding: 0 20px;
+  border-left: 1px solid #fcebac;
+}
+#main-nav li:first-child a {
+  border-left: none;
 }
 
 #main-nav .dropdown {
@@ -678,11 +680,13 @@ a {
 }
 #main-nav .dropdown li {
   float: none;
-  border-left: none;
   padding: 1px 0;
 }
 #main-nav .dropdown li a {
   color: white;
+  display: inline;
+  border-left: none;
+  padding: 0;
 }
 
 #main-nav li:hover {
