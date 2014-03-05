@@ -2,14 +2,13 @@ jQuery(function ($) {
 
   var containers = $('.dropdown-container')
 
-  console.log(containers.find('.dropdown-title'));
-
-  containers.find('.dropdown-title').each(function () {
+  containers.find('.dropdown-title').wrapInner('<a href="#"></a>').each(function () {
     $(this).nextUntil('.dropdown-title').wrapAll('<div class="dropdown-content"></div>');
   });
   containers.find('.dropdown-content').hide();
 
-  containers.on('click', '.dropdown-title', function (e) {
-    $(this).next('.dropdown-content').slideToggle();
+  containers.on('click', '.dropdown-title a', function (e) {
+    e.preventDefault();
+    $(this).parent('.dropdown-title').next('.dropdown-content').slideToggle();
   });
 });

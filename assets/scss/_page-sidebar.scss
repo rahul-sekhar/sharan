@@ -69,7 +69,6 @@ $sidebar-width: 225px;
       margin-bottom: 10px;
       @include sentinel-medium;
       text-transform: uppercase;
-      text-decoration: none;
       letter-spacing: 1px;
       font-size: 12px;
     }
@@ -89,7 +88,6 @@ $sidebar-width: 225px;
     }
 
     a {
-      text-decoration: none;
       @include link-colors(#777)
     }
   }

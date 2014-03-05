@@ -17,9 +17,4 @@
   li {
     line-height: 22px;
   }
-
-  a {
-    @include link-colors($darker-blue);
-    text-decoration: none;
-  }
 }

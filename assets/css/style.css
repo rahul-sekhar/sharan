@@ -509,6 +509,11 @@ input {
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+  color: #0084c9;
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -522,7 +527,6 @@ input {
 }
 
 .dropdown-container .dropdown-title {
-  cursor: pointer;
   color: #0084c9;
   font-size: 15px;
   margin-bottom: 0;
@@ -586,7 +590,6 @@ input {
   border-left: none;
 }
 #main-nav a {
-  text-decoration: none;
   color: #333333;
 }
 
@@ -731,10 +734,6 @@ input {
 .page-nav li {
   line-height: 22px;
 }
-.page-nav a {
-  color: #0084c9;
-  text-decoration: none;
-}
 
 .page-content h2 {
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
@@ -860,7 +859,6 @@ input {
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
-  text-decoration: none;
   letter-spacing: 1px;
   font-size: 12px;
 }
@@ -878,6 +876,5 @@ input {
   margin-right: 10px;
 }
 .page-sidebar .social a {
-  text-decoration: none;
   color: #777777;
 }

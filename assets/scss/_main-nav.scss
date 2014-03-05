@@ -24,7 +24,6 @@ $nav-margin: ($banner-height - 33px) / 2;
   }
 
   a {
-    text-decoration: none;
     @include link-colors($body-black);
   }
 }
