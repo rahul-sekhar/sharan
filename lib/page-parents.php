@@ -91,6 +91,13 @@ class PageAncestors {
   }
 
   private function page_info_from_id($page_id) {
+    if ($page_id == $this->page_id) {
+      return array(
+        'name' => get_the_title($page_id),
+        'url' => ''
+      );
+    }
+
     return array(
       'name' => get_the_title($page_id),
       'url' => get_permalink($page_id)
