@@ -819,12 +819,22 @@ a {
   font-weight: 600;
   font-style: italic;
 }
-.page-content h3, .page-content h4, .page-content h5, .page-content h6 {
+.page-content ul, .page-content ol {
+  margin: 16px 0;
+}
+.page-content h3 {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
-  margin: 16px 0;
+  margin: 44px 0 24px 0;
+}
+.page-content h4, .page-content h5, .page-content h6 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: inherit;
+  margin: 24px 0;
 }
 
 .page-sidebar {

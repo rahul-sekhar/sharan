@@ -33,13 +33,13 @@ function sharan_mce_buttons_2( $buttons ) {
 
 add_filter('tiny_mce_before_init', 'sharan_mce_formats' );
 function sharan_mce_formats($init) {
-  $init['theme_advanced_blockformats'] = 'p,h3';
+  $init['theme_advanced_blockformats'] = 'p,h3, h4';
 
   // Add the dropdown styles
   $style_formats = array(
     array(
       'title' => 'Dropdown Title',
-      'block' => 'h3',
+      'block' => 'h5',
       'classes' => 'dropdown-title',
     ),
     array(

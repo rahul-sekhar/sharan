@@ -640,10 +640,20 @@ body p em strong, body p em b, body p i strong, body p i b, body ul em strong, b
   font-weight: 600;
   font-style: italic;
 }
-body h3, body h4, body h5, body h6 {
+body ul, body ol {
+  margin: 16px 0;
+}
+body h3 {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
-  margin: 16px 0;
+  margin: 44px 0 24px 0;
+}
+body h4, body h5, body h6 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: inherit;
+  margin: 24px 0;
 }

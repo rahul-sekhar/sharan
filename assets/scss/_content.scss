@@ -25,9 +25,19 @@
     }
   }
 
-  h3, h4, h5, h6 {
+  ul, ol {
+    margin: 16px 0;
+  }
+
+  h3 {
     @include whitney-medium;
     font-size: 18px;
-    margin: 16px 0;
+    margin: 44px 0 24px 0;
+  }
+
+  h4, h5, h6 {
+    @include whitney-medium;
+    font-size: inherit;
+    margin: 24px 0;
   }
 }
