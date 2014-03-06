@@ -5,11 +5,11 @@
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
-    'id' => 'acf_event-fields',
+    'id' => 'acf_event-fields-2',
     'title' => 'Event Fields',
     'fields' => array (
       array (
-        'key' => 'field_5317df6f2c530',
+        'key' => 'field_531848d58b03d',
         'label' => 'From',
         'name' => 'from',
         'type' => 'date_picker',
@@ -19,7 +19,7 @@ if(function_exists("register_field_group"))
         'first_day' => 1,
       ),
       array (
-        'key' => 'field_5317dfbe2c531',
+        'key' => 'field_531848ef8b03e',
         'label' => 'To',
         'name' => 'to',
         'type' => 'date_picker',
@@ -29,7 +29,7 @@ if(function_exists("register_field_group"))
         'first_day' => 1,
       ),
       array (
-        'key' => 'field_5317ea803c098',
+        'key' => 'field_5318490468875',
         'label' => 'Location',
         'name' => 'location',
         'type' => 'text',
@@ -41,7 +41,7 @@ if(function_exists("register_field_group"))
         'maxlength' => '',
       ),
       array (
-        'key' => 'field_5317ea8e3c099',
+        'key' => 'field_5318491368876',
         'label' => 'City',
         'name' => 'city',
         'type' => 'taxonomy',
@@ -54,7 +54,7 @@ if(function_exists("register_field_group"))
         'multiple' => 0,
       ),
       array (
-        'key' => 'field_5317eab43c09a',
+        'key' => 'field_5318492968877',
         'label' => 'Type',
         'name' => 'type',
         'type' => 'taxonomy',
@@ -87,16 +87,15 @@ if(function_exists("register_field_group"))
     'menu_order' => 0,
   ));
   register_field_group(array (
-    'id' => 'acf_event-tags',
+    'id' => 'acf_event-tags-2',
     'title' => 'Event Tags',
     'fields' => array (
       array (
-        'key' => 'field_5317ee5da67e8',
+        'key' => 'field_5318494dbe108',
         'label' => 'Event Tag',
         'name' => 'event_tag',
         'type' => 'taxonomy',
-        'instructions' => 'This is a hidden tag used to pull selected events on pages',
-        'taxonomy' => 'post_tag',
+        'taxonomy' => 'event_tag',
         'field_type' => 'select',
         'allow_null' => 1,
         'load_save_terms' => 1,
@@ -124,11 +123,11 @@ if(function_exists("register_field_group"))
     'menu_order' => 0,
   ));
   register_field_group(array (
-    'id' => 'acf_more-event-fields',
+    'id' => 'acf_more-event-fields-2',
     'title' => 'More Event Fields',
     'fields' => array (
       array (
-        'key' => 'field_531813f849a53',
+        'key' => 'field_5318498e96cea',
         'label' => 'People',
         'name' => 'people',
         'type' => 'relationship',
@@ -149,7 +148,7 @@ if(function_exists("register_field_group"))
         'max' => '',
       ),
       array (
-        'key' => 'field_53181746ce19d',
+        'key' => 'field_531849b096ceb',
         'label' => 'Links',
         'name' => 'links',
         'type' => 'flexible_content',
@@ -162,7 +161,7 @@ if(function_exists("register_field_group"))
             'max' => '',
             'sub_fields' => array (
               array (
-                'key' => 'field_531817ab80822',
+                'key' => 'field_531849c396cec',
                 'label' => 'Name',
                 'name' => 'name',
                 'type' => 'text',
@@ -175,7 +174,7 @@ if(function_exists("register_field_group"))
                 'maxlength' => '',
               ),
               array (
-                'key' => 'field_531817b580823',
+                'key' => 'field_531849ce96ced',
                 'label' => 'URL',
                 'name' => 'url',
                 'type' => 'text',
@@ -197,7 +196,7 @@ if(function_exists("register_field_group"))
             'max' => '',
             'sub_fields' => array (
               array (
-                'key' => 'field_531817cf80825',
+                'key' => 'field_531849e696cef',
                 'label' => 'Name',
                 'name' => 'name',
                 'type' => 'text',
@@ -210,7 +209,7 @@ if(function_exists("register_field_group"))
                 'maxlength' => '',
               ),
               array (
-                'key' => 'field_531817d980826',
+                'key' => 'field_531849fb96cf0',
                 'label' => 'File',
                 'name' => 'file',
                 'type' => 'file',

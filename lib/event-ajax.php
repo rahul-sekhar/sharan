@@ -1,7 +1,7 @@
 <?php
 
 // Outputs a filtered list of events
-function sharan_event_list() {
+function sharan_event_list($show_no_results = true, $tag_ids = null) {
   $city_id = isset($_GET['city_id']) ? $_GET['city_id'] : null;
   $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : null;
 
@@ -16,6 +16,12 @@ function sharan_event_list() {
     array_push($tax_query, array(
       'taxonomy' => 'event_type',
       'terms' => $type_id
+    ));
+  }
+  if ($tag_ids) {
+    array_push($tax_query, array(
+      'taxonomy' => 'event_tag',
+      'terms' => $tag_ids
     ));
   }
 
@@ -34,7 +40,7 @@ function sharan_event_list() {
       </li>
     <?php endwhile; ?>
   </ul>
-  <?php else : ?>
+  <?php elseif ($show_no_results) : ?>
     <p class="no-results">No events found</p>
   <?php
   endif;

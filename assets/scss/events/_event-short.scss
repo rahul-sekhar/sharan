@@ -1,0 +1,25 @@
+.short.event {
+  .image {
+    float: left;
+    width: 115px;
+    height: 90px;
+  }
+
+  h3 {
+    font-size: 13px;
+    @include whitney-medium;
+    text-transform: uppercase;
+    margin: 8px 0;
+  }
+
+  p {
+    @include whitney-medium;
+    font-size: 13px;
+    margin: 6px 0;
+    color: $body-black;
+  }
+
+  h3, p {
+    margin-left: 135px;
+  }
+}

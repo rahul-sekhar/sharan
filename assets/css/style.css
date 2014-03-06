@@ -1067,28 +1067,6 @@ body.single-events .event.content h2 {
 .event-list ul.events li {
   margin-top: 40px;
 }
-.event-list .short.event .image {
-  float: left;
-  width: 115px;
-  height: 90px;
-  margin-right: 20px;
-}
-.event-list .short.event h3 {
-  font-size: 13px;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  margin: 8px 0;
-}
-.event-list .short.event p {
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 13px;
-  margin: 6px 0;
-  color: #333333;
-}
 
 .event.content h2 {
   font-size: 30px;
@@ -1186,4 +1164,42 @@ body.single-events .event.content h2 {
 }
 .event.content .links li {
   width: 30%;
+}
+
+.short.event .image {
+  float: left;
+  width: 115px;
+  height: 90px;
+}
+.short.event h3 {
+  font-size: 13px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+.short.event p {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  margin: 6px 0;
+  color: #333333;
+}
+.short.event h3, .short.event p {
+  margin-left: 135px;
+}
+
+.content ul.events {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.content li {
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
