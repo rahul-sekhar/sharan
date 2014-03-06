@@ -837,6 +837,7 @@ body {
 }
 #breadcrumbs li:before {
   content: '>';
+  margin-right: 5px;
 }
 #breadcrumbs li:first-child:before {
   content: none;
@@ -1183,7 +1184,7 @@ body.single-events .event.content h2 {
   height: 90px;
 }
 .short.event h3 {
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
@@ -1194,7 +1195,7 @@ body.single-events .event.content h2 {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
-  font-size: 13px;
+  font-size: 11px;
   margin: 6px 0;
   color: #333333;
 }
@@ -1213,4 +1214,11 @@ body.single-events .event.content h2 {
   width: 49%;
   padding-right: 20px;
   padding-bottom: 20px;
+}
+.content ul.events li:nth-child(odd) {
+  padding-right: 10px;
+}
+.content ul.events li:nth-child(even) {
+  padding-right: 0;
+  padding-left: 10px;
 }

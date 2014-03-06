@@ -6,7 +6,7 @@
   }
 
   h3 {
-    font-size: 13px;
+    font-size: 12px;
     @include whitney-medium;
     text-transform: uppercase;
     margin: 8px 0;
@@ -14,7 +14,7 @@
 
   p {
     @include whitney-medium;
-    font-size: 13px;
+    font-size: 11px;
     margin: 6px 0;
     color: $body-black;
   }

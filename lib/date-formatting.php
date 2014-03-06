@@ -12,22 +12,38 @@ function sharan_event_dates($from, $to) {
   }
 
   if ($to && $from != $to) {
-    // If both from and to dates are present
-    $dates = sharan_long_date($from_date, false);
-    $dates .= '&mdash;';
-    $dates .= sharan_long_date($to_date);
+    echo sharan_date_range($from_date, $to_date);
   } else {
-    // If only a from date is present or both from and to are the same
     $dates = sharan_long_date($from_date);
   }
-  echo $dates;
 }
 
-function sharan_long_date($date, $include_year = true) {
+function sharan_long_date($date) {
+  if (!$date) {
+    return false;
+  }
+
   $formatted_date = $date->format('jS ');
   $formatted_date .= '<span class="month">' . $date->format('F') . '</span>';
-  if ($include_year) {
-    $formatted_date .= $date->format(' Y');
-  }
+  $formatted_date .= $date->format(' Y');
   return $formatted_date;
+}
+
+function sharan_date_range($from, $to) {
+  if (!$from || !$to) {
+    return false;
+  }
+
+  $formatted_to = sharan_long_date($to);
+
+  if ($from->format('Y') != $to->format('Y')) {
+    $formatted_from = sharan_long_date($from);
+  } elseif ($from->format('m') != $to->format('m')) {
+    $formatted_from = $from->format('jS ');
+    $formatted_from .= '<span class="month">' . $from->format('F') . '</span>';
+  } else {
+    $formatted_from = $from->format('jS');
+  }
+
+  return $formatted_from . '&mdash;' . $formatted_to;
 }

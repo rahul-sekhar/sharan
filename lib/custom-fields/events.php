@@ -115,8 +115,8 @@ if(function_exists("register_field_group"))
       ),
     ),
     'options' => array (
-      'position' => 'side',
-      'layout' => 'default',
+      'position' => 'normal',
+      'layout' => 'no_box',
       'hide_on_screen' => array (
       ),
     ),

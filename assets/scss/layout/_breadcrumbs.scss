@@ -17,6 +17,7 @@
 
     &:before {
       content: '>';
+      margin-right: 5px;
     }
 
     &:first-child:before {

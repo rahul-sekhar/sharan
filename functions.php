@@ -8,11 +8,11 @@ require_once locate_template('/lib/acf-flexible-content/acf-flexible-content.php
 require_once locate_template('/lib/acf-config.php');
 
 // Load custom fields if we're not running the ACF backend
-if (defined('ACF_LITE')) {
+// if (defined('ACF_LITE')) {
   require_once locate_template('/lib/custom-fields/navigation.php');                  // Navigation fields
   require_once locate_template('/lib/custom-fields/events.php');                      // Event fields
   require_once locate_template('/lib/custom-fields/default-sidebar-image.php');       // Default sidebar image option fields
-}
+// }
 
 require_once locate_template('/lib/utils.php');             // Utility functions
 require_once locate_template('/lib/init.php');              // Initial theme setup and constants
@@ -32,3 +32,4 @@ require_once locate_template('/lib/date-formatting.php');   // Functions to form
 require_once locate_template('/lib/taxonomies.php');        // Functions tfor custom taxonomies
 require_once locate_template('/lib/event-ajax.php');        // AJAX handlers for events
 require_once locate_template('/lib/shortcodes.php');        // Shortcode handlers
+require_once locate_template('/lib/move-metaboxes.php');     // Move the default wordpress metaboxes
