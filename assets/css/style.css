@@ -982,7 +982,8 @@ body.single-events .event-list {
   width: 410px;
 }
 body.single-events .event.content {
-  margin-left: 480px;
+  float: right;
+  width: 500px;
   padding-top: 96px;
 }
 body.single-events .event.content h2 {
