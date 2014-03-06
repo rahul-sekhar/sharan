@@ -1,4 +1,6 @@
 .short.event {
+  @include clearfix;
+
   .image {
     float: left;
     width: 115px;

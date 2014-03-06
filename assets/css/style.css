@@ -1178,6 +1178,10 @@ body.single-events .event.content h2 {
   width: 30%;
 }
 
+.short.event {
+  overflow: hidden;
+  *zoom: 1;
+}
 .short.event .image {
   float: left;
   width: 115px;
