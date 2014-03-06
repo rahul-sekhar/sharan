@@ -34,6 +34,10 @@
     float: none;
     padding: 1px 0;
 
+    &.name {
+      height: 23px;
+    }
+
     a {
       @include link-colors(white);
       display: inline;

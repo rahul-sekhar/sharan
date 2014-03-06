@@ -765,6 +765,9 @@ body {
   float: none;
   padding: 1px 0;
 }
+#main-nav .dropdown li.name {
+  height: 23px;
+}
 #main-nav .dropdown li a {
   color: white;
   display: inline;
