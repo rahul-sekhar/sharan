@@ -9,6 +9,16 @@ if(function_exists("register_field_group"))
     'title' => 'Event Fields',
     'fields' => array (
       array (
+        'key' => 'field_5318af3934eca',
+        'label' => 'Image',
+        'name' => 'image',
+        'type' => 'image',
+        'required' => 1,
+        'save_format' => 'object',
+        'preview_size' => 'event-medium',
+        'library' => 'all',
+      ),
+      array (
         'key' => 'field_531848d58b03d',
         'label' => 'From',
         'name' => 'from',

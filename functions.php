@@ -11,6 +11,7 @@ require_once locate_template('/lib/acf-config.php');
 // if (defined('ACF_LITE')) {
   require_once locate_template('/lib/custom-fields/navigation.php');                  // Navigation fields
   require_once locate_template('/lib/custom-fields/events.php');                      // Event fields
+  require_once locate_template('/lib/custom-fields/people.php');                      // People fields
   require_once locate_template('/lib/custom-fields/default-sidebar-image.php');       // Default sidebar image option fields
 // }
 

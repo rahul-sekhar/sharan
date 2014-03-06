@@ -21,7 +21,7 @@ function register_event_custom_type() {
     'label'               => __( 'event', 'sharan' ),
     'description'         => __( 'Events organised by Sharan', 'sharan' ),
     'labels'              => $labels,
-    'supports'            => array( 'title', 'editor', 'thumbnail', ),
+    'supports'            => array( 'title', 'editor' ),
     'hierarchical'        => false,
     'public'              => true,
     'show_ui'             => true,
