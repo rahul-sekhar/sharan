@@ -7,8 +7,12 @@ require_once locate_template('/lib/acf-flexible-content/acf-flexible-content.php
 
 require_once locate_template('/lib/acf-config.php');
 
-require_once locate_template('/lib/custom-fields/navigation.php');  // Navigation fields
-require_once locate_template('/lib/custom-fields/events.php');      // Event fields
+// Load custom fields if we're not running the ACF backend
+if (defined('ACF_LITE')) {
+  require_once locate_template('/lib/custom-fields/navigation.php');                  // Navigation fields
+  require_once locate_template('/lib/custom-fields/events.php');                      // Event fields
+  require_once locate_template('/lib/custom-fields/default-sidebar-image.php');       // Default sidebar image option fields
+}
 
 require_once locate_template('/lib/utils.php');             // Utility functions
 require_once locate_template('/lib/init.php');              // Initial theme setup and constants

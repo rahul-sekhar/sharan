@@ -9,11 +9,14 @@ $sidebar-width: 225px;
   @include whitney-medium;
   font-size: 13px;
   color: $body-black;
+  margin-bottom: 20px;
 
   img {
     border: 1px solid #999;
     margin: -1 * $sidebar-padding;
     margin-bottom: 15px;
+    width: $sidebar-width;
+    max-width: $sidebar-width;
   }
 
   p {

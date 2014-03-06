@@ -5,21 +5,20 @@
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
-    'id' => 'acf_navigation',
+    'id' => 'acf_navigation-2',
     'title' => 'Navigation',
     'fields' => array (
       array (
-        'key' => 'field_5313776479881',
+        'key' => 'field_531869b392ddd',
         'label' => 'Main Navigation',
         'name' => 'main_nav',
         'type' => 'repeater',
         'sub_fields' => array (
           array (
-            'key' => 'field_53140b139dcf0',
+            'key' => 'field_531869c592dde',
             'label' => 'Name',
             'name' => 'name',
             'type' => 'text',
-            'required' => 1,
             'column_width' => '',
             'default_value' => '',
             'placeholder' => '',
@@ -29,14 +28,24 @@ if(function_exists("register_field_group"))
             'maxlength' => '',
           ),
           array (
-            'key' => 'field_5314087579882',
+            'key' => 'field_53186abcd2856',
+            'label' => 'Default Sidebar Image',
+            'name' => 'default_sidebar_image',
+            'type' => 'image',
+            'column_width' => '',
+            'save_format' => 'object',
+            'preview_size' => 'post-thumbnail',
+            'library' => 'all',
+          ),
+          array (
+            'key' => 'field_531869ea92ddf',
             'label' => 'Sections',
             'name' => 'sections',
             'type' => 'repeater',
             'column_width' => '',
             'sub_fields' => array (
               array (
-                'key' => 'field_53140b4a184cb',
+                'key' => 'field_53186a0992de0',
                 'label' => 'Name',
                 'name' => 'name',
                 'type' => 'text',
@@ -49,7 +58,7 @@ if(function_exists("register_field_group"))
                 'maxlength' => '',
               ),
               array (
-                'key' => 'field_5314090379883',
+                'key' => 'field_53186a1792de1',
                 'label' => 'Links',
                 'name' => 'links',
                 'type' => 'flexible_content',
@@ -63,7 +72,7 @@ if(function_exists("register_field_group"))
                     'max' => '',
                     'sub_fields' => array (
                       array (
-                        'key' => 'field_53140bac937cd',
+                        'key' => 'field_53186a3d92de2',
                         'label' => 'Name',
                         'name' => 'name',
                         'type' => 'text',
@@ -76,7 +85,7 @@ if(function_exists("register_field_group"))
                         'maxlength' => '',
                       ),
                       array (
-                        'key' => 'field_53140a5b20ac1',
+                        'key' => 'field_53186a5292de3',
                         'label' => 'Page',
                         'name' => 'url',
                         'type' => 'page_link',
@@ -97,7 +106,7 @@ if(function_exists("register_field_group"))
                     'max' => '',
                     'sub_fields' => array (
                       array (
-                        'key' => 'field_53140bbd937ce',
+                        'key' => 'field_53186a8392de5',
                         'label' => 'Name',
                         'name' => 'name',
                         'type' => 'text',
@@ -110,7 +119,7 @@ if(function_exists("register_field_group"))
                         'maxlength' => '',
                       ),
                       array (
-                        'key' => 'field_53140a7120ac2',
+                        'key' => 'field_53186a9592de6',
                         'label' => 'URL',
                         'name' => 'url',
                         'type' => 'text',
@@ -119,7 +128,7 @@ if(function_exists("register_field_group"))
                         'placeholder' => '',
                         'prepend' => '',
                         'append' => '',
-                        'formatting' => 'html',
+                        'formatting' => 'none',
                         'maxlength' => '',
                       ),
                     ),
@@ -130,7 +139,7 @@ if(function_exists("register_field_group"))
                 'max' => '',
               ),
             ),
-            'row_min' => 1,
+            'row_min' => '',
             'row_limit' => '',
             'layout' => 'row',
             'button_label' => 'Add Section',
