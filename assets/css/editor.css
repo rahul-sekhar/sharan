@@ -502,6 +502,11 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  text-align: center;
 }
 
 *, *:before, *:after {
@@ -665,4 +670,8 @@ body h4, body h5, body h6 {
 }
 body h4 + p, body h5 + p, body h6 + p {
   margin-top: 12px;
+}
+
+.alignleft, .alignright {
+  float: none;
 }

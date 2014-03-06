@@ -16,3 +16,7 @@ body {
   max-width: 580px;
   @include content-styles;
 }
+
+.alignleft, .alignright {
+  float: none;
+}

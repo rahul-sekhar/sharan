@@ -507,6 +507,11 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  text-align: center;
 }
 
 *, *:before, *:after {
