@@ -76,6 +76,14 @@ if(function_exists("register_field_group"))
         'return_format' => 'id',
         'multiple' => 0,
       ),
+      array (
+        'key' => 'field_5318b1d55e589',
+        'label' => 'Show register button',
+        'name' => 'show_register',
+        'type' => 'true_false',
+        'message' => '',
+        'default_value' => 1,
+      ),
     ),
     'location' => array (
       array (

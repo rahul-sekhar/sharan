@@ -1,7 +1,11 @@
 <div class="event short">
   <a href="<?php the_permalink(); ?>">
     <div class="image">
-      <?php the_post_thumbnail('event-small'); ?>
+      <?php
+      $image = get_field('image');
+      if ($image) : ?>
+        <img src="<?php echo $image['sizes']['event-small'] ?>" alt="" />
+      <?php endif; ?>
     </div>
 
     <div class="info">

@@ -13,15 +13,19 @@
 </section>
 
 <section class="pre-content">
-  <?php if (has_post_thumbnail()) : ?>
+  <?php
+  $image = get_field('image');
+  if ($image) : ?>
     <div class="image">
-      <?php the_post_thumbnail('event-medium'); ?>
+      <img src="<?php echo $image['sizes']['event-medium'] ?>" alt="" />
     </div>
   <?php endif; ?>
 
-  <div class="register">
-    <a href="#" class="button">Register</a>
-  </div>
+  <?php if (get_field('show_register')) : ?>
+    <div class="register">
+      <a href="#" class="button">Register</a>
+    </div>
+  <?php endif; ?>
 </section>
 
 <section class="inner-content">
