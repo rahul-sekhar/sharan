@@ -24,7 +24,7 @@ function sharan_event_dates($from, $to) {
 }
 
 function sharan_long_date($date, $include_year = true) {
-  $formatted_date = $date->format('dS ');
+  $formatted_date = $date->format('jS ');
   $formatted_date .= '<span class="month">' . $date->format('F') . '</span>';
   if ($include_year) {
     $formatted_date .= $date->format(' Y');

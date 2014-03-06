@@ -26,3 +26,4 @@ require_once locate_template('/lib/event-type.php');        // Custom post type 
 require_once locate_template('/lib/person-type.php');       // Custom post type for people
 require_once locate_template('/lib/date-formatting.php');   // Functions to format dates
 require_once locate_template('/lib/taxonomies.php');        // Functions tfor custom taxonomies
+require_once locate_template('/lib/events-ajax.php');       // AJAX handlers for events

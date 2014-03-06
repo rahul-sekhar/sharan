@@ -997,6 +997,9 @@ body.single-events .event.content h2 {
   margin: 20px 0;
 }
 .event-list .filters {
+  position: relative;
+}
+.event-list .filters .buttons {
   overflow: hidden;
   *zoom: 1;
 }
@@ -1013,8 +1016,47 @@ body.single-events .event.content h2 {
   background-color: #333;
   line-height: 50px;
 }
+.event-list .filters .city.active, .event-list .filters .type.active {
+  color: #1899cb;
+}
 .event-list .filters .city {
   border-right: 1px solid #666;
+}
+.event-list .filters .city-list, .event-list .filters .type-list {
+  position: absolute;
+  top: 50px;
+  background-color: #333;
+  width: 50%;
+  display: none;
+  font-size: 12px;
+}
+.event-list .filters .city-list.shown, .event-list .filters .type-list.shown {
+  display: block;
+}
+.event-list .filters .city-list ul, .event-list .filters .type-list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+.event-list .filters .city-list a, .event-list .filters .type-list a {
+  display: block;
+  padding: 5px 25px;
+  color: white;
+  border-bottom: 1px solid #666;
+}
+.event-list .filters .city-list a.selected, .event-list .filters .type-list a.selected {
+  color: #1899cb;
+}
+.event-list .filters .city-list li:last-child a, .event-list .filters .type-list li:last-child a {
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+.event-list .filters .city-list {
+  left: 0;
+}
+.event-list .filters .type-list {
+  right: 0;
 }
 .event-list ul.events {
   margin: 0;

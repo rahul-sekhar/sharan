@@ -1,5 +1,4 @@
 jQuery(function ($) {
-
   var containers = $('.dropdown-container')
 
   containers.find('.dropdown-title').wrapInner('<a href="#"></a>').each(function () {

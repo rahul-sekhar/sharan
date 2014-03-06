@@ -14,8 +14,8 @@ function register_event_custom_type() {
     'edit_item'           => __( 'Edit Event', 'sharan' ),
     'update_item'         => __( 'Update Event', 'sharan' ),
     'search_items'        => __( 'Search Event', 'sharan' ),
-    'not_found'           => __( 'Event not found', 'sharan' ),
-    'not_found_in_trash'  => __( 'Event not found in Trash', 'sharan' ),
+    'not_found'           => __( 'No events found', 'sharan' ),
+    'not_found_in_trash'  => __( 'No events found in trash', 'sharan' ),
   );
   $args = array(
     'label'               => __( 'event', 'sharan' ),

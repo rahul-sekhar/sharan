@@ -14,8 +14,8 @@ function register_person_custom_type() {
     'edit_item'           => __( 'Edit Person', 'sharan' ),
     'update_item'         => __( 'Update Person', 'sharan' ),
     'search_items'        => __( 'Search Person', 'sharan' ),
-    'not_found'           => __( 'Person not found', 'sharan' ),
-    'not_found_in_trash'  => __( 'Person not found in Trash', 'sharan' ),
+    'not_found'           => __( 'No people found', 'sharan' ),
+    'not_found_in_trash'  => __( 'No people found in trash', 'sharan' ),
   );
   $args = array(
     'label'               => __( 'person', 'sharan' ),
