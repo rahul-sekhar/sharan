@@ -1,6 +1,7 @@
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'roots'); ?>
+    <h2>Not found</h2>
+    <p><?php _e('Sorry, no results were found.', 'roots'); ?></p>
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>

@@ -11,8 +11,8 @@
         <main role="main">
           <?php include roots_template_path(); ?>
         </main>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
+      </div><!-- /.container -->
+    </div><!-- /#wrapper -->
 
     <?php get_template_part('templates/footer'); ?>
 

@@ -1,16 +1,16 @@
 @import "compass";
-@import "normalize";
 
-@import "functions";
-@import "settings";
-@import "fonts";
-@import "icons";
+@import "base/normalize";
+@import "base/functions";
+@import "base/settings";
+@import "base/fonts";
+@import "base/icons";
 
-@import "general-content";
-@import "content";
+@import "common/general-content";
+@import "common/content";
+@import "common/dropdowns";
 
-@import "dropdowns";
-@import "editor-dropdowns";
+@import "editor/editor-dropdowns";
 
 body {
   max-width: 580px;

@@ -5,7 +5,7 @@
 
   <?php get_template_part('templates/sidebar', 'page'); ?>
 
-  <div class="page-content">
+  <div class="page content">
     <?php get_template_part('templates/content', 'page'); ?>
-  </div>
+  </div><!-- /.page-content -->
 <?php endwhile; ?>

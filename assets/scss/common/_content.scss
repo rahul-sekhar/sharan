@@ -2,6 +2,7 @@
   h2 {
     @include sentinel-book;
     font-size: 36px;
+    margin: 30px 0;
   }
 
   p, ul, ol {

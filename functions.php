@@ -17,6 +17,10 @@ require_once locate_template('/lib/titles.php');            // Page titles
 require_once locate_template('/lib/cleanup.php');           // Cleanup
 require_once locate_template('/lib/relative-urls.php');     // Root relative URLs
 require_once locate_template('/lib/scripts.php');           // Scripts and stylesheets
+
 require_once locate_template('/lib/hide-admin-panel.php');  // Hide the admin panel
 require_once locate_template('/lib/page-parents.php');      // Getting the parent nav items for a page
 require_once locate_template('/lib/tinymce.php');           // Customize the TinyMCE editor
+require_once locate_template('/lib/event-type.php');        // Custom post type for events
+require_once locate_template('/lib/date-formatting.php');   // Functions to format dates
+require_once locate_template('/lib/taxonomies.php');        // Functions tfor custom taxonomies

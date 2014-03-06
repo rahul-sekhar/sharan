@@ -6,6 +6,13 @@ function roots_setup() {
   // Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
   add_theme_support('post-thumbnails');
   set_post_thumbnail_size(225, 0, false);
-  // add_image_size('category-thumb', 300, 9999); // 300px wide (and unlimited height)
+  add_image_size('event-small', 115, 90, true);
+  add_image_size('event-medium', 210, 150, true);
 }
 add_action('after_setup_theme', 'roots_setup');
+
+// Flush rewrite rules after switching themes
+function bones_flush_rewrite_rules() {
+  flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );

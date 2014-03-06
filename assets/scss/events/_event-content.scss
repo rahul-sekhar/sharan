@@ -1,0 +1,61 @@
+.event.content {
+  margin-left: 480px;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .info {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    @include clearfix;
+
+    p {
+      margin: 0;
+    }
+
+    .dates {
+      @include whitney-medium;
+      font-size: 13px;
+      letter-spacing: 1px;
+      float: left;
+      margin-right: 20px;
+
+      .month {
+        text-transform: uppercase;
+      }
+    }
+
+    .location {
+      @include whitney-book;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      float: left;
+      text-align: right;
+    }
+  }
+
+  .image {
+    float: left;
+    margin-right: 60px;
+  }
+
+  .register {
+    float: left;
+    margin-bottom: 10px;
+  }
+
+  .image + .register {
+    margin-top: 150px / 2 - $button-height / 2;
+  }
+
+  .inner-content {
+    padding-top: 15px;
+    clear: both;
+
+    > :first-child {
+      margin-top: 0;
+    }
+  }
+}

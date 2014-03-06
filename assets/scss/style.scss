@@ -5,26 +5,29 @@ Designed by Shalini Sekhar
 ******************************************************************/
 
 @import "compass";
-@import "normalize";
 
-@import "functions";
-@import "settings";
-@import "fonts";
-@import "icons";
+@import "base/normalize";
+@import "base/functions";
+@import "base/settings";
+@import "base/fonts";
+@import "base/icons";
 
-@import "layout";
-@import "general-content";
-@import "containers";
-@import "content";
+@import "common/general-content";
+@import "common/containers";
+@import "common/content";
+@import "common/dropdowns";
+@import "common/common-content";
+@import "common/buttons";
 
-@import "dropdowns";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/main-nav";
+@import "layout/main-nav-dropdown";
+@import "layout/footer";
+@import "layout/breadcrumbs";
 
-@import "header";
-@import "main-nav";
-@import "main-nav-dropdown";
-@import "footer";
-@import "breadcrumbs";
-@import "page-layout";
-@import "page-nav";
-@import "page-content";
-@import "page-sidebar";
+@import "pages/page-layout";
+@import "pages/page-nav";
+@import "pages/page-sidebar";
+
+@import "events/event-content";
