@@ -1,5 +1,6 @@
 <?php
 
+/* shortcode of this form: [events tags="Tag 1, Tag 2, Tag 3"] */
 function sharan_events_shortcode( $atts ) {
   extract( shortcode_atts( array(
     'tags' => null,
@@ -23,3 +24,14 @@ function sharan_events_shortcode( $atts ) {
   return ob_get_clean();
 }
 add_shortcode( 'events', 'sharan_events_shortcode' );
+
+
+/* shortcode of this form: [button url="http://registartion-path/"]Register Now![/button] */
+function sharan_button_shortcode( $atts, $content = null ) {
+  extract( shortcode_atts( array(
+    'url' => null,
+  ), $atts ) );
+
+  return '<a class="button" href="' . $url . '">' . $content . '</a>';
+}
+add_shortcode( 'button', 'sharan_button_shortcode' );
