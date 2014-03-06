@@ -1,8 +1,6 @@
 .event.content {
-  margin-left: 480px;
-
   h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .info {
@@ -39,6 +37,15 @@
   .image {
     float: left;
     margin-right: 60px;
+
+    img {
+      max-width: 210px;
+      max-height: 150px;
+    }
+  }
+
+  .pre-content {
+    @include clearfix;
   }
 
   .register {
@@ -52,7 +59,6 @@
 
   .inner-content {
     padding-top: 15px;
-    clear: both;
 
     > :first-child {
       margin-top: 0;

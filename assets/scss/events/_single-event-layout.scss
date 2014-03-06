@@ -1,0 +1,16 @@
+body.single-events {
+  .event-list {
+    float: left;
+    padding-top: 20px;
+    width: 410px;
+  }
+
+  .event.content {
+    margin-left: 480px;
+    padding-top: 76px + 20px;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+}

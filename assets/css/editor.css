@@ -500,6 +500,10 @@ a {
   color: #0084c9;
 }
 
+img {
+  max-width: 100%;
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

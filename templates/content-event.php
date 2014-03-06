@@ -12,14 +12,16 @@
   </p>
 </div>
 
-<?php if (has_post_thumbnail()) : ?>
-  <div class="image">
-    <?php the_post_thumbnail('event-medium'); ?>
-  </div>
-<?php endif; ?>
+<div class="pre-content">
+  <?php if (has_post_thumbnail()) : ?>
+    <div class="image">
+      <?php the_post_thumbnail('event-medium'); ?>
+    </div>
+  <?php endif; ?>
 
-<div class="register">
-  <a href="#" class="button">Register</a>
+  <div class="register">
+    <a href="#" class="button">Register</a>
+  </div>
 </div>
 
 <div class="inner-content">

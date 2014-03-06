@@ -11,6 +11,7 @@ body {
   padding-top: $banner-full-height;
   min-height: 100%;
   margin-bottom: -1 * $footer-height;
+  @include clearfix;
 
   &::after {
     content: "";

@@ -505,6 +505,10 @@ a {
   color: #0084c9;
 }
 
+img {
+  max-width: 100%;
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -660,6 +664,8 @@ body {
   padding-top: 66px;
   min-height: 100%;
   margin-bottom: -29px;
+  overflow: hidden;
+  *zoom: 1;
 }
 #wrapper::after {
   content: "";
@@ -970,11 +976,79 @@ body {
   color: #777777;
 }
 
-.event.content {
-  margin-left: 480px;
+body.single-events .event-list {
+  float: left;
+  padding-top: 20px;
+  width: 410px;
 }
+body.single-events .event.content {
+  margin-left: 480px;
+  padding-top: 96px;
+}
+body.single-events .event.content h2 {
+  margin-top: 0;
+}
+
+.event-list h2 {
+  font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+  margin: 20px 0;
+}
+.event-list .filters {
+  overflow: hidden;
+  *zoom: 1;
+}
+.event-list .filters .city, .event-list .filters .type {
+  display: block;
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+  background-color: #333;
+  line-height: 50px;
+}
+.event-list .filters .city {
+  border-right: 1px solid #666;
+}
+.event-list ul.events {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.event-list ul.events li {
+  margin-top: 40px;
+}
+.event-list .short.event .image {
+  float: left;
+  width: 115px;
+  height: 90px;
+  margin-right: 20px;
+}
+.event-list .short.event h3 {
+  font-size: 13px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+.event-list .short.event p {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  margin: 6px 0;
+  color: #333333;
+}
+
 .event.content h2 {
-  font-size: 32px;
+  font-size: 30px;
 }
 .event.content .info {
   margin-top: -20px;
@@ -1011,6 +1085,14 @@ body {
   float: left;
   margin-right: 60px;
 }
+.event.content .image img {
+  max-width: 210px;
+  max-height: 150px;
+}
+.event.content .pre-content {
+  overflow: hidden;
+  *zoom: 1;
+}
 .event.content .register {
   float: left;
   margin-bottom: 10px;
@@ -1020,7 +1102,6 @@ body {
 }
 .event.content .inner-content {
   padding-top: 15px;
-  clear: both;
 }
 .event.content .inner-content > :first-child {
   margin-top: 0;
