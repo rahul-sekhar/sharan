@@ -1079,7 +1079,6 @@ body.single-events .event.content h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   float: left;
-  text-align: right;
 }
 .event.content .pre-content {
   overflow: hidden;
