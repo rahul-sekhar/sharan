@@ -1,13 +1,18 @@
+$sidebar-width: 225px;
+$page-nav-width: 180px;
+$page-content-space: 98px;
+
 .page-nav {
   float: left;
-  width: 180px;
+  width: $page-nav-width;
 }
 
 .page.content {
-  margin-left: 240px;
-  margin-right: 300px;
+  margin-left: $page-nav-width + $page-content-space;
+  margin-right: $sidebar-width + $page-content-space;
 }
 
 .page-sidebar {
   float: right;
+  width: $sidebar-width;
 }

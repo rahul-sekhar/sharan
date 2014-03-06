@@ -849,12 +849,13 @@ body {
 }
 
 .page.content {
-  margin-left: 240px;
-  margin-right: 300px;
+  margin-left: 278px;
+  margin-right: 323px;
 }
 
 .page-sidebar {
   float: right;
+  width: 225px;
 }
 
 .page-nav h3 {
@@ -881,7 +882,6 @@ body {
 
 .page-sidebar {
   background-color: #ecece4;
-  width: 225px;
   padding: 15px;
   padding-bottom: 40px;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';

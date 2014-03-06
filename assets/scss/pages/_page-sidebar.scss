@@ -1,9 +1,7 @@
 $sidebar-padding: 15px;
-$sidebar-width: 225px;
 
 .page-sidebar {
   background-color: $near-white;
-  width: $sidebar-width;
   padding: $sidebar-padding;
   padding-bottom: 40px;
   @include whitney-medium;
