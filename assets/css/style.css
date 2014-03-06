@@ -1010,66 +1010,68 @@ body.single-events .event.content h2 {
   margin: 20px 0;
 }
 .event-list .filters {
-  position: relative;
-}
-.event-list .filters .buttons {
-  overflow: hidden;
-  *zoom: 1;
+  height: 50px;
 }
 .event-list .filters .city, .event-list .filters .type {
   display: block;
   width: 50%;
   float: left;
+  background-color: #333;
+  position: relative;
+}
+.event-list .filters .city .button, .event-list .filters .type .button {
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+  width: 100%;
+  padding: 0;
   text-align: center;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
   color: white;
-  background-color: #333;
+  background-color: transparent;
   line-height: 50px;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
 }
-.event-list .filters .city.active, .event-list .filters .type.active {
+.event-list .filters .city .button.active, .event-list .filters .type .button.active {
   color: #1899cb;
 }
-.event-list .filters .city {
-  border-right: 1px solid #666;
-}
-.event-list .filters .city-list, .event-list .filters .type-list {
+.event-list .filters .city ul, .event-list .filters .type ul {
   position: absolute;
   top: 50px;
-  background-color: #333;
-  width: 50%;
-  display: none;
   font-size: 12px;
-}
-.event-list .filters .city-list.shown, .event-list .filters .type-list.shown {
-  display: block;
-}
-.event-list .filters .city-list ul, .event-list .filters .type-list ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   margin: 0;
+  width: 100%;
+  background-color: #333;
+  display: none;
 }
-.event-list .filters .city-list a, .event-list .filters .type-list a {
+.event-list .filters .city ul a, .event-list .filters .type ul a {
   display: block;
   padding: 5px 25px;
   color: white;
   border-bottom: 1px solid #666;
 }
-.event-list .filters .city-list a.selected, .event-list .filters .type-list a.selected {
+.event-list .filters .city ul a.selected, .event-list .filters .type ul a.selected {
   color: #1899cb;
 }
-.event-list .filters .city-list li:last-child a, .event-list .filters .type-list li:last-child a {
+.event-list .filters .city ul li:last-child a, .event-list .filters .type ul li:last-child a {
   padding-bottom: 10px;
   border-bottom: none;
 }
-.event-list .filters .city-list {
-  left: 0;
+.event-list .filters .city:hover ul, .event-list .filters .type:hover ul {
+  display: block;
 }
-.event-list .filters .type-list {
-  right: 0;
+.event-list .filters .city .button {
+  border-right: 1px solid #666;
 }
 .event-list ul.events {
   margin: 0;
@@ -1188,7 +1190,7 @@ body.single-events .event.content h2 {
   height: 90px;
 }
 .short.event h3 {
-  font-size: 12px;
+  font-size: 13px;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
@@ -1199,7 +1201,7 @@ body.single-events .event.content h2 {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
-  font-size: 11px;
+  font-size: 13px;
   margin: 6px 0;
   color: #333333;
 }
@@ -1225,4 +1227,10 @@ body.single-events .event.content h2 {
 .content ul.events li:nth-child(even) {
   padding-right: 0;
   padding-left: 10px;
+}
+.content ul.events .short.event h3 {
+  font-size: 12px;
+}
+.content ul.events .short.event p {
+  font-size: 11px;
 }

@@ -14,7 +14,7 @@ function sharan_event_dates($from, $to) {
   if ($to && $from != $to) {
     echo sharan_date_range($from_date, $to_date);
   } else {
-    $dates = sharan_long_date($from_date);
+    echo sharan_long_date($from_date);
   }
 }
 
