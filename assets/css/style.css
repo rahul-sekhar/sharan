@@ -1081,23 +1081,23 @@ body.single-events .event.content h2 {
   float: left;
   text-align: right;
 }
-.event.content .image {
-  float: left;
-  margin-right: 60px;
-}
-.event.content .image img {
-  max-width: 210px;
-  max-height: 150px;
-}
 .event.content .pre-content {
   overflow: hidden;
   *zoom: 1;
 }
-.event.content .register {
+.event.content .pre-content .image {
+  float: left;
+  margin-right: 60px;
+}
+.event.content .pre-content .image img {
+  max-width: 210px;
+  max-height: 150px;
+}
+.event.content .pre-content .register {
   float: left;
   margin-bottom: 10px;
 }
-.event.content .image + .register {
+.event.content .pre-content .image + .register {
   margin-top: 57px;
 }
 .event.content .inner-content {
@@ -1105,4 +1105,43 @@ body.single-events .event.content h2 {
 }
 .event.content .inner-content > :first-child {
   margin-top: 0;
+}
+.event.content .people, .event.content .links {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 40px;
+}
+.event.content .people h3, .event.content .links h3 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.event.content .people ul, .event.content .links ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.event.content .people li, .event.content .links li {
+  float: left;
+}
+.event.content .people .image {
+  width: 120px;
+  height: 120px;
+}
+.event.content .people li {
+  margin-right: 30px;
+}
+.event.content .people .name {
+  margin: 0;
+  margin-top: 10px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+.event.content .links li {
+  width: 30%;
 }

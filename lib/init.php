@@ -8,6 +8,7 @@ function roots_setup() {
   set_post_thumbnail_size(225, 0, false);
   add_image_size('event-small', 115, 90, true);
   add_image_size('event-medium', 210, 150, true);
+  add_image_size('person', 120, 120, true);
 }
 add_action('after_setup_theme', 'roots_setup');
 
