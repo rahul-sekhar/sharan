@@ -10,7 +10,7 @@
   display: none;
 
   .placeholder-container {
-    width: 30%;
+    width: 25%;
     float: left;
   }
 
@@ -21,21 +21,31 @@
   }
 
   ul {
+    margin: 0;
     text-transform: none;
     color: #999;
-    line-height: 150%;
+    line-height: 130%;
+    letter-spacing: 0;
 
     float: left;
-    width: 23%;
-    padding-left: 40px;
+    width: 25%;
+    padding-left: 80px;
   }
+
+  $arrow-width: 6px;
+  $arrow-space: 5px;
+  $arrow-height: 6px;
 
   li {
     float: none;
-    padding: 1px 0;
+    padding: 3px 0;
+    padding-left: $arrow-width + $arrow-space;
+    position: relative;
 
     &.name {
-      height: 23px;
+      &:before {
+        content: none;
+      }
     }
 
     a {
@@ -44,10 +54,25 @@
       border-left: none;
       padding: 0;
     }
+
+    // Triangular bullet points
+    &:before {
+      content: '';
+      border-color: transparent white;
+      border-style: solid;
+      border-width: ($arrow-height / 2) 0 ($arrow-height / 2) $arrow-width;
+      display: block;
+      height: 0;
+      width: 0;
+      left: 0;
+      top: 0;
+      margin-top: 0.5 * 22px - 0.5 * $arrow-height;
+      position: absolute;
+    }
   }
 }
 
-#main-nav li:hover {
+#main-nav li.has-dropdown:hover {
   background: image-url('nav-arrow.png') no-repeat center bottom;
 
   .dropdown {

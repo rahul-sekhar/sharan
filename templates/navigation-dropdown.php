@@ -1,4 +1,6 @@
-<?php if (get_sub_field('sections')): ?>
+<?php
+if (get_sub_field('sections')):
+  ?>
   <div class="dropdown">
     <div class="placeholder-container">
       <div class="placeholder"></div>

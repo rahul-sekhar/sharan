@@ -713,6 +713,7 @@ body {
   list-style-type: none;
   line-height: 33px;
   margin-top: 6.5px;
+  letter-spacing: 1px;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
@@ -732,6 +733,9 @@ body {
 #main-nav li:first-child a {
   border-left: none;
 }
+#main-nav li:last-child a {
+  padding-right: 0;
+}
 
 #main-nav .dropdown {
   background-color: #333;
@@ -746,7 +750,7 @@ body {
   display: none;
 }
 #main-nav .dropdown .placeholder-container {
-  width: 30%;
+  width: 25%;
   float: left;
 }
 #main-nav .dropdown .placeholder {
@@ -755,19 +759,23 @@ body {
   background-color: #666;
 }
 #main-nav .dropdown ul {
+  margin: 0;
   text-transform: none;
   color: #999;
-  line-height: 150%;
+  line-height: 130%;
+  letter-spacing: 0;
   float: left;
-  width: 23%;
-  padding-left: 40px;
+  width: 25%;
+  padding-left: 80px;
 }
 #main-nav .dropdown li {
   float: none;
-  padding: 1px 0;
+  padding: 3px 0;
+  padding-left: 11px;
+  position: relative;
 }
-#main-nav .dropdown li.name {
-  height: 23px;
+#main-nav .dropdown li.name:before {
+  content: none;
 }
 #main-nav .dropdown li a {
   color: white;
@@ -775,11 +783,24 @@ body {
   border-left: none;
   padding: 0;
 }
+#main-nav .dropdown li:before {
+  content: '';
+  border-color: transparent white;
+  border-style: solid;
+  border-width: 3px 0 3px 6px;
+  display: block;
+  height: 0;
+  width: 0;
+  left: 0;
+  top: 0;
+  margin-top: 8px;
+  position: absolute;
+}
 
-#main-nav li:hover {
+#main-nav li.has-dropdown:hover {
   background: url('../images/nav-arrow.png?1393832215') no-repeat center bottom;
 }
-#main-nav li:hover .dropdown {
+#main-nav li.has-dropdown:hover .dropdown {
   display: block;
 }
 
@@ -849,8 +870,8 @@ body {
 }
 
 .page.content {
-  margin-left: 278px;
-  margin-right: 323px;
+  margin-left: 260px;
+  margin-right: 315px;
 }
 
 .page-sidebar {

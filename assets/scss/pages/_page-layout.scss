@@ -1,6 +1,6 @@
 $sidebar-width: 225px;
 $page-nav-width: 180px;
-$page-content-space: 98px;
+$page-content-space: 80px;
 
 .page-nav {
   float: left;
@@ -9,7 +9,7 @@ $page-content-space: 98px;
 
 .page.content {
   margin-left: $page-nav-width + $page-content-space;
-  margin-right: $sidebar-width + $page-content-space;
+  margin-right: $sidebar-width + + 10px + $page-content-space;
 }
 
 .page-sidebar {
