@@ -1324,11 +1324,12 @@ body.single-events .event.content h2 {
 }
 .content ul.events .short.event h3 {
   font-size: 13px;
+  letter-spacing: 1px;
   margin-left: 90.5px;
   margin-bottom: 0;
 }
 .content ul.events .short.event p {
-  font-size: 12px;
+  font-size: 13px;
   margin: 0;
   margin-left: 10px;
 }
