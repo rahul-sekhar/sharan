@@ -29,12 +29,16 @@ function roots_scripts() {
   }
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('dropdowns', get_template_directory_uri() . '/assets/js/dropdowns.js', array(), $version, true);
-  wp_register_script('events', get_template_directory_uri() . '/assets/js/events.js', array(), $version, true);
+  wp_register_script('responsiveslides', get_template_directory_uri() . '/assets/js/vendor/responsiveslides.min.js', array('jquery'), null, false);
+  wp_register_script('dropdowns', get_template_directory_uri() . '/assets/js/dropdowns.js', array(), $version, false);
+  wp_register_script('events', get_template_directory_uri() . '/assets/js/events.js', array(), $version, false);
+  wp_register_script('slideshow', get_template_directory_uri() . '/assets/js/slideshow.js', array('responsiveslides'), $version, false);
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');
+  wp_enqueue_script('responsiveslides');
   wp_enqueue_script('dropdowns');
   wp_enqueue_script('events');
+  wp_enqueue_script('slideshow');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 

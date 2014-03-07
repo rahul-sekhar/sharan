@@ -686,7 +686,7 @@ body {
   background-color: #fed970;
   height: 66px;
   padding-top: 10px;
-  z-index: 100;
+  z-index: 200;
 }
 #banner h1 {
   float: left;
@@ -697,10 +697,10 @@ body {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo.png?1393498597');
+  background-image: url('../images/logo.png?1394127265');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 159px;
+  width: 136px;
   height: 46px;
 }
 
@@ -1231,4 +1231,113 @@ body.single-events .event.content h2 {
 }
 .content ul.events .short.event p {
   font-size: 11px;
+}
+
+#slideshow {
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+#slideshow ul.slides {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#slideshow ul.slides li {
+  height: 500px;
+  width: 100%;
+}
+#slideshow img {
+  width: 100%;
+  height: 100%;
+}
+#slideshow .text {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  padding: 0 15%;
+  text-align: center;
+}
+#slideshow .caption {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 80px;
+  min-height: 100px;
+  text-shadow: #666666 0 0 8px;
+}
+#slideshow .button {
+  text-transform: none;
+  letter-spacing: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0 20px;
+  -webkit-box-shadow: #666666 0 0 8px;
+  -moz-box-shadow: #666666 0 0 8px;
+  box-shadow: #666666 0 0 8px;
+}
+#slideshow .button:after {
+  content: '\e806';
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  text-align: left;
+  width: auto;
+  margin-left: 0.4em;
+  margin-right: 0;
+}
+#slideshow .rslides_tabs {
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+  z-index: 100;
+}
+#slideshow .rslides_tabs li {
+  float: left;
+  margin-left: 5px;
+}
+#slideshow .rslides_tabs a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: #666666 0 0 8px;
+  -moz-box-shadow: #666666 0 0 8px;
+  box-shadow: #666666 0 0 8px;
+}
+#slideshow .rslides_tabs .rslides_here a {
+  background-color: #fed970;
 }

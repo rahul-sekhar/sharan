@@ -11,10 +11,13 @@ $darker-blue: #0084C9;
 
 
 // Z Indices
-$banner-z-index: 100;
+$banner-z-index: 200;
+$slide-nav-z-index: 100;
 
 
 // Settings
+$page-width: 1100px;
+
 $banner-height: image-height('logo.png');
 $banner-padding: 10px;
 $banner-full-height: $banner-height + 2 * $banner-padding;
