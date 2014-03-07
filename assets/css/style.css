@@ -704,10 +704,10 @@ body {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo.png?1394185654');
+  background-image: url('../images/logo.png?1394186209');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 158px;
+  width: 161px;
   height: 41px;
 }
 
@@ -1316,7 +1316,7 @@ body.single-events .event.content h2 {
   list-style-type: none;
 }
 .content ul.events li {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .content ul.events li:first-child {
   margin-top: 0;
