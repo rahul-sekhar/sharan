@@ -727,6 +727,7 @@ body {
 #main-nav li {
   float: left;
   padding-bottom: 14px;
+  /* Debug code to show a particular dropdown */
 }
 #main-nav a {
   color: #333333;
@@ -752,14 +753,9 @@ body {
   padding: 40px;
   display: none;
 }
-#main-nav .dropdown .placeholder-container {
+#main-nav .dropdown .feature-container {
   width: 25%;
   float: left;
-}
-#main-nav .dropdown .placeholder {
-  width: 196px;
-  height: 132px;
-  background-color: #666;
 }
 #main-nav .dropdown ul {
   margin: 0;
@@ -816,6 +812,64 @@ body {
 
 #main-nav li li:hover {
   background: none;
+}
+
+#main-nav .dropdown .feature-container a {
+  color: #1899cb;
+  padding: 0;
+  border: none;
+  text-transform: none;
+  letter-spacing: 0;
+}
+#main-nav .dropdown .feature-container .caption {
+  margin: 0;
+  font-size: 13px;
+  line-height: 130%;
+  margin-top: 10px;
+  width: 196px;
+}
+#main-nav .dropdown .feature-container .caption:after {
+  content: '\e806';
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  text-align: left;
+  width: auto;
+  margin-left: 0.4em;
+  margin-right: 0;
+}
+#main-nav .dropdown .feature-container .image {
+  width: 196px;
+  height: 132px;
+}
+#main-nav .dropdown .feature-container .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#main-nav .dropdown .feature-container .placeholder {
+  width: 196px;
+  height: 132px;
+  background-color: #666;
 }
 
 #content-info {

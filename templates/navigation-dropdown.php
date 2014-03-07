@@ -2,8 +2,23 @@
 if (get_sub_field('sections')):
   ?>
   <div class="dropdown">
-    <div class="placeholder-container">
-      <div class="placeholder"></div>
+    <div class="feature-container">
+      <?php if (get_sub_field('navigation_feature_type') == 'Image'):
+        $image = get_sub_field('feature_image');
+        if ($image): ?>
+          <a href="<?php the_sub_field('feature_link_url'); ?>">
+            <div class="image">
+              <img src="<?php echo $image['sizes']['nav-feature']; ?>" alt="" />
+            </div>
+
+            <?php if (get_sub_field('caption')): ?>
+              <p class="caption"><?php the_sub_field('caption'); ?></p>
+            <?php endif; ?>
+          </a>
+        <?php else: ?>
+          <div class="placeholder"></div>
+         <?php endif; ?>
+      <?php endif; ?>
     </div>
 
     <?php while (has_sub_field('sections')): ?>

@@ -17,6 +17,13 @@ $nav-margin: ($banner-height - 33px) / 2;
   li {
     float: left;
     padding-bottom: $banner-padding + $nav-margin;
+
+    /* Debug code to show a particular dropdown */
+    // $display-dropdown-no: 1
+    //
+    // &:nth-child($display-dropdown-no) .dropdown {
+    //   display: block;
+    // }
   }
 
   a {

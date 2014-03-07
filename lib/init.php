@@ -10,6 +10,7 @@ function roots_setup() {
   add_image_size('event-medium', 210, 150, true);
   add_image_size('person', 120, 120, true);
   add_image_size('slideshow', 1100, 500, true);
+  add_image_size('nav-feature', 196, 132, true);
 }
 add_action('after_setup_theme', 'roots_setup');
 
