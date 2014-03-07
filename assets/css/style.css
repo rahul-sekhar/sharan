@@ -1229,7 +1229,7 @@ body.single-events .event.content h2 {
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
-  margin: 8px 0;
+  margin: 0 0 8px 0;
 }
 .short.event p {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
