@@ -1308,24 +1308,37 @@ body.single-events .event.content h2 {
   list-style-type: none;
 }
 .content ul.events li {
-  display: inline-block;
-  vertical-align: top;
-  width: 49%;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  margin-top: 10px;
 }
-.content ul.events li:nth-child(odd) {
-  padding-right: 10px;
+.content ul.events li:first-child {
+  margin-top: 0;
 }
-.content ul.events li:nth-child(even) {
-  padding-right: 0;
-  padding-left: 10px;
+.content ul.events .short.event {
+  overflow: hidden;
+  *zoom: 1;
+}
+.content ul.events .short.event .image, .content ul.events .short.event img {
+  width: 80.5px;
+  height: 63.0px;
 }
 .content ul.events .short.event h3 {
   font-size: 12px;
+  margin-left: 90.5px;
+  margin-bottom: 0;
 }
 .content ul.events .short.event p {
   font-size: 11px;
+  margin: 0;
+  margin-left: 10px;
+}
+.content ul.events .short.event .date {
+  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: normal;
+  float: left;
+}
+.content ul.events .short.event .city {
+  float: left;
 }
 
 #slideshow {

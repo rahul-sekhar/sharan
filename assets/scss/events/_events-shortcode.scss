@@ -2,30 +2,57 @@
   ul.events {
     @include reset-list;
 
+    // li {
+    //   display: inline-block;
+    //   vertical-align: top;
+    //   width: 49%;
+    //   padding-right: 20px;
+    //   padding-bottom: 20px;
+
+    //   &:nth-child(odd) {
+    //     padding-right: 10px;
+    //   }
+
+    //   &:nth-child(even) {
+    //     padding-right: 0;
+    //     padding-left: 10px;
+    //   }
+    // }
+
     li {
-      display: inline-block;
-      vertical-align: top;
-      width: 49%;
-      padding-right: 20px;
-      padding-bottom: 20px;
-
-      &:nth-child(odd) {
-        padding-right: 10px;
-      }
-
-      &:nth-child(even) {
-        padding-right: 0;
-        padding-left: 10px;
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0;
       }
     }
 
     .short.event {
+      @include clearfix;
+
+      .image, img {
+        width: 115px * 0.7;
+        height: 90px * 0.7;
+      }
+
       h3 {
         font-size: 12px;
+        margin-left: 115px * 0.7 + 10px;
+        margin-bottom: 0;
       }
 
       p {
         font-size: 11px;
+        margin: 0;
+        margin-left: 10px;
+      }
+
+      .date {
+        @include whitney-semibold;
+        float: left;
+      }
+
+      .city {
+        float: left;
       }
     }
   }
