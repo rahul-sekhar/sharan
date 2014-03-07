@@ -50,6 +50,10 @@
       text-align: center;
       margin-bottom: 10px;
       margin-top: 150px / 2 - $button-height / 2;
+
+      .button {
+        margin: 0;
+      }
     }
   }
 

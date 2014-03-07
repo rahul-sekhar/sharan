@@ -1232,6 +1232,9 @@ body.single-events .event.content h2 {
   margin-bottom: 10px;
   margin-top: 57px;
 }
+.event.content .pre-content .register .button {
+  margin: 0;
+}
 .event.content .inner-content {
   padding-top: 15px;
 }
