@@ -636,6 +636,10 @@ img {
 .content h4 + p, .content h5 + p, .content h6 + p {
   margin-top: 12px;
 }
+.content .button {
+  display: block;
+  margin: 24px 0;
+}
 
 .button {
   display: inline-block;
