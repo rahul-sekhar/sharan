@@ -7,7 +7,7 @@
   width: 100%;
   padding: 40px;
   padding-bottom: 70px;
-  display: none;
+  // display: none;
 
   .placeholder-container {
     width: 25%;
@@ -33,17 +33,22 @@
   }
 
   $arrow-width: 6px;
-  $arrow-space: 5px;
+  $arrow-space: 6px;
   $arrow-height: 6px;
 
   li {
     float: none;
-    padding: 3px 0;
+    padding: 0;
+    margin: 10px 0;
     padding-left: $arrow-width + $arrow-space;
     position: relative;
 
     &.name {
-      min-height: 24px;
+      min-height: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      padding-left: 0;
+
       &:before {
         content: none;
       }
@@ -67,7 +72,7 @@
       width: 0;
       left: 0;
       top: 0;
-      margin-top: 0.5 * 22px - 0.5 * $arrow-height;
+      margin-top: 0.5 * 18px - 0.5 * $arrow-height;
       position: absolute;
     }
   }
