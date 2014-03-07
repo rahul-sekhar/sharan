@@ -1061,8 +1061,8 @@ body {
   color: #1899cb;
   display: block;
   margin-bottom: 10px;
-  font-family: 'Sentinel SSm 5r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 500;
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1478,12 +1478,12 @@ body.home .event-list h2 {
   *zoom: 1;
 }
 #home-footer .info {
-  width: 720px;
+  width: 600px;
   float: left;
 }
 #home-footer .info p {
   margin: 0;
-  line-height: 160%;
+  line-height: 170%;
   font-size: 18px;
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
@@ -1496,7 +1496,7 @@ body.home .event-list h2 {
 }
 #home-footer .support {
   float: right;
-  font-size: 17px;
+  font-size: 15px;
 }
 #home-footer .support p {
   margin: 0;
@@ -1505,8 +1505,8 @@ body.home .event-list h2 {
   color: #1899cb;
   display: block;
   margin-bottom: 24px;
-  font-family: 'Sentinel SSm 5r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 500;
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1px;

@@ -8,12 +8,12 @@
   @include clearfix;
 
   .info {
-    width: 720px;
+    width: 600px;
     float: left;
 
     p {
       margin: 0;
-      line-height: 160%;
+      line-height: 170%;
       font-size: 18px;
       @include sentinel-book;
 
@@ -25,7 +25,7 @@
 
   .support {
     float: right;
-    font-size: 17px;
+    font-size: 15px;
 
     p {
       margin: 0;
@@ -35,7 +35,7 @@
       @include link-colors($blue);
       display: block;
       margin-bottom: 24px;
-      @include sentinel-medium;
+      @include sentinel-book;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 8px;

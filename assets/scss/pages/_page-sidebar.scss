@@ -70,7 +70,7 @@ $sidebar-padding: 15px;
       @include link-colors($blue);
       display: block;
       margin-bottom: 10px;
-      @include sentinel-medium;
+      @include sentinel-book;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: 12px;
