@@ -20,7 +20,7 @@ $slideshow-height: 500px;
 
   .text {
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     width: 100%;
     padding: 0 15%;
     text-align: center;
@@ -31,7 +31,7 @@ $slideshow-height: 500px;
     color: white;
     font-size: 50px;
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     min-height: 100px;
     @include text-shadow(#666 0 0 8px);
   }
@@ -62,15 +62,15 @@ $slideshow-height: 500px;
 
     li {
       float: left;
-      margin-left: 5px;
+      margin-left: 8px;
     }
 
     a {
       @include hide-text;
       display: block;
       background-color: white;
-      width: 10px;
-      height: 10px;
+      width: 16px;
+      height: 16px;
       @include border-radius(50%);
       @include box-shadow(#666 0 0 8px);
     }

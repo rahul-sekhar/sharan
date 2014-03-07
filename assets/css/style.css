@@ -1274,7 +1274,7 @@ body.single-events .event.content h2 {
 }
 #slideshow .text {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   width: 100%;
   padding: 0 15%;
   text-align: center;
@@ -1286,7 +1286,7 @@ body.single-events .event.content h2 {
   color: white;
   font-size: 50px;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   min-height: 100px;
   text-shadow: #666666 0 0 8px;
 }
@@ -1340,7 +1340,7 @@ body.single-events .event.content h2 {
 }
 #slideshow .rslides_tabs li {
   float: left;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 #slideshow .rslides_tabs a {
   text-indent: -119988px;
@@ -1348,8 +1348,8 @@ body.single-events .event.content h2 {
   text-align: left;
   display: block;
   background-color: white;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
