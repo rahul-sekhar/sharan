@@ -15,7 +15,6 @@
     a {
       display: block;
       @include replace-text-with-dimensions('logo.png');
-      height: $banner-height;
     }
   }
 }
