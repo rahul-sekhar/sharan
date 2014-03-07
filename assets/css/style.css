@@ -830,6 +830,7 @@ body {
   font-size: 13px;
   line-height: 130%;
   margin-top: 10px;
+  text-align: right;
   width: 196px;
 }
 #main-nav .dropdown .feature-container .caption:after {
