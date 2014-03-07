@@ -6,6 +6,7 @@
   height: $banner-full-height;
   padding-top: $banner-padding;
   z-index: $banner-z-index;
+  @include box-shadow(#666 0 0 5px);
 
   h1 {
     float: left;
@@ -13,7 +14,8 @@
 
     a {
       display: block;
-      @include replace-text-with-dimensions('logo.png')
+      @include replace-text-with-dimensions('logo.png');
+      height: $banner-height;
     }
   }
 }

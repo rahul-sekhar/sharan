@@ -2,6 +2,10 @@ $sidebar-width: 225px;
 $page-nav-width: 180px;
 $page-content-space: 80px;
 
+.page-container {
+  margin-top: 70px;
+}
+
 .page-nav {
   float: left;
   width: $page-nav-width;

@@ -17,6 +17,7 @@ if(function_exists("register_field_group"))
             'label' => 'Image',
             'name' => 'image',
             'type' => 'image',
+            'instructions' => 'Please make sure the image is at least 1100x500 pixels in size',
             'required' => 1,
             'column_width' => '',
             'save_format' => 'object',

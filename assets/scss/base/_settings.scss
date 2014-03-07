@@ -18,7 +18,7 @@ $slide-nav-z-index: 100;
 // Settings
 $page-width: 1100px;
 
-$banner-height: image-height('logo.png');
+$banner-height: image-height('logo.png') - 5px;
 $banner-padding: 10px;
 $banner-full-height: $banner-height + 2 * $banner-padding;
 
