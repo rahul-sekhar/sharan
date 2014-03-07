@@ -48,16 +48,3 @@ if ($people) :
   </ul>
 </section>
 <?php endif; ?>
-
-<?php if (get_field('links')) : ?>
-<section class="links">
-  <h3>Links</h3>
-  <ul>
-    <?php while (has_sub_field('links')) : ?>
-      <li>
-        <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('name'); ?></a>
-      </li>
-    <?php endwhile; ?>
-  </ul>
-</section>
-<?php endif; ?>
