@@ -1,0 +1,117 @@
+#home-footer {
+  background-color: $near-white;
+  margin-bottom: -1 * $page-bottom-padding;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  margin-top: 80px;
+  clear: both;
+  @include clearfix;
+
+  .info {
+    width: 720px;
+    float: left;
+
+    p {
+      margin: 0;
+      line-height: 140%;
+      font-size: 20px;
+      @include sentinel-book;
+
+      strong {
+        @include sentinel-semibold;
+      }
+    }
+  }
+
+  .support {
+    float: right;
+    font-size: 17px;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      @include link-colors($blue);
+      display: block;
+      margin-bottom: 24px;
+      @include sentinel-medium;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      font-size: 17px;
+    }
+  }
+
+  .lower {
+    clear: both;
+    padding-top: 60px;
+    @include clearfix;
+  }
+
+  .social, #subscribe-form {
+    float: left;
+    margin-right: 60px;
+    p, label {
+      display: block;
+      margin: 0;
+      margin-bottom: 25px;
+      @include whitney-medium;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  .social {
+    ul {
+      @include reset-list;
+      @include clearfix;
+      margin-top: 15px;
+      font-size: 32px;
+    }
+
+    li {
+      float: left;
+      margin-right: 14px;
+    }
+
+    a {
+      @include link-colors(#333);
+
+      &:before {
+        margin-left: 0;
+      }
+    }
+  }
+
+  #subscribe-form .archive {
+    font-size: 13px;
+    margin-top: 20px;
+    display: block;
+  }
+
+  #subscribe-email {
+    border: 1px solid $grey;
+    font-size: 11px;
+    line-height: 16px;
+    padding: 6px 8px;
+    width: 216px;
+
+    @include border-radius(4px);
+    @include placeholder-color(#666);
+  }
+
+  .subscribe-email-box {
+    button {
+      margin-left: 5px;
+      height: 30px;
+      border: none;
+      background-color: $grey;
+      color: white;
+      font-size: 12px;
+
+      @include border-radius(4px);
+    }
+  }
+}

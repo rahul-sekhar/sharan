@@ -9,7 +9,7 @@ body {
 
 #wrapper {
   padding-top: $banner-full-height;
-  padding-bottom: 40px;
+  padding-bottom: $page-bottom-padding;
   min-height: 100%;
   margin-bottom: -1 * $footer-height;
   @include clearfix;

@@ -12,6 +12,7 @@ require_once locate_template('/lib/custom-fields/events.php');                  
 require_once locate_template('/lib/custom-fields/people.php');                      // People fields
 require_once locate_template('/lib/custom-fields/default-sidebar-image.php');       // Default sidebar image option fields
 require_once locate_template('/lib/custom-fields/slideshow.php');                   // Slideshow fields
+require_once locate_template('/lib/custom-fields/home-footer-text.php');            // Home page footer text field
 
 require_once locate_template('/lib/utils.php');             // Utility functions
 require_once locate_template('/lib/init.php');              // Initial theme setup and constants

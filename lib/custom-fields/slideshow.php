@@ -77,7 +77,7 @@ if(function_exists("register_field_group"))
         array (
           'param' => 'options_page',
           'operator' => '==',
-          'value' => 'acf-options-home-page',
+          'value' => 'acf-options-slideshow',
           'order_no' => 0,
           'group_no' => 0,
         ),

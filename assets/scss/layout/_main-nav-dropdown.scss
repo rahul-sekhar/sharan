@@ -6,7 +6,6 @@
   top: $banner-height + $banner-padding;
   width: 100%;
   padding: 40px;
-  padding-bottom: 70px;
   display: none;
 
   .placeholder-container {
@@ -39,7 +38,7 @@
   li {
     float: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 8px 0;
     padding-left: $arrow-width + $arrow-space;
     position: relative;
 

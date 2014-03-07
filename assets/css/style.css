@@ -750,7 +750,6 @@ body {
   top: 51px;
   width: 100%;
   padding: 40px;
-  padding-bottom: 70px;
   display: none;
 }
 #main-nav .dropdown .placeholder-container {
@@ -775,7 +774,7 @@ body {
 #main-nav .dropdown li {
   float: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 8px 0;
   padding-left: 11px;
   position: relative;
 }
@@ -946,6 +945,9 @@ body {
   margin-top: 5px;
   margin-bottom: 40px;
 }
+.page-sidebar #subscribe-form .archive {
+  display: none;
+}
 .page-sidebar #subscribe-email {
   border: 1px solid #b8b8ae;
   font-size: 11px;
@@ -1038,6 +1040,9 @@ body.single-events .event.content h2 {
   margin-top: 0;
 }
 
+.event-list {
+  margin-bottom: 60px;
+}
 .event-list h2 {
   font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 300;
@@ -1386,4 +1391,137 @@ body.home .event-list {
 }
 body.home .event-list h2 {
   font-size: 44px;
+}
+
+#home-footer {
+  background-color: #ecece4;
+  margin-bottom: -40px;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  margin-top: 80px;
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+#home-footer .info {
+  width: 720px;
+  float: left;
+}
+#home-footer .info p {
+  margin: 0;
+  line-height: 140%;
+  font-size: 20px;
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+}
+#home-footer .info p strong {
+  font-family: 'Sentinel SSm 6r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 600;
+  font-style: normal;
+}
+#home-footer .support {
+  float: right;
+  font-size: 17px;
+}
+#home-footer .support p {
+  margin: 0;
+}
+#home-footer .support a {
+  color: #1899cb;
+  display: block;
+  margin-bottom: 24px;
+  font-family: 'Sentinel SSm 5r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  font-size: 17px;
+}
+#home-footer .lower {
+  clear: both;
+  padding-top: 60px;
+  overflow: hidden;
+  *zoom: 1;
+}
+#home-footer .social, #home-footer #subscribe-form {
+  float: left;
+  margin-right: 60px;
+}
+#home-footer .social p, #home-footer .social label, #home-footer #subscribe-form p, #home-footer #subscribe-form label {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#home-footer .social ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 15px;
+  font-size: 32px;
+}
+#home-footer .social li {
+  float: left;
+  margin-right: 14px;
+}
+#home-footer .social a {
+  color: #333333;
+}
+#home-footer .social a:before {
+  margin-left: 0;
+}
+#home-footer #subscribe-form .archive {
+  font-size: 13px;
+  margin-top: 20px;
+  display: block;
+}
+#home-footer #subscribe-email {
+  border: 1px solid #b8b8ae;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 6px 8px;
+  width: 216px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+#home-footer #subscribe-email::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #666666;
+}
+#home-footer #subscribe-email:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666666;
+}
+#home-footer #subscribe-email::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666666;
+}
+#home-footer #subscribe-email:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #666666;
+}
+#home-footer .subscribe-email-box button {
+  margin-left: 5px;
+  height: 30px;
+  border: none;
+  background-color: #b8b8ae;
+  color: white;
+  font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }

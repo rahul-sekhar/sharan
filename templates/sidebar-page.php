@@ -12,30 +12,11 @@
     <img src="<?php echo $default_image['sizes']['post-thumbnail'] ?>" alt="" />
   <?php
   endif;
+
+  get_template_part('templates/newsletter-box');
+
+  get_template_part('templates/support-box');
+
+  get_template_part('templates/social-box');
   ?>
-
-  <form id="subscribe-form">
-    <label for="subscribe-email">Subscribe to our newsletter</label>
-    <div class="subscribe-email-box">
-      <input id="subscribe-email" type="email" placeholder="Enter your email address" />
-      <button type="submit"><i class="icon-ok"></i></button>
-    </div>
-  </form>
-
-  <section class="support">
-    <p>Support our work</p>
-    <a href="#">Donate</a>
-
-    <p>Get involved</p>
-    <a href="#">Volunteer</a>
-  </section>
-
-  <section class="social">
-    <p>Keep in touch</p>
-    <ul>
-      <li><a class="icon-facebook" href="#"></a></li>
-      <li><a class="icon-twitter" href="#"></a></li>
-      <li><a class="icon-youtube" href="#"></a></li>
-    </ul>
-  </section>
 </aside>
