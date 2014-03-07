@@ -672,7 +672,7 @@ body h4 + p, body h5 + p, body h6 + p {
   margin-top: 12px;
 }
 body .button {
-  display: block;
+  display: inline-block;
   margin: 24px 0;
 }
 
