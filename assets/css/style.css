@@ -774,6 +774,9 @@ body {
   padding-left: 11px;
   position: relative;
 }
+#main-nav .dropdown li.name {
+  min-height: 24px;
+}
 #main-nav .dropdown li.name:before {
   content: none;
 }

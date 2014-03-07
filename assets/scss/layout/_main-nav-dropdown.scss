@@ -43,6 +43,7 @@
     position: relative;
 
     &.name {
+      min-height: 24px;
       &:before {
         content: none;
       }
