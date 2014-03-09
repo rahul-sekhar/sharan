@@ -1,8 +1,12 @@
+<?php
+$links = get_field('social_links', 'options');
+if ($links): ?>
 <div class="social">
   <p>Keep in touch</p>
   <ul>
-    <li><a class="icon-facebook" href="#"></a></li>
-    <li><a class="icon-twitter" href="#"></a></li>
-    <li><a class="icon-youtube" href="#"></a></li>
+    <?php foreach ($links as $link): ?>
+      <li><a class="icon-<?php echo $link['type']; ?>" href="<?php echo $link['url']; ?>"></a></li>
+    <?php endforeach; ?>
   </ul>
 </div>
+<?php endif; ?>
