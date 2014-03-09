@@ -21,5 +21,9 @@
     </div>
   </div>
 
-  <?php sharan_event_list(); ?>
+  <div class="events-container">
+    <?php sharan_event_list(); ?>
+
+    <div class="loader"></div>
+  </div>
 </div>

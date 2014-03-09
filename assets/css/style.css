@@ -1119,6 +1119,7 @@ body.single-events .event.content h2 {
   background-color: #333;
   position: relative;
   text-align: center;
+  z-index: 10;
 }
 .event-list .filters .city .button, .event-list .filters .type .button {
   cursor: pointer;
@@ -1180,6 +1181,42 @@ body.single-events .event.content h2 {
 }
 .event-list ul.events li {
   margin-top: 40px;
+}
+.event-list .events-container {
+  padding-top: 1px;
+  position: relative;
+}
+.event-list .loader {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.event-list .loader:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: white url('../images/ajax-loader.gif?1394344349') no-repeat center;
+}
+.event-list.loading .loader {
+  display: block;
 }
 
 .event.content h2 {

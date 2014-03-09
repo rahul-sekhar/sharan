@@ -20,8 +20,10 @@ jQuery(function ($) {
       data['type_id'] = type.data('id');
     }
 
+    eventList.addClass('loading');
     $.get('/wp-admin/admin-ajax.php', data, function(response) {
       eventList.find('ul.events, p.no-results').replaceWith(response);
+      eventList.removeClass('loading');
     });
   }
 
