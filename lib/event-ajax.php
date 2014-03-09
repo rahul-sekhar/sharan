@@ -35,6 +35,7 @@ function sharan_event_list($show_no_results = true, $tag_ids = null) {
   $cut_off_date = strtotime("$wait_days days");
 
   $args = array(
+    'posts_per_page' => -1,
     'post_type' => 'events',
     'tax_query' => $tax_query,
     'meta_query' => array(
