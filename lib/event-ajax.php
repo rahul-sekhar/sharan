@@ -39,7 +39,7 @@ function sharan_event_list($show_no_results = true, $tag_ids = null) {
     'tax_query' => $tax_query,
     'meta_query' => array(
       array(
-        'key' => 'from',
+        'key' => 'to',
         'value' => date('Ymd', $cut_off_date),
         'compare' => '>=',
         'type' => 'DATE'
