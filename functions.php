@@ -7,13 +7,14 @@ require_once locate_template('/lib/acf-flexible-content/acf-flexible-content.php
 
 require_once locate_template('/lib/acf-config.php');
 
-require_once locate_template('/lib/custom-fields/navigation.php');                  // Navigation fields
-require_once locate_template('/lib/custom-fields/events.php');                      // Event fields
-require_once locate_template('/lib/custom-fields/people.php');                      // People fields
-require_once locate_template('/lib/custom-fields/default-sidebar-image.php');       // Default sidebar image option fields
-require_once locate_template('/lib/custom-fields/slideshow.php');                   // Slideshow fields
-require_once locate_template('/lib/custom-fields/home-footer-text.php');            // Home page footer text field
-require_once locate_template('/lib/custom-fields/social-links.php');                // Fields for social links
+require_once locate_template('/lib/custom-fields/navigation.php');
+require_once locate_template('/lib/custom-fields/events.php');
+require_once locate_template('/lib/custom-fields/people.php');
+require_once locate_template('/lib/custom-fields/default-sidebar-image.php');
+require_once locate_template('/lib/custom-fields/slideshow.php');
+require_once locate_template('/lib/custom-fields/home-footer-text.php');
+require_once locate_template('/lib/custom-fields/social-links.php');
+require_once locate_template('/lib/custom-fields/event-removal.php');
 
 require_once locate_template('/lib/utils.php');             // Utility functions
 require_once locate_template('/lib/init.php');              // Initial theme setup and constants

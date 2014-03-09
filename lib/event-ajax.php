@@ -25,9 +25,26 @@ function sharan_event_list($show_no_results = true, $tag_ids = null) {
     ));
   }
 
+  // Calculate the cut off date for events
+  $wait_days = get_field('event_wait_days', 'options');
+  if (!$wait_days) {
+    $wait_days = 0;
+  } else {
+    $wait_days = -1 * $wait_days;
+  }
+  $cut_off_date = strtotime("$wait_days days");
+
   $args = array(
     'post_type' => 'events',
-    'tax_query' => $tax_query
+    'tax_query' => $tax_query,
+    'meta_query' => array(
+      array(
+        'key' => 'from',
+        'value' => date('Ymd', $cut_off_date),
+        'compare' => '>=',
+        'type' => 'DATE'
+      )
+    )
   );
   $events = new WP_Query($args);
 
