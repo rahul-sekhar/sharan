@@ -1185,6 +1185,7 @@ body.single-events .event.content h2 {
 .event-list .events-container {
   padding-top: 1px;
   position: relative;
+  min-height: 100px;
 }
 .event-list .loader {
   content: '';
