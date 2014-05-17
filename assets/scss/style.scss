@@ -27,9 +27,9 @@ Designed by Shalini Sekhar
 @import "layout/footer";
 @import "layout/breadcrumbs";
 
-@import "pages/page-layout";
+@import "pages-and-posts/layout";
+@import "pages-and-posts/sidebar";
 @import "pages/page-nav";
-@import "pages/page-sidebar";
 
 @import "events/single-event-layout";
 @import "events/event-list";

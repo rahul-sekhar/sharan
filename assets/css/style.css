@@ -932,23 +932,134 @@ body {
   content: none;
 }
 
-.page-container {
+.page-container, .blog-container {
   margin-top: 70px;
 }
 
-.page-nav {
+.page-nav, .blog-nav {
   float: left;
   width: 180px;
 }
 
-.page.content {
+.page.content, .post.content {
   margin-left: 260px;
   margin-right: 315px;
 }
 
-.page-sidebar {
+.page-sidebar, .blog-sidebar {
   float: right;
   width: 225px;
+}
+
+.page-sidebar, .blog-sidebar {
+  background-color: #ecece4;
+  padding: 15px;
+  padding-bottom: 40px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.page-sidebar img, .blog-sidebar img {
+  border: 1px solid #999;
+  margin: -15px;
+  margin-bottom: 15px;
+  width: 225px;
+  max-width: 225px;
+}
+.page-sidebar p, .blog-sidebar p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.page-sidebar label, .blog-sidebar label {
+  display: block;
+  margin-bottom: 5px;
+}
+.page-sidebar #subscribe-form, .blog-sidebar #subscribe-form {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.page-sidebar #subscribe-form .archive, .blog-sidebar #subscribe-form .archive {
+  display: none;
+}
+.page-sidebar #subscribe-email, .blog-sidebar #subscribe-email {
+  border: 1px solid #b8b8ae;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 6px 8px;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.page-sidebar #subscribe-email::-webkit-input-placeholder, .blog-sidebar #subscribe-email::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #666666;
+}
+.page-sidebar #subscribe-email:-moz-placeholder, .blog-sidebar #subscribe-email:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666666;
+}
+.page-sidebar #subscribe-email::-moz-placeholder, .blog-sidebar #subscribe-email::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666666;
+}
+.page-sidebar #subscribe-email:-ms-input-placeholder, .blog-sidebar #subscribe-email:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #666666;
+}
+.page-sidebar .subscribe-email-box, .blog-sidebar .subscribe-email-box {
+  position: relative;
+  margin-top: 10px;
+}
+.page-sidebar .subscribe-email-box button, .blog-sidebar .subscribe-email-box button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  border: none;
+  background-color: #b8b8ae;
+  color: white;
+  font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.page-sidebar .support, .blog-sidebar .support {
+  margin-bottom: 40px;
+}
+.page-sidebar .support a, .blog-sidebar .support a {
+  color: #1899cb;
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.page-sidebar .social ul, .blog-sidebar .social ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 15px;
+  font-size: 18px;
+}
+.page-sidebar .social li, .blog-sidebar .social li {
+  float: left;
+  margin-right: 10px;
+}
+.page-sidebar .social a, .blog-sidebar .social a {
+  color: #777777;
 }
 
 .page-nav h3 {
@@ -971,117 +1082,6 @@ body {
 }
 .page-nav li {
   line-height: 22px;
-}
-
-.page-sidebar {
-  background-color: #ecece4;
-  padding: 15px;
-  padding-bottom: 40px;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 13px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-.page-sidebar img {
-  border: 1px solid #999;
-  margin: -15px;
-  margin-bottom: 15px;
-  width: 225px;
-  max-width: 225px;
-}
-.page-sidebar p {
-  margin: 0;
-  margin-bottom: 5px;
-}
-.page-sidebar label {
-  display: block;
-  margin-bottom: 5px;
-}
-.page-sidebar #subscribe-form {
-  margin-top: 5px;
-  margin-bottom: 40px;
-}
-.page-sidebar #subscribe-form .archive {
-  display: none;
-}
-.page-sidebar #subscribe-email {
-  border: 1px solid #b8b8ae;
-  font-size: 11px;
-  line-height: 16px;
-  padding: 6px 8px;
-  width: 100%;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.page-sidebar #subscribe-email::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: #666666;
-}
-.page-sidebar #subscribe-email:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #666666;
-}
-.page-sidebar #subscribe-email::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #666666;
-}
-.page-sidebar #subscribe-email:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: #666666;
-}
-.page-sidebar .subscribe-email-box {
-  position: relative;
-  margin-top: 10px;
-}
-.page-sidebar .subscribe-email-box button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 30px;
-  border: none;
-  background-color: #b8b8ae;
-  color: white;
-  font-size: 12px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.page-sidebar .support {
-  margin-bottom: 40px;
-}
-.page-sidebar .support a {
-  color: #1899cb;
-  display: block;
-  margin-bottom: 10px;
-  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-.page-sidebar .social ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  overflow: hidden;
-  *zoom: 1;
-  margin-top: 15px;
-  font-size: 18px;
-}
-.page-sidebar .social li {
-  float: left;
-  margin-right: 10px;
-}
-.page-sidebar .social a {
-  color: #777777;
 }
 
 body.single-events .event-list {
@@ -1402,6 +1402,14 @@ body.single-events .event.content h2 {
   height: 500px;
   width: 100%;
 }
+#slideshow ul.slides li:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+}
 #slideshow img {
   width: 100%;
   height: 100%;
@@ -1414,15 +1422,23 @@ body.single-events .event.content h2 {
   text-align: center;
 }
 #slideshow .caption {
+  margin-bottom: 60px;
+  min-height: 100px;
+}
+#slideshow .caption p {
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
   color: white;
   font-size: 50px;
-  margin: 0;
-  margin-bottom: 60px;
-  min-height: 100px;
   text-shadow: #666666 0 0 8px;
+  padding: 20px;
+  -webkit-border-radius: 40%;
+  -moz-border-radius: 40%;
+  -ms-border-radius: 40%;
+  -o-border-radius: 40%;
+  border-radius: 40%;
+  margin: 0;
 }
 #slideshow .button {
   text-transform: none;

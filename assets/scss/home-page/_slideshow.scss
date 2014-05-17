@@ -10,6 +10,15 @@ $slideshow-height: 500px;
     li {
       height: $slideshow-height;
       width: 100%;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        background-color: rgba(black, 0.25);
+      }
     }
   }
 
@@ -27,13 +36,18 @@ $slideshow-height: 500px;
   }
 
   .caption {
-    @include sentinel-book;
-    color: white;
-    font-size: 50px;
-    margin: 0;
     margin-bottom: 60px;
     min-height: 100px;
-    @include text-shadow(#666 0 0 8px);
+
+    p {
+      @include sentinel-book;
+      color: white;
+      font-size: 50px;
+      @include text-shadow(#666 0 0 8px);
+      padding: 20px;
+      @include border-radius(40%);
+      margin: 0;
+    }
   }
 
   .button {

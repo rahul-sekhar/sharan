@@ -10,7 +10,9 @@ if ($slides) :
 
           <div class="text">
             <?php if ($slide['text']) : ?>
-              <p class="caption"><?php echo $slide['text']; ?></p>
+              <div class="caption">
+                <p><?php echo $slide['text']; ?></p>
+              </div>
             <?php endif; ?>
 
             <a class="button" href="<?php echo $slide['link_url']; ?>"><?php echo $slide['link_text']; ?></a>
