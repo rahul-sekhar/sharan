@@ -1432,12 +1432,6 @@ body.single-events .event.content h2 {
   color: white;
   font-size: 50px;
   text-shadow: #666666 0 0 8px;
-  padding: 20px;
-  -webkit-border-radius: 40%;
-  -moz-border-radius: 40%;
-  -ms-border-radius: 40%;
-  -o-border-radius: 40%;
-  border-radius: 40%;
   margin: 0;
 }
 #slideshow .button {

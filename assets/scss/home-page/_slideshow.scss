@@ -44,8 +44,6 @@ $slideshow-height: 500px;
       color: white;
       font-size: 50px;
       @include text-shadow(#666 0 0 8px);
-      padding: 20px;
-      @include border-radius(40%);
       margin: 0;
     }
   }
