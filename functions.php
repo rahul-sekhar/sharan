@@ -34,4 +34,4 @@ require_once locate_template('/lib/date-formatting.php');   // Functions to form
 require_once locate_template('/lib/taxonomies.php');        // Functions tfor custom taxonomies
 require_once locate_template('/lib/event-ajax.php');        // AJAX handlers for events
 require_once locate_template('/lib/shortcodes.php');        // Shortcode handlers
-require_once locate_template('/lib/move-metaboxes.php');     // Move the default wordpress metaboxes
+require_once locate_template('/lib/move-metaboxes.php');    // Move the default wordpress metaboxes
