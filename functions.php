@@ -37,3 +37,6 @@ require_once locate_template('/lib/taxonomies.php');        // Functions tfor cu
 require_once locate_template('/lib/event-ajax.php');        // AJAX handlers for events
 require_once locate_template('/lib/shortcodes.php');        // Shortcode handlers
 require_once locate_template('/lib/move-metaboxes.php');    // Move the default wordpress metaboxes
+require_once locate_template('/lib/resource-tags.php');     // Resource tags
+require_once locate_template('/lib/book-type.php');         // Custom post type for books
+require_once locate_template('/lib/link-type.php');         // Custom post type for links

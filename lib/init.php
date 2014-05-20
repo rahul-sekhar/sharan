@@ -11,7 +11,7 @@ function roots_setup() {
   add_image_size('person', 120, 120, true);
   add_image_size('slideshow', 1100, 600, true);
   add_image_size('nav-feature', 196, 132, true);
-  add_image_size('book', 92, 0, true);
+  add_image_size('book', 130, 0, true);
 }
 add_action('after_setup_theme', 'roots_setup');
 
