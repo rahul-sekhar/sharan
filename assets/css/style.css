@@ -1399,7 +1399,7 @@ body.single-events .event.content h2 {
   list-style-type: none;
 }
 #slideshow ul.slides li {
-  height: 500px;
+  height: 600px;
   width: 100%;
 }
 #slideshow ul.slides li:before {

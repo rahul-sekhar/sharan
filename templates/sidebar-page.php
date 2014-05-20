@@ -4,8 +4,9 @@
     the_post_thumbnail();
   else :
     $page_nav = sharan_get_page_nav();
-    $default_image = $page_nav['default_sidebar_image'];
-    if (!$default_image) :
+    if ($page_nav && $page_nav['default_sidebar_image']) :
+      $default_image = $page_nav['default_sidebar_image'];
+    else :
       $default_image = get_field('default_sidebar_image', 'options');
     endif;
   ?>
