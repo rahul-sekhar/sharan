@@ -21,7 +21,7 @@ function register_book_custom_type() {
     'label'               => __( 'book', 'sharan' ),
     'description'         => __( 'Books appear on the resources page', 'sharan' ),
     'labels'              => $labels,
-    'supports'            => array( 'title', 'editor' ),
+    'supports'            => array( 'title' ),
     'hierarchical'        => false,
     'public'              => true,
     'show_ui'             => true,

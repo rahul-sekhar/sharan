@@ -21,7 +21,7 @@ function register_link_custom_type() {
     'label'               => __( 'link', 'sharan' ),
     'description'         => __( 'Links appear on the resources page', 'sharan' ),
     'labels'              => $labels,
-    'supports'            => array( 'title', 'editor' ),
+    'supports'            => array( 'title' ),
     'hierarchical'        => false,
     'public'              => true,
     'show_ui'             => true,
