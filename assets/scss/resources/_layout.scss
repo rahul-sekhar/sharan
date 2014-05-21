@@ -1,0 +1,20 @@
+$links-width: 250px;
+
+.page-container#resources {
+  .page.content {
+    margin-left: 0;
+  }
+
+  ul.books, ul.links {
+    @include reset-list;
+  }
+
+  ul.links {
+    float: left;
+    width: $links-width;
+  }
+
+  ul.books {
+    margin-left: $links-width + 20px;
+  }
+}
