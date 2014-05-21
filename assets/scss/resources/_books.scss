@@ -3,8 +3,31 @@
     li {
       display: inline-block;
       margin-right: 10px;
+      position: relative;
     }
 
+    img {
+      display: block;
+    }
 
+    .info {
+      background-color: black;
+      padding: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      display: none;
+
+      p {
+        margin: 0;
+        color: white;
+      }
+    }
+
+    li:hover .info {
+      display: block;
+    }
   }
 }

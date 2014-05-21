@@ -7,7 +7,7 @@ Template Name: Resources page
   <?php get_template_part('templates/sidebar', 'page'); ?>
 
   <div class="page content">
-    <?php get_template_part('templates/content', 'page'); ?>
+    <h2>Resources</h2>
 
     <?php
     $args = array(
@@ -21,7 +21,7 @@ Template Name: Resources page
     <ul class="links">
       <?php while($links->have_posts()) : $links->the_post(); ?>
         <li>
-          <p class="name"><?php the_field('name') ?></p>
+          <p class="name"><?php the_title(); ?></p>
           <p class="link"><a href="<?php the_field('link') ?>">Link</a></p>
           <div class="description"><?php the_field('description') ?></div>
         </li>
@@ -46,6 +46,10 @@ Template Name: Resources page
         <li>
           <?php $image = get_field('cover'); ?>
           <img src="<?php echo $image['sizes']['book']; ?>" alt="" />
+          <div class="info">
+            <p class="name"><?php the_title(); ?></p>
+            <p class="author"><?php the_field('author'); ?></p>
+          </div>
         </li>
       <?php endwhile; ?>
     </ul>
