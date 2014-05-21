@@ -481,6 +481,11 @@ th {
 }
 
 /* '' */
+.icon-cancel-circle:before {
+  content: '\e808';
+}
+
+/* '' */
 html {
   -webkit-font-smoothing: antialiased;
 }
@@ -746,7 +751,7 @@ body {
 }
 
 #main-nav .dropdown {
-  background-color: #333;
+  background-color: #333333;
   overflow: hidden;
   *zoom: 1;
   position: absolute;
@@ -1116,7 +1121,7 @@ body.single-events .event.content h2 {
   display: block;
   width: 50%;
   float: left;
-  background-color: #333;
+  background-color: #333333;
   position: relative;
   text-align: center;
   z-index: 10;
@@ -1152,7 +1157,7 @@ body.single-events .event.content h2 {
   list-style-type: none;
   margin: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #333333;
   display: none;
 }
 .event-list .filters .city ul a, .event-list .filters .type ul a {
@@ -1653,43 +1658,153 @@ body.home .event-list h2 {
 .page-container#resources .page.content {
   margin-left: 0;
 }
+.page-container#resources .resource-filters {
+  margin-bottom: 24px;
+  margin-right: -37px;
+}
 .page-container#resources ul.books, .page-container#resources ul.links {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 .page-container#resources ul.links {
+  display: none;
   float: left;
   width: 250px;
 }
 .page-container#resources ul.books {
-  margin-left: 270px;
+  margin: 0 -37px;
 }
 
-.page-container#resources ul.books li {
+.page-container#resources ul.books .author {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.page-container#resources ul.books li.resource {
   display: inline-block;
-  margin-right: 10px;
+  padding: 0 37px;
+  padding-bottom: 16px;
+  padding-top: 20px;
+  margin-bottom: 4px;
   position: relative;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+.page-container#resources ul.books li.resource .description {
+  display: none;
 }
 .page-container#resources ul.books img {
   display: block;
 }
 .page-container#resources ul.books .info {
-  background-color: black;
+  background-color: #333333;
   padding: 10px;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  min-height: 100%;
   display: none;
+  text-align: center;
 }
 .page-container#resources ul.books .info p {
   margin: 0;
   color: white;
 }
+.page-container#resources ul.books .info .name {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+.page-container#resources ul.books .info .author {
+  margin-top: 10px;
+  color: #b8b8ae;
+}
 .page-container#resources ul.books li:hover .info {
   display: block;
+}
+.page-container#resources ul.books li.selected .info {
+  display: none;
+}
+.page-container#resources ul.books li.selected:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../images/nav-arrow.png?1393832215') no-repeat center bottom;
+}
+.page-container#resources li.description {
+  background-color: #333333;
+  margin-top: -4px;
+  margin-bottom: 4px;
+  padding: 37px;
+  color: white;
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+}
+.page-container#resources li.description .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+}
+.page-container#resources li.description .close:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e808';
+}
+.page-container#resources li.description img {
+  float: left;
+}
+.page-container#resources li.description .buy {
+  float: left;
+  clear: left;
+  padding: 0;
+  width: 130px;
+  text-align: center;
+}
+.page-container#resources li.description .description-content {
+  margin-left: 170px;
+}
+.page-container#resources li.description p {
+  margin: 0;
+  margin-top: 10px;
+}
+.page-container#resources li.description p.name {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin-top: 0;
+}
+.page-container#resources li.description p.author {
+  color: #b8b8ae;
 }
 
 .page-container#resources ul.links {
@@ -1698,4 +1813,29 @@ body.home .event-list h2 {
 }
 .page-container#resources ul.links p {
   margin: 0;
+}
+
+.resource-filters ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.resource-filters li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  line-height: 30px;
+  background-color: #1899cb;
+  font-size: 13px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+.resource-filters li.selected {
+  background-color: #333333;
+}
+.resource-filters li a {
+  display: block;
+  color: white;
 }

@@ -53,6 +53,12 @@
       "css": "right-open-mini",
       "code": 59398,
       "src": "entypo"
+    },
+    {
+      "uid": "188e881b2e2f2b1eb350eb7697aabafd",
+      "css": "cancel-circle",
+      "code": 59400,
+      "src": "iconic"
     }
   ]
 }

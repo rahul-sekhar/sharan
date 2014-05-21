@@ -77,7 +77,7 @@
     }
 
     a {
-      @include link-colors(#333);
+      @include link-colors($dark-grey);
 
       &:before {
         margin-left: 0;

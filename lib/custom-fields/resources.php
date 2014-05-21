@@ -134,7 +134,7 @@ if(function_exists("register_field_group"))
         'taxonomy' => 'resource_tag',
         'field_type' => 'checkbox',
         'allow_null' => 0,
-        'load_save_terms' => 0,
+        'load_save_terms' => 1,
         'return_format' => 'id',
         'multiple' => 0,
       ),

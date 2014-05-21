@@ -6,7 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   @include whitney-book;
   font-size: 14px;
-  color: $body-black;
+  color: $dark-grey;
 }
 
 input {

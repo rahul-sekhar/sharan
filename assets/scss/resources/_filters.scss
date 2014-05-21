@@ -1,0 +1,25 @@
+.resource-filters {
+  ul {
+    @include reset-list;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    line-height: 30px;
+    background-color: $blue;
+    font-size: 13px;
+    @include whitney-medium;
+
+    &.selected {
+      background-color: $dark-grey;
+    }
+
+    a {
+      display: block;
+      color: white;
+    }
+  }
+}

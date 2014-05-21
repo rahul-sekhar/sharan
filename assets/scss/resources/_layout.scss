@@ -5,16 +5,22 @@ $links-width: 250px;
     margin-left: 0;
   }
 
+  .resource-filters {
+    margin-bottom: 24px;
+    margin-right: -37px;
+  }
+
   ul.books, ul.links {
     @include reset-list;
   }
 
   ul.links {
+    display: none;
     float: left;
     width: $links-width;
   }
 
   ul.books {
-    margin-left: $links-width + 20px;
+    margin: 0 -37px;
   }
 }

@@ -476,6 +476,11 @@ th {
 }
 
 /* '' */
+.icon-cancel-circle:before {
+  content: '\e808';
+}
+
+/* '' */
 html {
   -webkit-font-smoothing: antialiased;
 }

@@ -13,7 +13,7 @@ $page-content-space: 80px;
 
 .page.content, .post.content {
   margin-left: $page-nav-width + $page-content-space;
-  margin-right: $sidebar-width + + 10px + $page-content-space;
+  margin-right: $sidebar-width + 10px + $page-content-space;
 }
 
 .page-sidebar, .blog-sidebar {

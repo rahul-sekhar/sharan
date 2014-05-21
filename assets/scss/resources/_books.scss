@@ -1,9 +1,24 @@
 .page-container#resources {
   ul.books {
-    li {
+    .author {
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    li.resource {
       display: inline-block;
-      margin-right: 10px;
+      padding: 0 37px;
+      padding-bottom: 16px;
+      padding-top: 20px;
+      margin-bottom: 4px;
       position: relative;
+      vertical-align: bottom;
+      cursor: pointer;
+
+      .description {
+        display: none;
+      }
     }
 
     img {
@@ -11,23 +26,103 @@
     }
 
     .info {
-      background-color: black;
+      background-color: $dark-grey;
       padding: 10px;
       position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 100%;
-      width: 100%;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      min-height: 100%;
       display: none;
+      text-align: center;
 
       p {
         margin: 0;
         color: white;
       }
+
+      .name {
+        @include sentinel-book;
+        font-size: 18px;
+      }
+
+      .author {
+        margin-top: 10px;
+        color: $grey;
+      }
     }
 
-    li:hover .info {
-      display: block;
+    li:hover {
+      .info {
+        display: block;
+      }
+    }
+
+    li.selected {
+      .info {
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background: image-url('nav-arrow.png') no-repeat center bottom;
+      }
+    }
+  }
+
+  li.description {
+    background-color: $dark-grey;
+    margin-top: -4px;
+    margin-bottom: 4px;
+    padding: 37px;
+    color: white;
+    @include clearfix;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 20px;
+
+      &:before {
+        @include font-icon;
+        content: '\e808';
+      }
+    }
+
+    img {
+      float: left;
+    }
+
+    .buy {
+      float: left;
+      clear: left;
+      padding: 0;
+      width: 130px;
+      text-align: center;
+    }
+
+    .description-content {
+      margin-left: 130px + 40px;
+    }
+
+    p {
+      margin: 0;
+      margin-top: 10px;
+
+      &.name {
+        @include sentinel-book;
+        font-size: 16px;
+        margin-top: 0;
+      }
+
+      &.author {
+        color: $grey;
+      }
     }
   }
 }
