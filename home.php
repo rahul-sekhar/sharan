@@ -1,5 +1,5 @@
 <div class="news inner-container with-side-nav">
-  <?php get_template_part('templates/navigation', 'news'); ?>
+  <?php get_template_part('templates/side-nav', 'news'); ?>
 
   <?php get_template_part('templates/sidebar', 'news'); ?>
 
@@ -13,10 +13,5 @@
     </div><!-- /.post-content -->
   <?php endwhile; ?>
 
-  <nav class="wp-prev-next">
-    <ul>
-      <li class="prev-link"><?php previous_posts_link(__('&laquo; Newer entries', "sharan")) ?></li>
-      <li class="next-link"><?php next_posts_link(__('Older entries &raquo;', "sharan")) ?></li>
-    </ul>
-  </nav>
+  <?php get_template_part('templates/navigation', 'page'); ?>
 </div>

@@ -476,6 +476,11 @@ th {
 }
 
 /* '' */
+.icon-left-open-mini:before {
+  content: '\e809';
+}
+
+/* '' */
 .icon-right-open-mini:before {
   content: '\e806';
 }
@@ -1490,9 +1495,19 @@ body.home #slideshow {
 }
 body.home .event-list {
   width: 410px;
+  float: left;
 }
 body.home .event-list h2 {
   font-size: 44px;
+}
+body.home .recent-news {
+  float: right;
+  width: 500px;
+  margin-bottom: 60px;
+}
+body.home .view-all {
+  display: block;
+  margin-top: 40px;
 }
 
 #home-footer {
@@ -1626,6 +1641,32 @@ body.home .event-list h2 {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+}
+
+.recent-news h2 {
+  font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 44px;
+  margin: 20px 0;
+}
+.recent-news ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.recent-news li {
+  margin-top: 40px;
+}
+.recent-news h3 {
+  margin-bottom: 0;
+}
+.recent-news .date {
+  margin-top: 5px;
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 10px;
 }
 
 .inner-container#resources .resource-filters {
@@ -1836,11 +1877,43 @@ body.home .event-list h2 {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+.wp-prev-next .prev-link a:before, .wp-prev-next .next-link a:after {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  margin: 0;
+}
+.wp-prev-next .prev-link {
+  float: left;
+}
+.wp-prev-next .prev-link a:before {
+  content: '\e809';
+}
+.wp-prev-next .next-link {
   float: right;
 }
-.wp-prev-next li {
-  float: left;
-  margin-left: 40px;
+.wp-prev-next .next-link a:after {
+  content: '\e806';
 }
 
 .side-nav.news .title a {

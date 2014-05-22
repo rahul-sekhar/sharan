@@ -3,11 +3,26 @@
 
   ul {
     @include reset-list;
-    float: right;
   }
 
-  li {
+  .prev-link a:before, .next-link a:after {
+    @include font-icon;
+    margin: 0;
+  }
+
+  .prev-link {
     float: left;
-    margin-left: 40px;
+
+    a:before {
+      content: '\e809';
+    }
+  }
+
+  .next-link {
+    float: right;
+
+    a:after {
+      content: '\e806';
+    }
   }
 }

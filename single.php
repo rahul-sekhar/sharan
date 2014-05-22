@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
   <div class="post inner-container with-side-nav">
-    <?php get_template_part('templates/navigation', 'news'); ?>
+    <?php get_template_part('templates/side-nav', 'news'); ?>
 
     <?php get_template_part('templates/sidebar', 'post'); ?>
 

@@ -26,4 +26,8 @@
 
     <div class="loader"></div>
   </div>
+
+  <?php if ( is_front_page() ) : ?>
+    <a class="view-all" href="/events">View all events</a>
+  <?php endif; ?>
 </div>

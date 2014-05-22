@@ -471,6 +471,11 @@ th {
 }
 
 /* '' */
+.icon-left-open-mini:before {
+  content: '\e809';
+}
+
+/* '' */
 .icon-right-open-mini:before {
   content: '\e806';
 }
