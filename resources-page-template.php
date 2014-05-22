@@ -3,10 +3,10 @@
 Template Name: Resources page
 */
 ?>
-<div class="page-container" id="resources">
+<div class="inner-container" id="resources">
   <?php get_template_part('templates/sidebar', 'page'); ?>
 
-  <div class="page content">
+  <div class="content">
     <h2>Resources</h2>
 
     <div class="resource-filters">
@@ -64,7 +64,7 @@ Template Name: Resources page
             <p class="author"><?php the_field('author'); ?></p>
             <p><?php the_field('description'); ?></p>
             <?php if(get_field('buy_link')) : ?>
-              <a class="buy button" href="<?php the_field('buy_link'); ?>">Buy book</a>
+              <a class="buy button" href="<?php the_field('buy_link'); ?>" target="_blank">Buy book</a>
             <?php endif; ?>
           </div>
         </li><?php endwhile; ?>

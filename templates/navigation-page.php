@@ -1,4 +1,4 @@
-<nav class="page-nav">
+<nav class="page side-nav">
   <?php $page_nav = sharan_get_page_nav() ?>
   <?php if ($page_nav) : ?>
     <h3><?php echo $page_nav['name']; ?></h3>

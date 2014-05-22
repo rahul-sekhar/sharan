@@ -16,27 +16,29 @@ require_once locate_template('/lib/custom-fields/home-footer-text.php');
 require_once locate_template('/lib/custom-fields/social-links.php');
 require_once locate_template('/lib/custom-fields/event-removal.php');
 require_once locate_template('/lib/custom-fields/resources.php');
+require_once locate_template('/lib/custom-fields/page-placeholder-message.php');
 
-require_once locate_template('/lib/utils.php');             // Utility functions
-require_once locate_template('/lib/init.php');              // Initial theme setup and constants
-require_once locate_template('/lib/wrapper.php');           // Theme wrapper class
-require_once locate_template('/lib/config.php');            // Configuration
-require_once locate_template('/lib/titles.php');            // Page titles
-require_once locate_template('/lib/cleanup.php');           // Cleanup
-require_once locate_template('/lib/relative-urls.php');     // Root relative URLs
-require_once locate_template('/lib/scripts.php');           // Scripts and stylesheets
+require_once locate_template('/lib/utils.php');                   // Utility functions
+require_once locate_template('/lib/init.php');                    // Initial theme setup and constants
+require_once locate_template('/lib/wrapper.php');                 // Theme wrapper class
+require_once locate_template('/lib/config.php');                  // Configuration
+require_once locate_template('/lib/titles.php');                  // Page titles
+require_once locate_template('/lib/cleanup.php');                 // Cleanup
+require_once locate_template('/lib/relative-urls.php');           // Root relative URLs
+require_once locate_template('/lib/scripts.php');                 // Scripts and stylesheets
 
-require_once locate_template('/lib/remove-comments.php');   // Remove comments
-require_once locate_template('/lib/hide-admin-panel.php');  // Hide the admin panel
-require_once locate_template('/lib/page-parents.php');      // Getting the parent nav items for a page
-require_once locate_template('/lib/tinymce.php');           // Customize the TinyMCE editor
-require_once locate_template('/lib/event-type.php');        // Custom post type for events
-require_once locate_template('/lib/person-type.php');       // Custom post type for people
-require_once locate_template('/lib/date-formatting.php');   // Functions to format dates
-require_once locate_template('/lib/taxonomies.php');        // Functions tfor custom taxonomies
-require_once locate_template('/lib/event-ajax.php');        // AJAX handlers for events
-require_once locate_template('/lib/shortcodes.php');        // Shortcode handlers
-require_once locate_template('/lib/move-metaboxes.php');    // Move the default wordpress metaboxes
-require_once locate_template('/lib/resource-tags.php');     // Resource tags
-require_once locate_template('/lib/book-type.php');         // Custom post type for books
-require_once locate_template('/lib/link-type.php');         // Custom post type for links
+require_once locate_template('/lib/remove-comments.php');         // Remove comments
+require_once locate_template('/lib/remove-post-taxonomies.php');  // Remove category and tags from posts
+require_once locate_template('/lib/hide-admin-panel.php');        // Hide the admin panel
+require_once locate_template('/lib/page-parents.php');            // Getting the parent nav items for a page
+require_once locate_template('/lib/tinymce.php');                 // Customize the TinyMCE editor
+require_once locate_template('/lib/event-type.php');              // Custom post type for events
+require_once locate_template('/lib/person-type.php');             // Custom post type for people
+require_once locate_template('/lib/date-formatting.php');         // Functions to format dates
+require_once locate_template('/lib/taxonomies.php');              // Functions tfor custom taxonomies
+require_once locate_template('/lib/event-ajax.php');              // AJAX handlers for events
+require_once locate_template('/lib/shortcodes.php');              // Shortcode handlers
+require_once locate_template('/lib/move-metaboxes.php');          // Move the default wordpress metaboxes
+require_once locate_template('/lib/resource-tags.php');           // Resource tags
+require_once locate_template('/lib/book-type.php');               // Custom post type for books
+require_once locate_template('/lib/link-type.php');               // Custom post type for links

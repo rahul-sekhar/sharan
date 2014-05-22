@@ -688,6 +688,26 @@ body {
   height: 29px;
 }
 
+.inner-container {
+  margin-top: 70px;
+}
+.inner-container .content {
+  margin-right: 315px;
+}
+.inner-container.with-side-nav .content {
+  margin-left: 260px;
+}
+
+.side-nav {
+  float: left;
+  width: 180px;
+}
+
+.sidebar {
+  float: right;
+  width: 225px;
+}
+
 #banner {
   position: fixed;
   width: 100%;
@@ -714,6 +734,167 @@ body {
   background-position: 50% 50%;
   width: 161px;
   height: 41px;
+}
+
+#content-info {
+  margin: 0;
+  padding: 0;
+  background-color: #1899cb;
+}
+#content-info p {
+  margin: 0;
+  text-align: right;
+  line-height: 29px;
+  color: #ecece4;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+}
+#content-info .credit {
+  font-family: 'Sentinel SSm 6r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+}
+#content-info .credit-seperator {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.sidebar {
+  background-color: #ecece4;
+  padding: 15px;
+  padding-bottom: 40px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.sidebar img {
+  border: 1px solid #999;
+  margin: -15px;
+  margin-bottom: 15px;
+  width: 225px;
+  max-width: 225px;
+}
+.sidebar p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.sidebar label {
+  display: block;
+  margin-bottom: 5px;
+}
+.sidebar #subscribe-form {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.sidebar #subscribe-form .archive {
+  display: none;
+}
+.sidebar #subscribe-email {
+  border: 1px solid #b8b8ae;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 6px 8px;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.sidebar #subscribe-email::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #666666;
+}
+.sidebar #subscribe-email:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666666;
+}
+.sidebar #subscribe-email::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666666;
+}
+.sidebar #subscribe-email:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #666666;
+}
+.sidebar .subscribe-email-box {
+  position: relative;
+  margin-top: 10px;
+}
+.sidebar .subscribe-email-box button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  border: none;
+  background-color: #b8b8ae;
+  color: white;
+  font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.sidebar .support {
+  margin-bottom: 40px;
+}
+.sidebar .support a {
+  color: #1899cb;
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.sidebar .social ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 15px;
+  font-size: 18px;
+}
+.sidebar .social li {
+  float: left;
+  margin-right: 10px;
+}
+.sidebar .social a {
+  color: #777777;
+}
+
+.side-nav h3 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.side-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  margin-top: 22px;
+}
+.side-nav li {
+  line-height: 22px;
 }
 
 #main-nav {
@@ -879,214 +1060,6 @@ body {
   width: 196px;
   height: 132px;
   background-color: #666;
-}
-
-#content-info {
-  margin: 0;
-  padding: 0;
-  background-color: #1899cb;
-}
-#content-info p {
-  margin: 0;
-  text-align: right;
-  line-height: 29px;
-  color: #ecece4;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 13px;
-}
-#content-info .credit {
-  font-family: 'Sentinel SSm 6r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 600;
-  font-style: normal;
-  font-size: 15px;
-}
-#content-info .credit-seperator {
-  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
-}
-
-#breadcrumbs {
-  margin-bottom: 50px;
-}
-#breadcrumbs ol {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  overflow: hidden;
-  *zoom: 1;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 45px;
-  border-bottom: 1px solid #ccc;
-}
-#breadcrumbs li {
-  float: left;
-  margin-right: 5px;
-}
-#breadcrumbs li:before {
-  content: '>';
-  margin-right: 2px;
-}
-#breadcrumbs li:first-child:before {
-  content: none;
-}
-
-.page-container, .blog-container {
-  margin-top: 70px;
-}
-
-.page-nav, .blog-nav {
-  float: left;
-  width: 180px;
-}
-
-.page.content, .post.content {
-  margin-left: 260px;
-  margin-right: 315px;
-}
-
-.page-sidebar, .blog-sidebar {
-  float: right;
-  width: 225px;
-}
-
-.page-sidebar, .blog-sidebar {
-  background-color: #ecece4;
-  padding: 15px;
-  padding-bottom: 40px;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 13px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-.page-sidebar img, .blog-sidebar img {
-  border: 1px solid #999;
-  margin: -15px;
-  margin-bottom: 15px;
-  width: 225px;
-  max-width: 225px;
-}
-.page-sidebar p, .blog-sidebar p {
-  margin: 0;
-  margin-bottom: 5px;
-}
-.page-sidebar label, .blog-sidebar label {
-  display: block;
-  margin-bottom: 5px;
-}
-.page-sidebar #subscribe-form, .blog-sidebar #subscribe-form {
-  margin-top: 5px;
-  margin-bottom: 40px;
-}
-.page-sidebar #subscribe-form .archive, .blog-sidebar #subscribe-form .archive {
-  display: none;
-}
-.page-sidebar #subscribe-email, .blog-sidebar #subscribe-email {
-  border: 1px solid #b8b8ae;
-  font-size: 11px;
-  line-height: 16px;
-  padding: 6px 8px;
-  width: 100%;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.page-sidebar #subscribe-email::-webkit-input-placeholder, .blog-sidebar #subscribe-email::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: #666666;
-}
-.page-sidebar #subscribe-email:-moz-placeholder, .blog-sidebar #subscribe-email:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #666666;
-}
-.page-sidebar #subscribe-email::-moz-placeholder, .blog-sidebar #subscribe-email::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #666666;
-}
-.page-sidebar #subscribe-email:-ms-input-placeholder, .blog-sidebar #subscribe-email:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: #666666;
-}
-.page-sidebar .subscribe-email-box, .blog-sidebar .subscribe-email-box {
-  position: relative;
-  margin-top: 10px;
-}
-.page-sidebar .subscribe-email-box button, .blog-sidebar .subscribe-email-box button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 30px;
-  border: none;
-  background-color: #b8b8ae;
-  color: white;
-  font-size: 12px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.page-sidebar .support, .blog-sidebar .support {
-  margin-bottom: 40px;
-}
-.page-sidebar .support a, .blog-sidebar .support a {
-  color: #1899cb;
-  display: block;
-  margin-bottom: 10px;
-  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-.page-sidebar .social ul, .blog-sidebar .social ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  overflow: hidden;
-  *zoom: 1;
-  margin-top: 15px;
-  font-size: 18px;
-}
-.page-sidebar .social li, .blog-sidebar .social li {
-  float: left;
-  margin-right: 10px;
-}
-.page-sidebar .social a, .blog-sidebar .social a {
-  color: #777777;
-}
-
-.page-nav h3 {
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 28px;
-}
-.page-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 13px;
-  margin-top: 22px;
-}
-.page-nav li {
-  line-height: 22px;
 }
 
 body.single-events .event-list {
@@ -1655,49 +1628,46 @@ body.home .event-list h2 {
   border-radius: 4px;
 }
 
-.page-container#resources .page.content {
-  margin-left: 0;
-}
-.page-container#resources .resource-filters {
+.inner-container#resources .resource-filters {
   margin-bottom: 24px;
   margin-right: -37px;
 }
-.page-container#resources ul.books, .page-container#resources ul.links {
+.inner-container#resources ul.books, .inner-container#resources ul.links {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.page-container#resources ul.links {
+.inner-container#resources ul.links {
   display: none;
   float: left;
   width: 250px;
 }
-.page-container#resources ul.books {
+.inner-container#resources ul.books {
   margin: 0 -37px;
 }
 
-.page-container#resources ul.books .author {
+.inner-container#resources ul.books .author {
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.page-container#resources ul.books li.resource {
+.inner-container#resources ul.books li.resource {
   display: inline-block;
   padding: 0 37px;
-  padding-bottom: 16px;
-  padding-top: 20px;
+  padding-bottom: 18px;
+  padding-top: 18px;
   margin-bottom: 4px;
   position: relative;
   vertical-align: bottom;
   cursor: pointer;
 }
-.page-container#resources ul.books li.resource .description {
+.inner-container#resources ul.books li.resource .description {
   display: none;
 }
-.page-container#resources ul.books img {
+.inner-container#resources ul.books img {
   display: block;
 }
-.page-container#resources ul.books .info {
+.inner-container#resources ul.books .info {
   background-color: #333333;
   padding: 10px;
   position: absolute;
@@ -1708,27 +1678,27 @@ body.home .event-list h2 {
   display: none;
   text-align: center;
 }
-.page-container#resources ul.books .info p {
+.inner-container#resources ul.books .info p {
   margin: 0;
   color: white;
 }
-.page-container#resources ul.books .info .name {
+.inner-container#resources ul.books .info .name {
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
 }
-.page-container#resources ul.books .info .author {
+.inner-container#resources ul.books .info .author {
   margin-top: 10px;
   color: #b8b8ae;
 }
-.page-container#resources ul.books li:hover .info {
+.inner-container#resources ul.books li:hover .info {
   display: block;
 }
-.page-container#resources ul.books li.selected .info {
+.inner-container#resources ul.books li.selected .info {
   display: none;
 }
-.page-container#resources ul.books li.selected:after {
+.inner-container#resources ul.books li.selected:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1737,7 +1707,7 @@ body.home .event-list h2 {
   left: 0;
   background: url('../images/nav-arrow.png?1393832215') no-repeat center bottom;
 }
-.page-container#resources li.description {
+.inner-container#resources li.description {
   background-color: #333333;
   margin-top: -4px;
   margin-bottom: 4px;
@@ -1747,14 +1717,14 @@ body.home .event-list h2 {
   *zoom: 1;
   position: relative;
 }
-.page-container#resources li.description .close {
+.inner-container#resources li.description .close {
   position: absolute;
   top: 10px;
   right: 10px;
   color: white;
   font-size: 20px;
 }
-.page-container#resources li.description .close:before {
+.inner-container#resources li.description .close:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1779,39 +1749,39 @@ body.home .event-list h2 {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
   content: '\e808';
 }
-.page-container#resources li.description img {
+.inner-container#resources li.description img {
   float: left;
 }
-.page-container#resources li.description .buy {
+.inner-container#resources li.description .buy {
   float: left;
   clear: left;
   padding: 0;
   width: 130px;
   text-align: center;
 }
-.page-container#resources li.description .description-content {
+.inner-container#resources li.description .description-content {
   margin-left: 170px;
 }
-.page-container#resources li.description p {
+.inner-container#resources li.description p {
   margin: 0;
   margin-top: 10px;
 }
-.page-container#resources li.description p.name {
+.inner-container#resources li.description p.name {
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
   margin-top: 0;
 }
-.page-container#resources li.description p.author {
+.inner-container#resources li.description p.author {
   color: #b8b8ae;
 }
 
-.page-container#resources ul.links {
+.inner-container#resources ul.links {
   background-color: #ecece4;
   padding: 20px;
 }
-.page-container#resources ul.links p {
+.inner-container#resources ul.links p {
   margin: 0;
 }
 
@@ -1838,4 +1808,76 @@ body.home .event-list h2 {
 .resource-filters li a {
   display: block;
   color: white;
+}
+
+.news.inner-container .post.content {
+  margin-bottom: 70px;
+}
+
+.post.content h2, .post.content h3 {
+  margin-bottom: 0;
+}
+.post.content h2 a, .post.content h3 a {
+  color: #333333;
+}
+.post.content .date {
+  margin-top: 5px;
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 10px;
+}
+
+.wp-prev-next {
+  overflow: hidden;
+  *zoom: 1;
+}
+.wp-prev-next ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+.wp-prev-next li {
+  float: left;
+  margin-left: 40px;
+}
+
+.side-nav.news .title a {
+  color: #333333;
+}
+.side-nav.news .title a:after {
+  content: '\e806';
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  text-align: left;
+  width: auto;
+  margin-left: 0.4em;
+  -webkit-transition: -webkit-transform 200ms linear;
+  -moz-transition: -moz-transform 200ms linear;
+  -o-transition: -o-transform 200ms linear;
+  transition: transform 200ms linear;
+}
+.side-nav.news ul.shown .title a:after {
+  content: '\e807';
 }

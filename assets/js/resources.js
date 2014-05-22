@@ -1,6 +1,8 @@
 jQuery(function ($) {
+  var description, bookList;
+
   // Show book descriptions
-  var description = $('<li class="description"></li>');
+  description = $('<li class="description"></li>');
   $('body').on('click', 'li.description .close', function (e) {
     e.preventDefault();
     bookList.find('.selected').removeClass('selected');
@@ -11,14 +13,14 @@ jQuery(function ($) {
   bookList.on('click', 'li.resource', function (e) {
     e.preventDefault();
 
-    resource = $(this);
+    var resource = $(this);
     if (resource.hasClass('selected')) {
       return;
     }
 
-    descriptionContent = $('<div class="description-content"></div>')
+    var descriptionContent = $('<div class="description-content"></div>')
       .append(resource.find('.description').contents().clone());
-    descriptionImage = resource.find('img').clone();
+    var descriptionImage = resource.find('img').clone();
 
     description.empty()
       .append('<a href="#" class="close"></a>')
@@ -30,7 +32,7 @@ jQuery(function ($) {
     resource.addClass('selected');
 
     resourceBottom = resource.offset().top + resource.outerHeight();
-    lastRowItem = resource;
+    var lastRowItem = resource;
     while(lastRowItem.next('li.resource').length && lastRowItem.next('li.resource').offset().top < resourceBottom) {
       lastRowItem = lastRowItem.next();
     }
@@ -51,7 +53,7 @@ jQuery(function ($) {
     description.remove();
     bookList.find('.selected').removeClass('selected');
 
-    tagId = $(this).data('id');
+    var tagId = $(this).data('id');
     $('.resource:not(.tag-' + tagId + ')').hide();
     $('.resource.tag-' + tagId).show();
   });

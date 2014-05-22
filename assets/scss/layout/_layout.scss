@@ -1,3 +1,7 @@
+$sidebar-width: 225px;
+$side-nav-width: 180px;
+$content-side-spacing: 80px;
+
 html {
   height: 100%;
   overflow-y: scroll;
@@ -19,4 +23,28 @@ body {
     display: block;
     height: $footer-height;
   }
+}
+
+.inner-container {
+  margin-top: 70px;
+
+  .content {
+    margin-right: $sidebar-width + 10px + $content-side-spacing;
+  }
+
+  &.with-side-nav {
+    .content {
+      margin-left: $side-nav-width + $content-side-spacing;
+    }
+  }
+}
+
+.side-nav {
+  float: left;
+  width: $side-nav-width;
+}
+
+.sidebar {
+  float: right;
+  width: $sidebar-width;
 }

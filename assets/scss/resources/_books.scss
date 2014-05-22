@@ -1,4 +1,4 @@
-.page-container#resources {
+.inner-container#resources {
   ul.books {
     .author {
       font-size: 13px;
@@ -9,8 +9,8 @@
     li.resource {
       display: inline-block;
       padding: 0 37px;
-      padding-bottom: 16px;
-      padding-top: 20px;
+      padding-bottom: 18px;
+      padding-top: 18px;
       margin-bottom: 4px;
       position: relative;
       vertical-align: bottom;

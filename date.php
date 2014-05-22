@@ -4,7 +4,7 @@
   <?php get_template_part('templates/sidebar', 'news'); ?>
 
   <div class="content">
-    <h2>News</h2>
+    <h2>News &ndash; <?php the_time('F Y'); ?></h2>
   </div>
 
   <?php while (have_posts()) : the_post(); ?>

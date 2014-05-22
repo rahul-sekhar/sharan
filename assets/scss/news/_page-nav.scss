@@ -1,0 +1,13 @@
+.wp-prev-next {
+  @include clearfix;
+
+  ul {
+    @include reset-list;
+    float: right;
+  }
+
+  li {
+    float: left;
+    margin-left: 40px;
+  }
+}

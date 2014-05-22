@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <div class="page-container">
+  <div class="page inner-container with-side-nav">
     <?php get_template_part('templates/navigation', 'page'); ?>
 
     <?php get_template_part('templates/sidebar', 'page'); ?>

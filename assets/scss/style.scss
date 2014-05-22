@@ -21,15 +21,13 @@ Designed by Shalini Sekhar
 
 @import "layout/layout";
 @import "layout/header";
-@import "layout/main-nav";
-@import "layout/main-nav-dropdown";
-@import "layout/main-nav-dropdown-features";
 @import "layout/footer";
-@import "layout/breadcrumbs";
+@import "layout/sidebar";
+@import "layout/side-nav";
 
-@import "pages-and-posts/layout";
-@import "pages-and-posts/sidebar";
-@import "pages/page-nav";
+@import "main-nav/main-nav";
+@import "main-nav/dropdowns";
+@import "main-nav/dropdown-features";
 
 @import "events/single-event-layout";
 @import "events/event-list";
@@ -45,3 +43,7 @@ Designed by Shalini Sekhar
 @import "resources/books";
 @import "resources/links";
 @import "resources/filters";
+
+@import "news/content";
+@import "news/page-nav";
+@import "news/side-nav";
