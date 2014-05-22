@@ -1,10 +1,4 @@
 .recent-news {
-  h2 {
-    @include whitney-light;
-    font-size: 44px;
-    margin: 20px 0;
-  }
-
   ul {
     @include reset-list;
   }

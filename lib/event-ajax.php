@@ -38,6 +38,9 @@ function sharan_event_list($show_no_results = true, $tag_ids = null) {
     'posts_per_page' => -1,
     'post_type' => 'events',
     'tax_query' => $tax_query,
+    'meta_key' => 'from',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
     'meta_query' => array(
       array(
         'key' => 'to',

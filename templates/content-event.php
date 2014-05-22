@@ -1,4 +1,4 @@
-<h2><?php the_title(); ?></h2>
+<h3><?php the_title(); ?></h3>
 
 <section class="info">
   <p class="dates"><?php sharan_event_dates( get_field('from'), get_field('to') ) ?></p>

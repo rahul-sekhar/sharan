@@ -1,5 +1,7 @@
 .event.content {
-  h2 {
+  h3 {
+    @include sentinel-book;
+    margin: 30px 0;
     font-size: 30px;
   }
 
