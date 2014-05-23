@@ -1,0 +1,10 @@
+.person {
+  .image {
+    width: 120px;
+    height: 120px;
+
+    &.empty {
+      background: image-url('profile.png') no-repeat center;
+    }
+  }
+}

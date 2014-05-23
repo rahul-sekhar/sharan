@@ -51,6 +51,15 @@ if(function_exists("register_field_group"))
           'group_no' => 2,
         ),
       ),
+      array (
+        array (
+          'param' => 'page_template',
+          'operator' => '==',
+          'value' => 'people-page-template.php',
+          'order_no' => 0,
+          'group_no' => 2,
+        ),
+      ),
     ),
     'options' => array (
       'position' => 'acf_after_title',

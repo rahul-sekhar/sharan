@@ -1,0 +1,9 @@
+.people.inner-container {
+  ul.people {
+    @include reset-list;
+
+    li {
+      margin-bottom: 40px;
+    }
+  }
+}

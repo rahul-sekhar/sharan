@@ -1,5 +1,4 @@
 <?php
-
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
@@ -7,14 +6,15 @@ if(function_exists("register_field_group"))
     'title' => 'People',
     'fields' => array (
       array (
-        'key' => 'field_5318b006033b5',
-        'label' => 'Image',
-        'name' => 'image',
-        'type' => 'image',
-        'required' => 1,
-        'save_format' => 'object',
-        'preview_size' => 'person',
-        'library' => 'all',
+        'key' => 'field_537f17b36a9b5',
+        'label' => 'Short description',
+        'name' => 'short_description',
+        'type' => 'textarea',
+        'default_value' => '',
+        'placeholder' => '',
+        'maxlength' => '',
+        'rows' => '',
+        'formatting' => 'br',
       ),
     ),
     'location' => array (
@@ -29,7 +29,7 @@ if(function_exists("register_field_group"))
       ),
     ),
     'options' => array (
-      'position' => 'acf_after_title',
+      'position' => 'normal',
       'layout' => 'no_box',
       'hide_on_screen' => array (
       ),

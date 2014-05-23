@@ -42,3 +42,4 @@ require_once locate_template('/lib/move-metaboxes.php');          // Move the de
 require_once locate_template('/lib/resource-tags.php');           // Resource tags
 require_once locate_template('/lib/book-type.php');               // Custom post type for books
 require_once locate_template('/lib/link-type.php');               // Custom post type for links
+require_once locate_template('/lib/people-page.php');             // Function to retrieve the people page

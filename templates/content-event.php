@@ -39,12 +39,12 @@ if ($people) :
 <section class="people">
   <h3>Resource People</h3>
   <ul>
-  <?php foreach($people as $person) : ?>
+  <?php foreach($people as $post) : setup_postdata($post) ?>
     <li>
-      <div class="image"><?php echo get_the_post_thumbnail($person->ID, 'person'); ?></div>
-      <p class="name"><?php echo $person->post_title; ?></p>
+      <?php get_template_part('templates/short', 'person'); ?>
     </li>
   <?php endforeach; ?>
+  <?php wp_reset_postdata(); ?>
   </ul>
 </section>
 <?php endif; ?>

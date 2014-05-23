@@ -1,0 +1,22 @@
+.person.medium {
+  overflow: hidden;
+
+  .image {
+    float: left;
+  }
+
+  .info {
+    margin-left: 135px;
+  }
+
+  .short-description {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .name {
+    margin: 0;
+    @include whitney-medium;
+    font-size: 14px;
+  }
+}

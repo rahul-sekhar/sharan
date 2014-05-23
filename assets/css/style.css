@@ -1274,23 +1274,12 @@ body {
 .event.content .people li, .event.content .links li {
   float: left;
 }
-.event.content .people .image {
-  width: 120px;
-  height: 120px;
+.event.content .people {
+  margin-top: 40px;
 }
 .event.content .people li {
-  margin-right: 30px;
-}
-.event.content .people .name {
-  margin: 0;
-  margin-top: 10px;
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-}
-.event.content .links li {
-  width: 30%;
+  margin-right: 40px;
+  margin-bottom: 20px;
 }
 
 .short.event {
@@ -2034,4 +2023,51 @@ body.home .view-all {
 }
 .side-nav.news ul.shown .title a:after {
   content: '\e807';
+}
+
+.person .image {
+  width: 120px;
+  height: 120px;
+}
+.person .image.empty {
+  background: url('../images/profile.png?1398272115') no-repeat center;
+}
+
+.person.short .name {
+  margin: 0;
+  margin-top: 10px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.person.medium {
+  overflow: hidden;
+}
+.person.medium .image {
+  float: left;
+}
+.person.medium .info {
+  margin-left: 135px;
+}
+.person.medium .short-description {
+  margin: 0;
+  margin-top: 10px;
+}
+.person.medium .name {
+  margin: 0;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.people.inner-container ul.people {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.people.inner-container ul.people li {
+  margin-bottom: 40px;
 }

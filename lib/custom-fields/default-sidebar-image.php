@@ -17,6 +17,15 @@ if(function_exists("register_field_group"))
         'preview_size' => 'post-thumbnail',
         'library' => 'all',
       ),
+      array (
+        'key' => 'field_537f17db72a5a',
+        'label' => 'Sidebar image for people section',
+        'name' => 'people_default_sidebar_image',
+        'type' => 'image',
+        'save_format' => 'object',
+        'preview_size' => 'thumbnail',
+        'library' => 'all',
+      ),
     ),
     'location' => array (
       array (

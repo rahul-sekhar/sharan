@@ -11,13 +11,7 @@
     <ul class="post">
     <?php while($posts->have_posts()) : $posts->the_post(); ?>
       <li>
-        <h3>
-          <a href="<?php the_permalink(); ?>">
-            <?php the_title(); ?>
-          </a>
-        </h3>
-        <p class="date"><?php echo get_the_time(get_option('date_format')); ?></p>
-        <?php the_excerpt(); ?>
+        <?php get_template_part('templates/short', 'post'); ?>
       </li>
     <?php endwhile; ?>
     </ul>

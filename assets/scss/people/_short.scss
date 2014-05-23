@@ -1,0 +1,8 @@
+.person.short {
+  .name {
+    margin: 0;
+    margin-top: 10px;
+    @include whitney-medium;
+    font-size: 14px;
+  }
+}
