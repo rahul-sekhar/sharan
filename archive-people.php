@@ -14,8 +14,7 @@
     $args = array(
       'posts_per_page' => -1,
       'post_type' => 'people',
-      'orderby' => 'title',
-      'order' => 'ASC'
+      'orderby' => 'menu_order'
     );
     $people = new WP_Query($args);
 

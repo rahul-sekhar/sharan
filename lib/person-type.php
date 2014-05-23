@@ -21,7 +21,7 @@ function register_person_custom_type() {
     'label'               => __( 'person', 'sharan' ),
     'description'         => __( 'People', 'sharan' ),
     'labels'              => $labels,
-    'supports'            => array( 'title', 'editor', 'thumbnail' ),
+    'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
     'hierarchical'        => false,
     'public'              => true,
     'show_ui'             => true,
