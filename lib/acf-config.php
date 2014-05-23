@@ -11,6 +11,7 @@ if (function_exists('acf_add_options_sub_page')) {
   acf_add_options_sub_page('Default Sidebar Images');
   acf_add_options_sub_page('Events');
   acf_add_options_sub_page('Resources');
+  acf_add_options_sub_page('Consultation');
   acf_add_options_sub_page('Registration');
   acf_add_options_sub_page('Gallery');
   acf_add_options_sub_page('Sidebar and Footer Links');

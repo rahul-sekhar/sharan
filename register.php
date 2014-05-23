@@ -1,8 +1,3 @@
-<?php
-/*
-Template Name: Register page
-*/
-?>
 <div class="inner-container">
   <?php
   $post = get_page_by_path(get_query_var('event'), OBJECT, 'events');

@@ -59,6 +59,15 @@ if(function_exists("register_field_group"))
           'group_no' => 0,
         ),
       ),
+      array (
+        array (
+          'param' => 'options_page',
+          'operator' => '==',
+          'value' => 'acf-options-consultation',
+          'order_no' => 0,
+          'group_no' => 1,
+        ),
+      ),
     ),
     'options' => array (
       'position' => 'normal',
