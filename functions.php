@@ -17,6 +17,7 @@ require_once locate_template('/lib/custom-fields/social-links.php');
 require_once locate_template('/lib/custom-fields/event-removal.php');
 require_once locate_template('/lib/custom-fields/resources.php');
 require_once locate_template('/lib/custom-fields/page-placeholder-message.php');
+require_once locate_template('/lib/custom-fields/default-resource-tag.php');
 
 require_once locate_template('/lib/utils.php');                   // Utility functions
 require_once locate_template('/lib/init.php');                    // Initial theme setup and constants

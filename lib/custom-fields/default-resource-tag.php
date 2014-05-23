@@ -3,21 +3,20 @@
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
-    'id' => 'acf_event-removal-fields',
-    'title' => 'Event removal fields',
+    'id' => 'acf_default-resource-tag',
+    'title' => 'Default resource tag',
     'fields' => array (
       array (
-        'key' => 'field_531bf81c6e10f',
-        'label' => 'Number of days to wait before removing events',
-        'name' => 'event_wait_days',
-        'type' => 'number',
-        'default_value' => 0,
-        'placeholder' => '',
-        'prepend' => '',
-        'append' => '',
-        'min' => '',
-        'max' => '',
-        'step' => '',
+        'key' => 'field_537f5f6812d69',
+        'label' => 'Resource tag to be selected by default',
+        'name' => 'default_resource_tag',
+        'type' => 'taxonomy',
+        'taxonomy' => 'resource_tag',
+        'field_type' => 'select',
+        'allow_null' => 0,
+        'load_save_terms' => 0,
+        'return_format' => 'id',
+        'multiple' => 0,
       ),
     ),
     'location' => array (
@@ -25,7 +24,7 @@ if(function_exists("register_field_group"))
         array (
           'param' => 'options_page',
           'operator' => '==',
-          'value' => 'acf-options-events',
+          'value' => 'acf-options-resources',
           'order_no' => 0,
           'group_no' => 0,
         ),

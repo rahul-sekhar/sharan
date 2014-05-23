@@ -11,7 +11,10 @@ Template Name: Resources page
 
     <div class="resource-filters">
       <ul>
-        <?php foreach (get_terms('resource_tag') as $tag) : ?><li>
+        <?php
+        $default_tag_id = get_field('default_resource_tag', 'options');
+        foreach (get_terms('resource_tag') as $tag) :
+          ?><li<?php if ($default_tag_id == $tag->term_id) echo ' class="selected"' ?>>
           <a href="#" data-id="<?php echo $tag->term_id; ?>"><?php echo $tag->name; ?></a>
         </li><?php endforeach; ?>
       </ul>
@@ -22,6 +25,8 @@ Template Name: Resources page
     $args = array(
       'posts_per_page' => -1,
       'post_type' => 'books',
+      'orderby' => 'title',
+      'order' => 'ASC'
     );
     $books = new WP_Query($args);
 
@@ -57,6 +62,8 @@ Template Name: Resources page
     $args = array(
       'posts_per_page' => -1,
       'post_type' => 'links',
+      'orderby' => 'title',
+      'order' => 'ASC'
     );
     $links = new WP_Query($args);
 
