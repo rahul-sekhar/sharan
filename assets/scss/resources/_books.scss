@@ -29,6 +29,7 @@
       background-color: $dark-grey;
       padding: 10px;
       position: absolute;
+      z-index: $book-hover-z-index;;
       left: 0px;
       right: 0px;
       top: 0px;
@@ -73,6 +74,7 @@
   }
 
   li.description {
+    z-index: $book-info-z-index;
     background-color: $dark-grey;
     margin-top: -4px;
     margin-bottom: 4px;

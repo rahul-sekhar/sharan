@@ -1791,6 +1791,7 @@ body.home .view-all {
   background-color: #333333;
   padding: 10px;
   position: absolute;
+  z-index: 50;
   left: 0px;
   right: 0px;
   top: 0px;
@@ -1828,6 +1829,7 @@ body.home .view-all {
   background: url('../images/nav-arrow.png?1393832215') no-repeat center bottom;
 }
 .inner-container#resources li.description {
+  z-index: 70;
   background-color: #333333;
   margin-top: -4px;
   margin-bottom: 4px;
