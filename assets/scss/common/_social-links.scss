@@ -1,0 +1,17 @@
+.social {
+  ul {
+    @include reset-list;
+    @include clearfix;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+
+  a {
+    @include link-colors(#777)
+  }
+}

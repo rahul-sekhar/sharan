@@ -37,6 +37,7 @@ function roots_scripts() {
   wp_register_script('resources', get_template_directory_uri() . '/assets/js/resources.js', array(), $version, false);
   wp_register_script('newsArchives', get_template_directory_uri() . '/assets/js/newsArchives.js', array(), $version, false);
   wp_register_script('extLinks', get_template_directory_uri() . '/assets/js/extLinks.js', array(), $version, false);
+  wp_register_script('newsletter', get_template_directory_uri() . '/assets/js/newsletter.js', array(), $version, false);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');
@@ -48,6 +49,7 @@ function roots_scripts() {
   wp_enqueue_script('resources');
   wp_enqueue_script('newsArchives');
   wp_enqueue_script('extLinks');
+  wp_enqueue_script('newsletter');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 

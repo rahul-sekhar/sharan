@@ -48,7 +48,7 @@ if(function_exists("register_field_group"))
           'operator' => '==',
           'value' => 'events-page-template.php',
           'order_no' => 0,
-          'group_no' => 2,
+          'group_no' => 3,
         ),
       ),
       array (
@@ -57,7 +57,16 @@ if(function_exists("register_field_group"))
           'operator' => '==',
           'value' => 'people-page-template.php',
           'order_no' => 0,
-          'group_no' => 2,
+          'group_no' => 4,
+        ),
+      ),
+      array (
+        array (
+          'param' => 'page_template',
+          'operator' => '==',
+          'value' => 'register-page-template.php',
+          'order_no' => 0,
+          'group_no' => 5,
         ),
       ),
     ),

@@ -1,0 +1,42 @@
+#registration-form {
+  .field {
+    overflow: hidden;
+    margin-bottom: 20px;
+    clear: left;
+  }
+
+  .options {
+    margin-bottom: 40px;
+
+    ul {
+      @include reset-list;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact {
+    input, textarea {
+      border: 1px solid $grey;
+      @include whitney-book;
+      font-size: 13px;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    textarea {
+      padding: 4px 6px;
+      resize: none;
+    }
+
+    label {
+      display: block;
+      float: left;
+      width: 120px;
+    }
+  }
+}

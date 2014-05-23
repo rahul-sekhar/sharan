@@ -11,6 +11,7 @@ Designed by Shalini Sekhar
 @import "base/settings";
 @import "base/fonts";
 @import "base/icons";
+@import "base/icons-animation";
 
 @import "common/general-content";
 @import "common/containers";
@@ -18,6 +19,8 @@ Designed by Shalini Sekhar
 @import "common/dropdowns";
 @import "common/common-content";
 @import "common/buttons";
+@import "common/subscribe-form";
+@import "common/social-links";
 
 @import "layout/layout";
 @import "layout/header";
@@ -53,3 +56,5 @@ Designed by Shalini Sekhar
 @import "people/short";
 @import "people/medium";
 @import "people/page";
+
+@import "registration/form";

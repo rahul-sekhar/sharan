@@ -65,14 +65,10 @@
 
   .social {
     ul {
-      @include reset-list;
-      @include clearfix;
-      margin-top: 15px;
       font-size: 32px;
     }
 
     li {
-      float: left;
       margin-right: 14px;
     }
 
@@ -91,27 +87,19 @@
     display: block;
   }
 
-  #subscribe-email {
-    border: 1px solid $grey;
-    font-size: 11px;
-    line-height: 16px;
-    padding: 6px 8px;
-    width: 216px;
+  #subscribe-form .message {
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
 
-    @include border-radius(4px);
-    @include placeholder-color(#666);
+  #subscribe-email {
+    width: 216px;
   }
 
   .subscribe-email-box {
     button {
       margin-left: 5px;
-      height: 30px;
-      border: none;
-      background-color: $grey;
-      color: white;
-      font-size: 12px;
-
-      @include border-radius(4px);
     }
   }
 }

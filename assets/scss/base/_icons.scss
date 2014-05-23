@@ -54,13 +54,14 @@
   @include font-icon;
 }
 
-.icon-ok:before { content: '\e800'; } /* '' */
+.icon-spin6:before { content: '\e80b'; } /* '' */
+.icon-cancel-circle:before { content: '\e808'; } /* '' */
 .icon-facebook:before { content: '\e802'; } /* '' */
 .icon-gplus:before { content: '\e803'; } /* '' */
 .icon-tumblr:before { content: '\e805'; } /* '' */
-.icon-twitter:before { content: '\e801'; } /* '' */
+.icon-ok:before { content: '\e800'; } /* '' */
 .icon-youtube:before { content: '\e804'; } /* '' */
 .icon-down-open-mini:before { content: '\e807'; } /* '' */
 .icon-left-open-mini:before { content: '\e809'; } /* '' */
 .icon-right-open-mini:before { content: '\e806'; } /* '' */
-.icon-cancel-circle:before { content: '\e808'; } /* '' */
+.icon-twitter:before { content: '\e801'; } /* '' */
