@@ -3,7 +3,25 @@
   padding: 0;
   background-color: $blue;
 
-  p {
+  .footer-links {
+    font-size: 10px;
+
+    ul {
+      @include reset-list;
+      line-height: $footer-height;
+    }
+
+    li {
+      float: left;
+      margin-right: 15px;
+
+      a {
+        @include link-colors($near-white);
+      }
+    }
+  }
+
+  p.credit {
     margin: 0;
     text-align: right;
     line-height: $footer-height;

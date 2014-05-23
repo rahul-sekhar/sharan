@@ -829,7 +829,7 @@ img {
   overflow: hidden;
   *zoom: 1;
   margin-top: 15px;
-  font-size: 32px;
+  font-size: 24px;
 }
 .social li {
   float: left;
@@ -915,7 +915,23 @@ body {
   padding: 0;
   background-color: #1899cb;
 }
-#content-info p {
+#content-info .footer-links {
+  font-size: 10px;
+}
+#content-info .footer-links ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 29px;
+}
+#content-info .footer-links li {
+  float: left;
+  margin-right: 15px;
+}
+#content-info .footer-links li a {
+  color: #ecece4;
+}
+#content-info p.credit {
   margin: 0;
   text-align: right;
   line-height: 29px;
@@ -2188,4 +2204,15 @@ body.home .view-all {
   display: block;
   float: left;
   width: 120px;
+}
+
+#gallery .total_images, #gallery .lang_gallery {
+  display: none;
+}
+#gallery .pwa-inner h2 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  margin: 39px 0 24px 0;
 }
