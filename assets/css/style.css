@@ -1747,9 +1747,7 @@ body.home .view-all {
   list-style-type: none;
 }
 .inner-container#resources ul.links {
-  display: none;
-  float: left;
-  width: 250px;
+  margin-top: 40px;
 }
 .inner-container#resources ul.books {
   margin: 0 -37px;
@@ -1888,12 +1886,18 @@ body.home .view-all {
   color: #b8b8ae;
 }
 
-.inner-container#resources ul.links {
+.inner-container#resources ul.links li {
   background-color: #ecece4;
   padding: 20px;
+  margin-bottom: 20px;
 }
 .inner-container#resources ul.links p {
   margin: 0;
+}
+.inner-container#resources ul.links p.name {
+  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 600;
+  font-style: normal;
 }
 
 .resource-filters ul {

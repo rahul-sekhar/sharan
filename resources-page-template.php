@@ -18,29 +18,7 @@ Template Name: Resources page
     </div>
 
     <?php
-    $args = array(
-      'posts_per_page' => -1,
-      'post_type' => 'links',
-    );
-    $links = new WP_Query($args);
-
-    if ($links->have_posts()) :
-    ?>
-    <ul class="links">
-      <?php while($links->have_posts()) : $links->the_post(); ?>
-        <li>
-          <p class="name"><?php the_title(); ?></p>
-          <p class="link"><a href="<?php the_field('link') ?>">Link</a></p>
-          <div class="description"><?php the_field('description') ?></div>
-        </li>
-      <?php endwhile; ?>
-    </ul>
-    <?php
-    endif;
-    wp_reset_postdata();
-    ?>
-
-    <?php
+    // Books
     $args = array(
       'posts_per_page' => -1,
       'post_type' => 'books',
@@ -68,6 +46,29 @@ Template Name: Resources page
             <?php endif; ?>
           </div>
         </li><?php endwhile; ?>
+    </ul>
+    <?php
+    endif;
+    wp_reset_postdata();
+    ?>
+
+    <?php
+    // Links
+    $args = array(
+      'posts_per_page' => -1,
+      'post_type' => 'links',
+    );
+    $links = new WP_Query($args);
+
+    if ($links->have_posts()) :
+    ?>
+    <ul class="links">
+      <?php while($links->have_posts()) : $links->the_post(); ?>
+        <li class="resource <?php the_resource_tag_classes() ?>">
+          <p class="name"><a href="<?php the_field('link') ?>"><?php the_title(); ?></a></p>
+          <div class="description"><?php the_field('description') ?></div>
+        </li>
+      <?php endwhile; ?>
     </ul>
     <?php
     endif;

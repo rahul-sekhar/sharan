@@ -1,10 +1,17 @@
 .inner-container#resources {
   ul.links {
-    background-color: $near-white;
-    padding: 20px;
+    li {
+      background-color: $near-white;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
 
     p {
       margin: 0;
+
+      &.name {
+        @include whitney-semibold;
+      }
     }
   }
 }

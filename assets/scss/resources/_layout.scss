@@ -1,5 +1,3 @@
-$links-width: 250px;
-
 .inner-container#resources {
   .resource-filters {
     margin-bottom: 24px;
@@ -11,9 +9,7 @@ $links-width: 250px;
   }
 
   ul.links {
-    display: none;
-    float: left;
-    width: $links-width;
+    margin-top: 40px;
   }
 
   ul.books {

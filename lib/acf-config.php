@@ -9,5 +9,5 @@ if (function_exists('acf_add_options_sub_page')) {
   acf_add_options_sub_page('Home page');
   acf_add_options_sub_page('Slideshow');
   acf_add_options_sub_page('Navigation');
-  acf_add_options_sub_page('Social Links');
+  acf_add_options_sub_page('Sidebar and Footer Links');
 }
