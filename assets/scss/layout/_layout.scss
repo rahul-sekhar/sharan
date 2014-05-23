@@ -29,6 +29,7 @@ body {
   margin-top: 70px;
 
   .content {
+    max-width: 650px;
     margin-right: $sidebar-width + 10px + $content-side-spacing;
   }
 

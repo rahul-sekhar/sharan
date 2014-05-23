@@ -6,7 +6,7 @@ Template Name: Resources page
 <div class="inner-container" id="resources">
   <?php get_template_part('templates/sidebar', 'page'); ?>
 
-  <div class="content">
+  <div class="content resources">
     <h2>Resources</h2>
 
     <div class="resource-filters">

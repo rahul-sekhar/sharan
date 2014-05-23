@@ -23,7 +23,7 @@
 
   <?php if (get_field('show_register')) : ?>
     <div class="register">
-      <a href="#" class="button">Register</a>
+      <a href="<?php the_permalink(); ?>register/" class="button">Register</a>
     </div>
   <?php endif; ?>
 </section>

@@ -4,7 +4,8 @@
   background-color: $blue;
 
   .footer-links {
-    font-size: 10px;
+    @include whitney-medium;
+    font-size: 11px;
 
     ul {
       @include reset-list;

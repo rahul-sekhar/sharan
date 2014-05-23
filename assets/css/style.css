@@ -866,6 +866,7 @@ body {
   margin-top: 70px;
 }
 .inner-container .content {
+  max-width: 650px;
   margin-right: 315px;
 }
 .inner-container.with-side-nav .content {
@@ -916,7 +917,10 @@ body {
   background-color: #1899cb;
 }
 #content-info .footer-links {
-  font-size: 10px;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
 }
 #content-info .footer-links ul {
   margin: 0;
@@ -1831,6 +1835,9 @@ body.home .view-all {
   font-size: 10px;
 }
 
+.inner-container#resources .content.resources {
+  max-width: none;
+}
 .inner-container#resources .resource-filters {
   margin-bottom: 24px;
   margin-right: -37px;

@@ -32,9 +32,10 @@ if(function_exists("register_field_group"))
       ),
       array (
         'key' => 'field_537fa486dcb2e',
-        'label' => 'Newsletter link',
+        'label' => 'Newsletter Archive Link',
         'name' => 'newsletter_link',
         'type' => 'page_link',
+        'required' => 1,
         'post_type' => array (
           0 => 'page',
         ),

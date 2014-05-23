@@ -1,4 +1,8 @@
 .inner-container#resources {
+  .content.resources {
+    max-width: none;
+  }
+
   .resource-filters {
     margin-bottom: 24px;
     margin-right: -37px;
