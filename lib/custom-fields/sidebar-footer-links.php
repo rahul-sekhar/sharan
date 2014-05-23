@@ -31,6 +31,17 @@ if(function_exists("register_field_group"))
         'multiple' => 0,
       ),
       array (
+        'key' => 'field_537fa486dcb2e',
+        'label' => 'Newsletter link',
+        'name' => 'newsletter_link',
+        'type' => 'page_link',
+        'post_type' => array (
+          0 => 'page',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+      ),
+      array (
         'key' => 'field_531be78f7a228',
         'label' => 'Social Links',
         'name' => 'social_links',
@@ -49,6 +60,7 @@ if(function_exists("register_field_group"))
               'twitter' => 'Twitter',
               'youtube' => 'Youtube',
               'tumblr' => 'Tumblr',
+              'pinterest' => 'Pinterest',
             ),
             'default_value' => '',
             'allow_null' => 0,

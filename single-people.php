@@ -2,7 +2,7 @@
   <div class="people inner-container with-side-nav">
     <?php get_template_part('templates/side-nav', 'people'); ?>
 
-    <?php get_template_part('templates/sidebar', 'people'); ?>
+    <?php get_template_part('templates/sidebar', 'person'); ?>
 
     <div class="page content">
       <?php get_template_part('templates/content', 'person'); ?>

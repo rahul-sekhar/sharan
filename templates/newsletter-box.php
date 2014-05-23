@@ -5,5 +5,5 @@
     <button type="submit"><i class="icon-ok"></i></button>
   </div>
 
-  <a href="#" class="archive">View archive</a>
+  <a href="<?php the_field('newsletter_link', 'options'); ?>" class="archive">View archive</a>
 </form>

@@ -69,6 +69,15 @@ if(function_exists("register_field_group"))
           'group_no' => 5,
         ),
       ),
+      array (
+        array (
+          'param' => 'page_template',
+          'operator' => '==',
+          'value' => 'gallery-page-template.php',
+          'order_no' => 0,
+          'group_no' => 6,
+        ),
+      ),
     ),
     'options' => array (
       'position' => 'acf_after_title',

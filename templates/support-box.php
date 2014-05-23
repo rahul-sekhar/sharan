@@ -2,6 +2,6 @@
   <p>Support our work</p>
   <a href="<?php the_field('donate_link', 'options'); ?>">Donate</a>
 
-  <p>Get in touch</p>
+  <p>Follow SHARAN</p>
   <a href="<?php the_field('contact_link', 'options'); ?>">Contact</a>
 </div>
