@@ -1,7 +1,7 @@
 <div class="support">
   <p>Support our work</p>
-  <a href="#">Donate</a>
+  <a href="<?php the_field('donate_link', 'options'); ?>">Donate</a>
 
   <p>Get in touch</p>
-  <a href="#">Contact</a>
+  <a href="<?php the_field('contact_link', 'options'); ?>">Contact</a>
 </div>

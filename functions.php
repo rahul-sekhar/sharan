@@ -13,7 +13,7 @@ require_once locate_template('/lib/custom-fields/people.php');
 require_once locate_template('/lib/custom-fields/default-sidebar-image.php');
 require_once locate_template('/lib/custom-fields/slideshow.php');
 require_once locate_template('/lib/custom-fields/home-footer-text.php');
-require_once locate_template('/lib/custom-fields/social-links.php');
+require_once locate_template('/lib/custom-fields/sidebar-footer-links.php');
 require_once locate_template('/lib/custom-fields/event-removal.php');
 require_once locate_template('/lib/custom-fields/resources.php');
 require_once locate_template('/lib/custom-fields/page-placeholder-message.php');

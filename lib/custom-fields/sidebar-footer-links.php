@@ -7,6 +7,30 @@ if(function_exists("register_field_group"))
     'title' => 'Social Links',
     'fields' => array (
       array (
+        'key' => 'field_537f650170158',
+        'label' => 'Donate Link',
+        'name' => 'donate_link',
+        'type' => 'page_link',
+        'required' => 1,
+        'post_type' => array (
+          0 => 'page',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+      ),
+      array (
+        'key' => 'field_537f651970159',
+        'label' => 'Contact Link',
+        'name' => 'contact_link',
+        'type' => 'page_link',
+        'required' => 1,
+        'post_type' => array (
+          0 => 'page',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+      ),
+      array (
         'key' => 'field_531be78f7a228',
         'label' => 'Social Links',
         'name' => 'social_links',
@@ -45,7 +69,7 @@ if(function_exists("register_field_group"))
             'maxlength' => '',
           ),
         ),
-        'row_min' => 1,
+        'row_min' => '',
         'row_limit' => '',
         'layout' => 'table',
         'button_label' => 'Add Link',
