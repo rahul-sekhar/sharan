@@ -24,7 +24,9 @@ function sharan_ajax_subscribe() {
   $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
   $success = wp_mail($to, $subject, $message, $headers);
 
-  // Exit if sending the mail fails
+  /* Exit if sending the mail fails
+   * This is top priority, it does not matter as much if the confirmation email
+   * or adding of the item fail */
   if (!$success) {
     die(0);
   }
