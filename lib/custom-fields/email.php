@@ -22,7 +22,7 @@ if(function_exists("register_field_group"))
       array (
         'key' => 'field_5380c3f59400e',
         'label' => 'Subject for newsletter subscription confirmation email',
-        'name' => 'subscription_email_subject',
+        'name' => 'subscriptions_email_subject',
         'type' => 'text',
         'default_value' => '',
         'placeholder' => '',
@@ -34,7 +34,7 @@ if(function_exists("register_field_group"))
       array (
         'key' => 'field_5380c4159400f',
         'label' => 'Message for newsletter subscription confirmation email',
-        'name' => 'subscription_email_message',
+        'name' => 'subscriptions_email_message',
         'type' => 'textarea',
         'default_value' => '',
         'placeholder' => '',
