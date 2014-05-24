@@ -18,7 +18,7 @@ function sharan_ajax_subscribe() {
   }
 
   // Send a subscription email
-  $to = get_field('subscription_email', 'options');
+  $to = get_field('subscriptions_email', 'options');
   $subject = 'Newsletter subscription';
   $message = $email . ' has subscribed to the newsletter.';
   $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
