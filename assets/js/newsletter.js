@@ -16,6 +16,8 @@ jQuery(function ($) {
       return;
     }
 
+    emailInput.change();
+
     // Set a loading icon
     form.find('button').attr('disabled', true)
       .find('i').attr('class', 'icon-spin6 animate-spin');

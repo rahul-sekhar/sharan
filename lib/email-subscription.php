@@ -3,11 +3,39 @@
 function sharan_ajax_subscribe() {
   global $wpdb, $post;
 
-  $email = isset($_POST['email']) ? strip_tags($_POST['email']) : null;
+  $email = isset($_POST['email']) ? trim(strip_tags($_POST['email'])) : null;
 
   if (!$email) {
     die(0);
   }
+
+  // Check if subscription exists
+  $exists = get_page_by_title($email, OBJECT, 'subscription');
+  if ($exists) {
+    $message = 'You are already subscribed';
+    echo $message;
+    die();
+  }
+
+  // Send a subscription email
+  $to = get_field('subscription_email', 'options');
+  $subject = 'Newsletter subscription';
+  $message = $email . ' has subscribed to the newsletter.';
+  $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
+  $success = wp_mail($to, $subject, $message, $headers);
+
+  // Exit if sending the mail fails
+  if (!$success) {
+    die(0);
+  }
+
+  // Add a subscription to the database
+  $subscription = array(
+    'post_title' => $email,
+    'post_status' => 'publish',
+    'post_type' => 'subscription'
+  );
+  $id = wp_insert_post($subscription);
 
   $message = 'Thank you for subscribing';
   echo $message;

@@ -21,6 +21,7 @@ $feature-box-height: 132px;
     &:after {
       content: '\e806';
       @include font-icon;
+      display: inline;
       text-align: left;
       width: auto;
       margin-left: 0.4em;

@@ -1182,6 +1182,7 @@ body {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  display: inline;
   text-align: left;
   width: auto;
   margin-left: 0.4em;
@@ -2076,6 +2077,7 @@ body.home .view-all {
   /* font-size: 120%; */
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  display: inline;
   margin: 0;
 }
 .wp-prev-next .prev-link {

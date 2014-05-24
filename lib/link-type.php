@@ -31,8 +31,8 @@ function register_link_custom_type() {
     'menu_position'       => 20,
     'menu_icon'           => '',
     'can_export'          => true,
-    'has_archive'         => true,
-    'exclude_from_search' => false,
+    'has_archive'         => false,
+    'exclude_from_search' => true,
     'publicly_queryable'  => true,
     'capability_type'     => 'page',
     'taxonomies'          => array('resource_tag')
