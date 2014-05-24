@@ -29,6 +29,13 @@ function sharan_ajax_subscribe() {
     die(0);
   }
 
+  // Send a confirmation mail
+  $to = $email;
+  $subject = get_field('subscriptions_email_subject', 'options');
+  $message = get_field('subscriptions_email_message', 'options');
+  $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
+  $success = wp_mail($to, $subject, $message, $headers);
+
   // Add a subscription to the database
   $subscription = array(
     'post_title' => $email,
