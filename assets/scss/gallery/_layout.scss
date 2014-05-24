@@ -1,0 +1,41 @@
+#gallery {
+  .content.gallery {
+    max-width: none;
+    margin-right: 0;
+  }
+
+  ul.albums {
+    @include reset-list;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .pagination {
+    float: right;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    p {
+      margin: 0;
+      float: left;
+      margin-left: 10px;
+    }
+
+    ul {
+      @include reset-list;
+      float: left;
+    }
+
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+
+    .current {
+      @include whitney-medium;
+    }
+  }
+}

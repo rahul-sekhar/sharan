@@ -2213,13 +2213,73 @@ body.home .view-all {
   width: 120px;
 }
 
-#gallery .total_images, #gallery .lang_gallery {
-  display: none;
+#gallery .content.gallery {
+  max-width: none;
+  margin-right: 0;
 }
-#gallery .pwa-inner h2 {
+#gallery ul.albums {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#gallery ul.albums li {
+  display: inline-block;
+  vertical-align: top;
+}
+#gallery .pagination {
+  float: right;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+#gallery .pagination p {
+  margin: 0;
+  float: left;
+  margin-left: 10px;
+}
+#gallery .pagination ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+}
+#gallery .pagination li {
+  float: left;
+  margin-left: 10px;
+}
+#gallery .pagination .current {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
-  font-size: 18px;
-  margin: 39px 0 24px 0;
+}
+
+#gallery ul.albums {
+  margin-right: -70px;
+}
+#gallery ul.albums li {
+  width: 162px;
+  margin-right: 68px;
+  margin-bottom: 40px;
+}
+#gallery ul.albums .thumb {
+  border: 1px solid #b8b8ae;
+}
+#gallery ul.albums img {
+  width: 160px;
+  height: 160px;
+  display: block;
+}
+#gallery ul.albums p {
+  margin: 0;
+}
+#gallery ul.albums .title {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+#gallery ul.albums .date {
+  margin-top: 4px;
+}
+#gallery ul.albums .date, #gallery ul.albums .num-photos {
+  color: #333333;
+  font-size: 11px;
 }

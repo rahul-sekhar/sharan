@@ -1,0 +1,38 @@
+#gallery {
+  ul.albums {
+    margin-right: -70px;
+
+    li {
+      width: 162px;
+      margin-right: 68px;
+      margin-bottom: 40px;
+    }
+
+    .thumb {
+      border: 1px solid $grey;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      display: block;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .title {
+      @include whitney-medium;
+    }
+
+    .date {
+      margin-top: 4px;
+    }
+
+    .date, .num-photos {
+      color: $dark-grey;
+      font-size: 11px;
+    }
+  }
+}

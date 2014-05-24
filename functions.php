@@ -20,6 +20,7 @@ require_once locate_template('/lib/custom-fields/page-placeholder-message.php');
 require_once locate_template('/lib/custom-fields/default-resource-tag.php');
 require_once locate_template('/lib/custom-fields/event-registration.php');
 require_once locate_template('/lib/custom-fields/registration-options.php');
+require_once locate_template('/lib/custom-fields/gallery.php');
 
 require_once locate_template('/lib/utils.php');                   // Utility functions
 require_once locate_template('/lib/init.php');                    // Initial theme setup and constants
@@ -29,6 +30,9 @@ require_once locate_template('/lib/titles.php');                  // Page titles
 require_once locate_template('/lib/cleanup.php');                 // Cleanup
 require_once locate_template('/lib/relative-urls.php');           // Root relative URLs
 require_once locate_template('/lib/scripts.php');                 // Scripts and stylesheets
+
+require_once locate_template('/lib/cache.php');                   // Create cache folder
+require_once locate_template('/lib/gallery.php');                 // Gallery class to pull from Picasa
 
 require_once locate_template('/lib/remove-comments.php');         // Remove comments
 require_once locate_template('/lib/remove-post-taxonomies.php');  // Remove category and tags from posts
