@@ -22,10 +22,6 @@ function sharan_ajax_subscribe() {
   $subject = 'Newsletter subscription';
   $message = $email . ' has subscribed to the newsletter.';
   $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
-  var_dump($to);
-  var_dump($subject);
-  var_dump($message);
-  var_dump($headers);
   $success = wp_mail($to, $subject, $message, $headers);
 
   // Exit if sending the mail fails
