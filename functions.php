@@ -51,6 +51,7 @@ require_once locate_template('/lib/resource-tags.php');           // Resource ta
 require_once locate_template('/lib/book-type.php');               // Custom post type for books
 require_once locate_template('/lib/link-type.php');               // Custom post type for links
 require_once locate_template('/lib/people-page.php');             // Function to retrieve the people page
+require_once locate_template('/lib/email-general.php');           // Helper functions for emailing
 require_once locate_template('/lib/email-subscription.php');      // Handlers for subscription
 require_once locate_template('/lib/event-registration.php');      // Handlers for event registration
 require_once locate_template('/lib/subscription-type.php');       // Post type for newsletter subscriptions

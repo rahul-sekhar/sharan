@@ -21,8 +21,7 @@ function sharan_ajax_subscribe() {
   $to = get_field('subscriptions_email', 'options');
   $subject = 'Newsletter subscription';
   $message = $email . ' has subscribed to the newsletter.';
-  $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
-  $success = wp_mail($to, $subject, $message, $headers);
+  $success = wp_mail($to, $subject, $message, sharan_from_header());
 
   /* Exit if sending the mail fails
    * This is top priority, it does not matter as much if the confirmation email
@@ -35,8 +34,7 @@ function sharan_ajax_subscribe() {
   $to = $email;
   $subject = get_field('subscriptions_email_subject', 'options');
   $message = get_field('subscriptions_email_message', 'options');
-  $headers = 'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>' . "\r\n";
-  $success = wp_mail($to, $subject, $message, $headers);
+  $success = wp_mail($to, $subject, $message, sharan_from_header());
 
   // Add a subscription to the database
   $subscription = array(
