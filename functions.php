@@ -22,6 +22,7 @@ require_once locate_template('/lib/custom-fields/event-registration.php');
 require_once locate_template('/lib/custom-fields/registration-options.php');
 require_once locate_template('/lib/custom-fields/gallery.php');
 require_once locate_template('/lib/custom-fields/email.php');
+require_once locate_template('/lib/custom-fields/registrations.php');
 
 require_once locate_template('/lib/utils.php');                   // Utility functions
 require_once locate_template('/lib/init.php');                    // Initial theme setup and constants
@@ -55,3 +56,5 @@ require_once locate_template('/lib/email-general.php');           // Helper func
 require_once locate_template('/lib/email-subscription.php');      // Handlers for subscription
 require_once locate_template('/lib/event-registration.php');      // Handlers for event registration
 require_once locate_template('/lib/subscription-type.php');       // Post type for newsletter subscriptions
+require_once locate_template('/lib/registration-type.php');       // Post type for registrations
+require_once locate_template('/lib/mail-wrapper.php');            // Wrapper for development mail debugging

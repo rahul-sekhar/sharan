@@ -84,6 +84,16 @@ if(function_exists("register_field_group"))
         'message' => '',
         'default_value' => 1,
       ),
+      array (
+        'key' => 'field_5382ec6589dac',
+        'label' => 'Registration closing date',
+        'name' => 'registration_closing_date',
+        'type' => 'date_picker',
+        'instructions' => 'If left blank, the date the event starts on will be used.',
+        'date_format' => 'yymmdd',
+        'display_format' => 'dd/mm/yy',
+        'first_day' => 1,
+      ),
     ),
     'location' => array (
       array (
