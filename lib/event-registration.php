@@ -135,7 +135,7 @@ EOT;
 
   // Add a registration to the database
   $registration = array(
-    'post_title' => $event_name,
+    'post_title' => $event_name . ' - ' . $name,
     'post_status' => 'publish',
     'post_type' => 'registration'
   );
