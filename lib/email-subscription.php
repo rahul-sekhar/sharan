@@ -11,7 +11,7 @@ function sharan_ajax_subscribe() {
 
   // Check if subscription exists
   $exists = get_page_by_title($email, OBJECT, 'subscription');
-  if ($exists) {
+  if ($exists && $exists->post_status != 'trash') {
     $message = 'You are already subscribed';
     echo $message;
     die();

@@ -1,7 +1,7 @@
 <?php
 
 function sharan_mail($to, $subject, $message, $headers) {
-  if (DEVELOPMENT) :
+  if (defined('DEVELOPMENT') && DEVELOPMENT) :
     echo <<<EOT
 
 Headers:
