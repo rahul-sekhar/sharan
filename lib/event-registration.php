@@ -125,6 +125,7 @@ EOT;
   $to = $email;
   $subject = get_field('registrations_email_subject', 'options');
   $message = get_field('registrations_email_message', 'options');
+  $message = html_entity_decode($message);
 
   // Message replacements
   $message_placeholders = array(':name', ':event_name', ':event_link', ':payment_option_name', ':amount');
