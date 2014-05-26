@@ -1,5 +1,6 @@
 <form id="registration-form" method="POST" action="">
   <div class="options">
+    <p class="name"><?php the_title() ?></p>
     <?php get_template_part('templates/registration', 'options') ?>
   </div>
 
@@ -8,9 +9,7 @@
   </div>
 
   <div class="buttons">
-    <a class="cancel" href="<?php echo the_permalink(); ?>">Cancel</a>
-
     <input type="hidden" name="submitted" value="true" />
-    <input class="submit" type="submit" value="Register" />
+    <input class="submit button" type="submit" value="Register" />
   </div>
 </form>

@@ -641,10 +641,10 @@ body {
   max-width: 580px;
 }
 body h2 {
-  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 400;
+  font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 300;
   font-style: normal;
-  font-size: 36px;
+  font-size: 44px;
   margin: 30px 0;
 }
 body p, body ul, body ol {

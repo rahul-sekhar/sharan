@@ -1,13 +1,13 @@
 <?php
 if (register_event()) : ?>
   <div class="content register">
-    <p>Thank you for registering. We have sent a confirmation email to you.
+    <p>Thank you for registering. We have sent you a confirmation email.
     You will be redirected back to the event page in a few seconds.</p>
   </div>
 
   <script>
     setTimeout(function () {
-       window.location.href = "<?php the_permalink(); ?>";
+       // window.location.href = "<?php the_permalink(); ?>";
     }, 5000);
   </script>
 

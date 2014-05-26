@@ -694,10 +694,10 @@ img {
 }
 
 .content h2 {
-  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 400;
+  font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 300;
   font-style: normal;
-  font-size: 36px;
+  font-size: 44px;
   margin: 30px 0;
 }
 .content p, .content ul, .content ol {
@@ -750,6 +750,7 @@ img {
 }
 
 .button {
+  border: none;
   display: inline-block;
   background-color: #1899cb;
   color: white;
@@ -766,6 +767,9 @@ img {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+}
+.button.disabled {
+  background-color: #b8b8ae;
 }
 
 #subscribe-form .message {
@@ -1207,10 +1211,10 @@ body {
   margin-bottom: 60px;
 }
 .event-list h2 {
-  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 400;
+  font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 300;
   font-style: normal;
-  font-size: 36px;
+  font-size: 44px;
   margin: 30px 0;
 }
 .event-list .filters {
@@ -2185,34 +2189,96 @@ body.home .view-all {
   clear: left;
 }
 #registration-form .options {
+  background-color: #333333;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  width: 500px;
+  padding: 15px;
   margin-bottom: 40px;
+}
+#registration-form .options .name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+#registration-form .options li {
+  line-height: 20px;
+  vertical-align: middle;
+}
+#registration-form .options input {
+  margin-right: 15px;
+}
+#registration-form .options .price {
+  margin-left: 50px;
 }
 #registration-form .options ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-#registration-form .options li {
-  margin-bottom: 20px;
-}
 #registration-form .contact input, #registration-form .contact textarea {
-  border: 1px solid #b8b8ae;
+  border: 1px solid #ecece4;
   font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 400;
   font-style: normal;
   font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  outline: none;
+  padding: 15px;
+  width: 500px;
 }
-#registration-form .contact input {
-  padding: 2px 4px;
+#registration-form .contact input.invalid, #registration-form .contact textarea.invalid {
+  background-color: #ff9999;
 }
 #registration-form .contact textarea {
-  padding: 4px 6px;
   resize: none;
 }
 #registration-form .contact label {
   display: block;
   float: left;
   width: 120px;
+  padding: 6px 0;
+}
+
+.register.inner-container h2 {
+  width: 500px;
+}
+.register.inner-container .sidebar {
+  width: 450px;
+  padding: 6px 24px;
+}
+.register.inner-container .sidebar h3 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  padding-top: 10px;
+  margin: 0;
+}
+.register.inner-container .sidebar h3:first-child {
+  margin-top: 18px;
+  padding-top: 0;
+}
+.register.inner-container .sidebar p {
+  margin: 18px 0;
+  font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 160%;
+}
+.register.inner-container .sidebar strong, .register.inner-container .sidebar b {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
 }
 
 #gallery .content.gallery {

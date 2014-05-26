@@ -1,24 +1,19 @@
 <div class="field">
-  <label for="registration-name">Name:</label>
-  <input id="registration-name" name="name" required />
+  <input id="registration-name" name="name" placeholder="Name" required />
 </div>
 
 <div class="field">
-  <label for="registration-email">Email address:</label>
-  <input id="registration-email" name="email" type="email" required />
+  <input id="registration-email" name="email" type="email" placeholder="Email" required />
 </div>
 
 <div class="field">
-  <label for="registration-phone">Phone number:</label>
-  <input id="registration-phone" name="phone" required />
+  <input id="registration-phone" name="phone" placeholder="Phone number" required />
 </div>
 
 <div class="field">
-  <label for="registration-address">Address:</label>
-  <textarea id="registration-address" name="address" required></textarea>
+  <textarea id="registration-address" name="address" placeholder="Address" required></textarea>
 </div>
 
 <div class="field">
-  <label for="registration-comments">Comments:</label>
-  <textarea id="registration-comments" name="comments"></textarea>
+  <textarea id="registration-comments" name="comments" placeholder="Comments"></textarea>
 </div>

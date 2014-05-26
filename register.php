@@ -1,4 +1,4 @@
-<div class="inner-container">
+<div class="register inner-container">
   <?php
   $post = get_page_by_path(get_query_var('event'), OBJECT, 'events');
   $registrations_closed = registrations_closed($post);

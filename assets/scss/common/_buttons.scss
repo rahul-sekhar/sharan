@@ -1,5 +1,6 @@
 $button-height: 36px;
 .button {
+  border: none;
   display: inline-block;
   background-color: $blue;
   color: white;
@@ -10,4 +11,8 @@ $button-height: 36px;
   padding: 0 40px;
   letter-spacing: 1px;
   @include border-radius(5px);
+
+  &.disabled {
+    background-color: $grey;
+  }
 }

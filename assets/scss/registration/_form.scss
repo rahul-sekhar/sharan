@@ -6,30 +6,55 @@
   }
 
   .options {
+    background-color: $dark-grey;
+    @include whitney-medium;
+    color: white;
+    width: 500px;
+    padding: 15px;
     margin-bottom: 40px;
 
-    ul {
-      @include reset-list;
+    .name {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-bottom: 15px;
+      font-size: 13px;
     }
 
     li {
-      margin-bottom: 20px;
+      line-height: 20px;
+      vertical-align: middle;
+    }
+
+    input {
+      margin-right: 15px;
+    }
+
+    .price {
+      margin-left: 50px;
+    }
+
+    ul {
+      @include reset-list;
     }
   }
 
   .contact {
     input, textarea {
-      border: 1px solid $grey;
+      border: 1px solid $near-white;
       @include whitney-book;
       font-size: 13px;
-    }
+      @include border-radius(4px);
+      outline: none;
+      padding: 15px;
+      width: 500px;
 
-    input {
-      padding: 2px 4px;
+      &.invalid {
+        background-color: lighten(red, 30);
+      }
     }
 
     textarea {
-      padding: 4px 6px;
       resize: none;
     }
 
@@ -37,6 +62,7 @@
       display: block;
       float: left;
       width: 120px;
+      padding: 6px 0;
     }
   }
 }
