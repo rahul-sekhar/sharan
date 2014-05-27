@@ -19,6 +19,7 @@ require_once locate_template('/lib/custom-fields/resources.php');
 require_once locate_template('/lib/custom-fields/page-placeholder-message.php');
 require_once locate_template('/lib/custom-fields/default-resource-tag.php');
 require_once locate_template('/lib/custom-fields/event-registration.php');
+require_once locate_template('/lib/custom-fields/consultation-registration.php');
 require_once locate_template('/lib/custom-fields/registration-options.php');
 require_once locate_template('/lib/custom-fields/gallery.php');
 require_once locate_template('/lib/custom-fields/email.php');
@@ -52,7 +53,6 @@ require_once locate_template('/lib/resource-tags.php');           // Resource ta
 require_once locate_template('/lib/book-type.php');               // Custom post type for books
 require_once locate_template('/lib/link-type.php');               // Custom post type for links
 require_once locate_template('/lib/people-page.php');             // Function to retrieve the people page
-require_once locate_template('/lib/email-general.php');           // Helper functions for emailing
 require_once locate_template('/lib/email-subscription.php');      // Handlers for subscription
 require_once locate_template('/lib/event-registration-rewrites.php');  // URL rewrites for event registration
 require_once locate_template('/lib/event-registration.php');      // Handlers for event registration

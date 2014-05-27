@@ -3,19 +3,18 @@
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
-    'id' => 'acf_event-registration',
-    'title' => 'Event Registration',
+    'id' => 'acf_consultation-registration',
+    'title' => 'Consultation Registration',
     'fields' => array (
       array (
         'key' => 'field_537f8a6a72624',
         'label' => 'Price Options',
-        'name' => 'price_options',
+        'name' => 'consultation_price_options',
         'type' => 'repeater',
-        'instructions' => 'If left blank, the register button will not be displayed',
-        'required' => 0,
+        'required' => 1,
         'sub_fields' => array (
           array (
-            'key' => 'field_537f8ba472625',
+            'key' => 'field_538426e7614f0',
             'label' => 'Name',
             'name' => 'name',
             'type' => 'text',
@@ -29,7 +28,7 @@ if(function_exists("register_field_group"))
             'maxlength' => '',
           ),
           array (
-            'key' => 'field_537f8bbc72626',
+            'key' => 'field_538426ea614f1',
             'label' => 'Price',
             'name' => 'price',
             'type' => 'number',
@@ -44,7 +43,7 @@ if(function_exists("register_field_group"))
             'step' => '',
           ),
         ),
-        'row_min' => 0,
+        'row_min' => 1,
         'row_limit' => '',
         'layout' => 'row',
         'button_label' => 'Add Option',
@@ -53,9 +52,9 @@ if(function_exists("register_field_group"))
     'location' => array (
       array (
         array (
-          'param' => 'post_type',
+          'param' => 'options_page',
           'operator' => '==',
-          'value' => 'events',
+          'value' => 'acf-options-consultation',
           'order_no' => 0,
           'group_no' => 0,
         ),

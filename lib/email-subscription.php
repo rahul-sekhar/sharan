@@ -18,7 +18,7 @@ function sharan_ajax_subscribe() {
   }
 
   // Send a subscription email
-  $to = get_field('subscriptions_email', 'options');
+  $to = get_field('subscription_email', 'options');
   $subject = 'Newsletter subscription';
   $message = $email . ' has subscribed to the newsletter.';
   $success = sharan_mail($to, $subject, $message, sharan_from_header());
@@ -32,8 +32,8 @@ function sharan_ajax_subscribe() {
 
   // Send a confirmation mail
   $to = $email;
-  $subject = get_field('subscriptions_email_subject', 'options');
-  $message = get_field('subscriptions_email_message', 'options');
+  $subject = get_field('subscription_email_subject', 'options');
+  $message = get_field('subscription_email_message', 'options');
   $message = html_entity_decode($message);
   $success = sharan_mail($to, $subject, $message, sharan_from_header());
 

@@ -99,8 +99,8 @@ if(function_exists("register_field_group"))
       ),
       array (
         'key' => 'field_5383609e116b2',
-        'label' => 'Payment Option',
-        'name' => 'payment_option',
+        'label' => 'Price Option',
+        'name' => 'price_option',
         'type' => 'text',
         'default_value' => '',
         'placeholder' => '',

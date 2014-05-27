@@ -22,7 +22,7 @@
     }
 
     li {
-      line-height: 20px;
+      line-height: 30px;
       vertical-align: middle;
     }
 
@@ -48,9 +48,25 @@
       outline: none;
       padding: 15px;
       width: 500px;
+    }
 
-      &.invalid {
-        background-color: lighten(red, 30);
+    .field.invalid {
+      position: relative;
+
+      input, textarea {
+        border: 1px solid lighten(red, 40);
+        background-color: lighten(red, 47);
+      }
+
+      &:after {
+        @include font-icon;
+        line-height: 47px;
+        content: '\e80c';
+        font-size: 25px;
+        color: lighten(red, 20);
+        position: absolute;
+        left: 500px + 10px;
+        top: 0;
       }
     }
 

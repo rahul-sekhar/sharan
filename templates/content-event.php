@@ -21,7 +21,7 @@
     </div>
   <?php endif; ?>
 
-  <?php if (get_field('show_register')) : ?>
+  <?php if (get_field('price_options')) : ?>
     <div class="register">
       <a href="<?php the_permalink(); ?>register/" class="button">Register</a>
     </div>

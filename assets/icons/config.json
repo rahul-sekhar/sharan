@@ -77,6 +77,12 @@
       "css": "cancel-circle",
       "code": 59400,
       "src": "iconic"
+    },
+    {
+      "uid": "189edfc41118cccbeb25788fcbb403da",
+      "css": "attention",
+      "code": 59404,
+      "src": "mfglabs"
     }
   ]
 }

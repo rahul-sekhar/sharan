@@ -446,11 +446,11 @@ th {
 }
 
 /* '' */
-.icon-cancel-circle:before {
-  content: '\e808';
+.icon-attention:before {
+  content: '\e80c';
 }
 
-/* '' */
+/* '' */
 .icon-facebook:before {
   content: '\e802';
 }
@@ -496,6 +496,11 @@ th {
 }
 
 /* '' */
+.icon-cancel-circle:before {
+  content: '\e808';
+}
+
+/* '' */
 .icon-youtube:before {
   content: '\e804';
 }
@@ -2206,7 +2211,7 @@ body.home .view-all {
   font-size: 13px;
 }
 #registration-form .options li {
-  line-height: 20px;
+  line-height: 30px;
   vertical-align: middle;
 }
 #registration-form .options input {
@@ -2235,8 +2240,43 @@ body.home .view-all {
   padding: 15px;
   width: 500px;
 }
-#registration-form .contact input.invalid, #registration-form .contact textarea.invalid {
-  background-color: #ff9999;
+#registration-form .contact .field.invalid {
+  position: relative;
+}
+#registration-form .contact .field.invalid input, #registration-form .contact .field.invalid textarea {
+  border: 1px solid #ffcccc;
+  background-color: #fff0f0;
+}
+#registration-form .contact .field.invalid:after {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  line-height: 47px;
+  content: '\e80c';
+  font-size: 25px;
+  color: #ff6666;
+  position: absolute;
+  left: 510px;
+  top: 0;
 }
 #registration-form .contact textarea {
   resize: none;

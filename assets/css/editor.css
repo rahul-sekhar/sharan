@@ -441,11 +441,11 @@ th {
 }
 
 /* '' */
-.icon-cancel-circle:before {
-  content: '\e808';
+.icon-attention:before {
+  content: '\e80c';
 }
 
-/* '' */
+/* '' */
 .icon-facebook:before {
   content: '\e802';
 }
@@ -491,6 +491,11 @@ th {
 }
 
 /* '' */
+.icon-cancel-circle:before {
+  content: '\e808';
+}
+
+/* '' */
 .icon-youtube:before {
   content: '\e804';
 }

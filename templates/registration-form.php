@@ -1,6 +1,10 @@
 <form id="registration-form" method="POST" action="">
   <div class="options">
-    <p class="name"><?php the_title() ?></p>
+    <?php if (get_query_var('register') == 'consultation') : ?>
+      <p class="name">Consultation</p>
+    <?php else : ?>
+      <p class="name"><?php the_title() ?></p>
+    <?php endif; ?>
     <?php get_template_part('templates/registration', 'options') ?>
   </div>
 
