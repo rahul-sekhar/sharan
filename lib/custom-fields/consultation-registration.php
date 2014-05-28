@@ -7,7 +7,7 @@ if(function_exists("register_field_group"))
     'title' => 'Consultation Registration',
     'fields' => array (
       array (
-        'key' => 'field_537f8a6a72624',
+        'key' => 'field_538431b506e01',
         'label' => 'Price Options',
         'name' => 'consultation_price_options',
         'type' => 'repeater',
