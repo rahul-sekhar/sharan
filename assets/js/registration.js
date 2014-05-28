@@ -29,7 +29,7 @@ jQuery(function ($) {
   form.on('blur', 'input[required], textarea[required]', checkField);
 
   // Debounce
-  submit.on(click, function () {
+  submit.on('click', function () {
     if(!submit.hasClass('disabled')) {
       submit.attr('disabled', true).addClass('disabled');
     }
