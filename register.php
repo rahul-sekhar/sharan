@@ -1,9 +1,6 @@
-<pre>Register page</pre>
 <div class="register inner-container">
   <?php
   $post = get_page_by_path(get_query_var('event'), OBJECT, 'events');
-  var_dump($post);
-  var_dump(get_field('payment_options', $post->ID));
   $registrations_allowed = registrations_allowed($post);
   $registrations_closed = registrations_closed($post);
 

@@ -16,7 +16,7 @@ function registrations_closed( $event ) {
 
 // Check if registrations are allowed for an event
 function registrations_allowed( $event ) {
-  return (bool)get_field('payment_options', $event->ID);
+  return (bool)get_field('price_options', $event->ID);
 }
 
 function sanitize_registration_fields() {
