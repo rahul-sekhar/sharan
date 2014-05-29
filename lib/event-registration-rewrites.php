@@ -39,7 +39,9 @@ function sharan_event_registration_wp_title( $title, $sep) {
 
   if ( get_query_var('register') == 'event') {
     $event = get_page_by_path(get_query_var('event'), OBJECT, 'events');
-    $base_title = 'Register for ' . $event->post_title;
+    if ($event) {
+      $base_title = 'Register for ' . $event->post_title;
+    }
   } elseif ( get_query_var( 'register' ) == 'consultation') {
     $base_title = 'Register for a consultation';
   }

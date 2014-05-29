@@ -59,3 +59,4 @@ require_once locate_template('/lib/event-registration.php');      // Handlers fo
 require_once locate_template('/lib/subscription-type.php');       // Post type for newsletter subscriptions
 require_once locate_template('/lib/registration-type.php');       // Post type for registrations
 require_once locate_template('/lib/mail-wrapper.php');            // Wrapper for development mail debugging
+require_once locate_template('/lib/clean-admin-interface.php');   // Change admin menu items and clean up

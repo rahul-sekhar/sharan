@@ -2,6 +2,10 @@
 
 // Check if registrations are closed for an event
 function registrations_closed( $event ) {
+  if (!$event) {
+    return true;
+  }
+
   // Get the registration closing date
   $closing_date = get_field('registration_closing_date', $event->ID);
 
@@ -11,11 +15,14 @@ function registrations_closed( $event ) {
   }
 
   // Check if we have passed that date
-  $registrations_closed = ($closing_date < date('Ymd'));
+  return ($closing_date < date('Ymd'));
 }
 
 // Check if registrations are allowed for an event
 function registrations_allowed( $event ) {
+  if (!$event) {
+    return false;
+  }
   return (bool)get_field('price_options', $event->ID);
 }
 
