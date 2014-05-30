@@ -7,6 +7,7 @@ $slideshow-height: 600px;
 #slideshow {
   position: relative;
   margin: 0 auto;
+  width: 100%;
   max-width: $page-width;
   @include clearfix;
 
@@ -35,21 +36,25 @@ $slideshow-height: 600px;
 
   .text {
     position: absolute;
-    bottom: 40px;
-    width: 100%;
-    padding: 0 15%;
+    bottom: 25px;
+    left: 30%;
+    width: 40%;
+    // padding: 0 15%;
     text-align: center;
+    // background-color: $dark-grey;
+    // background-color: rgba($dark-grey, 0.8);
   }
 
   .caption {
-    margin-bottom: 60px;
-    min-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 78px;
 
     p {
       @include sentinel-book;
       color: white;
-      font-size: 50px;
-      @include text-shadow(#666 0 0 8px);
+      font-size: 32px;
+      @include text-shadow(#333 0 0 8px);
       margin: 0;
     }
   }
@@ -57,9 +62,10 @@ $slideshow-height: 600px;
   .button {
     text-transform: none;
     letter-spacing: 0;
+    margin-bottom: 20px;
     @include border-radius(2px);
     padding: 0 20px;
-    @include box-shadow(#666 0 0 8px);
+    @include box-shadow(#333 0 0 8px);
 
     &:after {
       content: '\e806';
@@ -74,12 +80,15 @@ $slideshow-height: 600px;
   // Navigation
   .rslides_tabs {
     position: absolute;
-    right: 25px;
-    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    @include reset-list;
+    bottom: 15px;
     z-index: $slide-nav-z-index;
 
     li {
-      float: left;
+      display: inline-block;
       margin-left: 8px;
     }
 
@@ -87,8 +96,8 @@ $slideshow-height: 600px;
       @include hide-text;
       display: block;
       background-color: white;
-      width: 12px;
-      height: 12px;
+      width: 8px;
+      height: 8px;
       @include border-radius(50%);
       @include box-shadow(#666 0 0 8px);
     }

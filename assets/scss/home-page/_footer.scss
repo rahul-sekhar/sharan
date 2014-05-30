@@ -1,7 +1,7 @@
 #home-footer {
   background-color: $near-white;
   margin-bottom: -1 * $page-bottom-padding;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 30px;
   margin-top: 80px;
   clear: both;
@@ -85,6 +85,7 @@
     font-size: 13px;
     margin-top: 20px;
     display: block;
+    @include whitney-medium;
   }
 
   #subscribe-form .message {

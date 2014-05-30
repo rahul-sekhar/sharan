@@ -6,7 +6,7 @@ if ($slides) :
     <div id="slideshow">
       <ul class="slides">
         <?php foreach($slides as $slide) : ?>
-          <li>
+          <li class="slide">
             <img src="<?php echo $slide['image']['sizes']['slideshow'] ?>" alt="" />
 
             <div class="text">

@@ -1051,13 +1051,13 @@ body {
   margin-right: 25px;
 }
 #content-info .footer-links li a {
-  color: #ecece4;
+  color: #f1f1f1;
 }
 #content-info p.credit {
   margin: 0;
   text-align: right;
   line-height: 29px;
-  color: #ecece4;
+  color: #f1f1f1;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
@@ -1077,7 +1077,7 @@ body {
 }
 
 .sidebar {
-  background-color: #ecece4;
+  background-color: #f1f1f1;
   padding: 15px;
   padding-bottom: 40px;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
@@ -1814,6 +1814,7 @@ body {
 #slideshow {
   position: relative;
   margin: 0 auto;
+  width: 100%;
   max-width: 1100px;
   overflow: hidden;
   *zoom: 1;
@@ -1840,36 +1841,38 @@ body {
 }
 #slideshow .text {
   position: absolute;
-  bottom: 40px;
-  width: 100%;
-  padding: 0 15%;
+  bottom: 25px;
+  left: 30%;
+  width: 40%;
   text-align: center;
 }
 #slideshow .caption {
-  margin-bottom: 60px;
-  min-height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 78px;
 }
 #slideshow .caption p {
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
   color: white;
-  font-size: 50px;
-  text-shadow: #666666 0 0 8px;
+  font-size: 32px;
+  text-shadow: #333333 0 0 8px;
   margin: 0;
 }
 #slideshow .button {
   text-transform: none;
   letter-spacing: 0;
+  margin-bottom: 20px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
   padding: 0 20px;
-  -webkit-box-shadow: #666666 0 0 8px;
-  -moz-box-shadow: #666666 0 0 8px;
-  box-shadow: #666666 0 0 8px;
+  -webkit-box-shadow: #333333 0 0 8px;
+  -moz-box-shadow: #333333 0 0 8px;
+  box-shadow: #333333 0 0 8px;
 }
 #slideshow .button:after {
   content: '\e806';
@@ -1902,12 +1905,17 @@ body {
 }
 #slideshow .rslides_tabs {
   position: absolute;
-  right: 25px;
-  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  bottom: 15px;
   z-index: 100;
 }
 #slideshow .rslides_tabs li {
-  float: left;
+  display: inline-block;
   margin-left: 8px;
 }
 #slideshow .rslides_tabs a {
@@ -1916,8 +1924,8 @@ body {
   text-align: left;
   display: block;
   background-color: white;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1931,8 +1939,8 @@ body {
   background-color: #fed970;
 }
 
-body.home #slideshow {
-  margin-bottom: 80px;
+body.home #slideshow-wrapper {
+  margin-bottom: 40px;
 }
 body.home h2 {
   font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
@@ -1944,21 +1952,50 @@ body.home h2 {
 body.home .event-list {
   width: 410px;
   float: left;
+  margin-bottom: 40px;
 }
 body.home .recent-news {
   float: right;
   width: 500px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 body.home .view-all {
   display: block;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
   margin-top: 40px;
+}
+body.home .view-all:after {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  content: '\e806';
 }
 
 #home-footer {
-  background-color: #ecece4;
+  background-color: #f1f1f1;
   margin-bottom: -40px;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 30px;
   margin-top: 80px;
   clear: both;
@@ -2038,6 +2075,9 @@ body.home .view-all {
   font-size: 13px;
   margin-top: 20px;
   display: block;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
 }
 #home-footer #subscribe-form .message {
   font-size: 13px;
@@ -2223,7 +2263,7 @@ body.home .view-all {
 }
 
 .inner-container#resources ul.links li {
-  background-color: #ecece4;
+  background-color: #f1f1f1;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -2451,7 +2491,7 @@ body.home .view-all {
   list-style-type: none;
 }
 #registration-form .contact input, #registration-form .contact textarea {
-  border: 1px solid #ecece4;
+  border: 1px solid #f1f1f1;
   font-family: 'Whitney SSm 4r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 400;
   font-style: normal;

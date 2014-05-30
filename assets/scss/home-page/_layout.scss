@@ -1,6 +1,6 @@
 body.home {
-  #slideshow {
-    margin-bottom: 80px;
+  #slideshow-wrapper {
+    margin-bottom: 40px;
   }
 
   h2 {
@@ -12,16 +12,23 @@ body.home {
   .event-list {
     width: 410px;
     float: left;
+    margin-bottom: 40px;
   }
 
   .recent-news {
     float: right;
     width: 500px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .view-all {
     display: block;
+    @include whitney-medium;
     margin-top: 40px;
+
+    &:after {
+      @include font-icon;
+      content: '\e806';
+    }
   }
 }
