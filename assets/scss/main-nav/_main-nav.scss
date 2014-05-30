@@ -41,4 +41,71 @@ $nav-margin: ($banner-height - 33px) / 2;
   li:last-child a {
     padding-right: 0;
   }
+
+  @media all and (max-width: $breakpoint-width) {
+    display: none;
+  }
+}
+
+#nav-pull {
+  display: none;
+}
+
+@media all and (max-width: $breakpoint-width) {
+  body.nav-shown #main-nav {
+    display: block;
+    clear: left;
+    float: none;
+    background-color: $yellow;
+    text-align: center;
+    margin: 0 -1 * $page-padding;
+
+    li {
+      float: none;
+      &:last-child a {
+        padding-right: 20px;
+      }
+    }
+
+    a {
+      border-left: none;
+    }
+  }
+
+  body.nav-shown {
+    min-height: 100%;
+  }
+
+  body.nav-shown #banner {
+    position: static;
+    height: auto;
+    overflow: hidden;
+    min-height: 100%;
+    padding-bottom: $footer-height;
+    margin-bottom: -1 * $footer-height;
+  }
+
+  body.nav-shown #wrapper {
+    display: none;
+  }
+
+  #nav-pull {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: $page-padding;
+    line-height: 33px;
+    font-size: 25px;
+
+    &:before {
+      @include font-icon;
+      content: '\e80d';
+    }
+  }
+
+  body.nav-shown #nav-pull {
+    &:before {
+      content: '\e80e';
+    }
+  }
 }

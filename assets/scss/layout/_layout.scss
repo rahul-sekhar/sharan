@@ -25,17 +25,68 @@ body {
   }
 }
 
+$content-margin-right: $sidebar-width + 10px + $content-side-spacing;
+$content-margin-left: $side-nav-width + $content-side-spacing;
+$content-width: $page-width - $content-margin-right - $content-margin-left;
+$side-nav-removal-width: $content-width + $content-margin-left + (2 * $page-padding) + $scrollbar-width;
+
 .inner-container {
   margin-top: 70px;
 
   .content {
     max-width: 650px;
-    margin-right: $sidebar-width + 10px + $content-side-spacing;
+    margin-right: $content-margin-right;
   }
 
   &.with-side-nav {
     .content {
-      margin-left: $side-nav-width + $content-side-spacing;
+      margin-left: $content-margin-left;
+
+      @media all and (max-width: $sidebar-removal-width) {
+        margin-right: 0;
+        max-width: $content-width;
+      }
+
+      $total-width-without-sidebar: $content-width + $content-margin-left;
+      @media all and (max-width: $total-width-without-sidebar + (2 * $page-padding) + $scrollbar-width) {
+        width: ($content-width / $total-width-without-sidebar) * 100%;
+        margin-left: ($content-margin-left / $total-width-without-sidebar) * 100%;
+      }
+
+      @media all and (max-width: $side-nav-removal-width) {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.side-nav-pull {
+  display: none;
+
+  @media all and (max-width: $side-nav-removal-width) {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 40px;
+    top: 0;
+    left: 0;
+    background-color: $grey;
+
+    &:before {
+      @include font-icon;
+      content: '\e80f';
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      color: white;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      margin-top: -20px;
+      line-height: 40px;
+      font-size: 40px;
     }
   }
 }
@@ -43,9 +94,37 @@ body {
 .side-nav {
   float: left;
   width: $side-nav-width;
+
+  @media all and (max-width: $side-nav-removal-width) {
+    display: none;
+  }
+}
+
+@media all and (max-width: $side-nav-removal-width) {
+  .inner-container.with-side-nav {
+    padding-left: 40px;
+
+    &.side-nav-shown {
+      .content {
+        display: none;
+      }
+
+      .side-nav {
+        display: block;
+        max-width: $content-width;
+        width: auto;
+        margin: 0 auto;
+        float: none;
+      }
+    }
+  }
 }
 
 .sidebar {
   float: right;
   width: $sidebar-width;
+
+  @media all and (max-width: $sidebar-removal-width) {
+    display: none;
+  }
 }

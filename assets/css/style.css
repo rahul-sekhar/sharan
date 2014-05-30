@@ -441,16 +441,16 @@ th {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-spin6:before {
-  content: '\e80b';
+.icon-ok:before {
+  content: '\e800';
 }
 
-/* '' */
-.icon-attention:before {
-  content: '\e80c';
+/* '' */
+.icon-twitter:before {
+  content: '\e801';
 }
 
-/* '' */
+/* '' */
 .icon-facebook:before {
   content: '\e802';
 }
@@ -461,51 +461,66 @@ th {
 }
 
 /* '' */
-.icon-tumblr:before {
-  content: '\e805';
-}
-
-/* '' */
-.icon-twitter:before {
-  content: '\e801';
-}
-
-/* '' */
-.icon-ok:before {
-  content: '\e800';
-}
-
-/* '' */
-.icon-down-open-mini:before {
-  content: '\e807';
-}
-
-/* '' */
-.icon-left-open-mini:before {
-  content: '\e809';
-}
-
-/* '' */
-.icon-right-open-mini:before {
-  content: '\e806';
-}
-
-/* '' */
-.icon-pinterest:before {
-  content: '\e80a';
-}
-
-/* '' */
-.icon-cancel-circle:before {
-  content: '\e808';
-}
-
-/* '' */
 .icon-youtube:before {
   content: '\e804';
 }
 
 /* '' */
+.icon-tumblr:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-right-open-mini:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-down-open-mini:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-cancel-circle:before {
+  content: '\e808';
+}
+
+/* '' */
+.icon-left-open-mini:before {
+  content: '\e809';
+}
+
+/* '' */
+.icon-pinterest:before {
+  content: '\e80a';
+}
+
+/* '' */
+.icon-spin6:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-attention:before {
+  content: '\e80c';
+}
+
+/* '' */
+.icon-menu:before {
+  content: '\e80d';
+}
+
+/* '' */
+.icon-cancel:before {
+  content: '\e80e';
+}
+
+/* '' */
+.icon-right-open-big:before {
+  content: '\e80f';
+}
+
+/* '' */
 .animate-spin {
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
@@ -634,7 +649,8 @@ img {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1180px;
+  padding: 0 40px;
   margin: 0 auto;
   position: relative;
 }
@@ -881,15 +897,108 @@ body {
 .inner-container.with-side-nav .content {
   margin-left: 260px;
 }
+@media all and (max-width: 1024px) {
+  .inner-container.with-side-nav .content {
+    margin-right: 0;
+    max-width: 525px;
+  }
+}
+@media all and (max-width: 880px) {
+  .inner-container.with-side-nav .content {
+    width: 66.87898%;
+    margin-left: 33.12102%;
+  }
+}
+@media all and (max-width: 880px) {
+  .inner-container.with-side-nav .content {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+.side-nav-pull {
+  display: none;
+}
+@media all and (max-width: 880px) {
+  .side-nav-pull {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 40px;
+    top: 0;
+    left: 0;
+    background-color: #b8b8ae;
+  }
+  .side-nav-pull:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    content: '\e80f';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    margin-top: -20px;
+    line-height: 40px;
+    font-size: 40px;
+  }
+}
 
 .side-nav {
   float: left;
   width: 180px;
 }
+@media all and (max-width: 880px) {
+  .side-nav {
+    display: none;
+  }
+}
 
+@media all and (max-width: 880px) {
+  .inner-container.with-side-nav {
+    padding-left: 40px;
+  }
+  .inner-container.with-side-nav.side-nav-shown .content {
+    display: none;
+  }
+  .inner-container.with-side-nav.side-nav-shown .side-nav {
+    display: block;
+    max-width: 525px;
+    width: auto;
+    margin: 0 auto;
+    float: none;
+  }
+}
 .sidebar {
   float: right;
   width: 225px;
+}
+@media all and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 #banner {
@@ -1079,7 +1188,90 @@ body {
 #main-nav li:last-child a {
   padding-right: 0;
 }
+@media all and (max-width: 1195px) {
+  #main-nav {
+    display: none;
+  }
+}
 
+#nav-pull {
+  display: none;
+}
+
+@media all and (max-width: 1195px) {
+  body.nav-shown #main-nav {
+    display: block;
+    clear: left;
+    float: none;
+    background-color: #fed970;
+    text-align: center;
+    margin: 0 -40px;
+  }
+  body.nav-shown #main-nav li {
+    float: none;
+  }
+  body.nav-shown #main-nav li:last-child a {
+    padding-right: 20px;
+  }
+  body.nav-shown #main-nav a {
+    border-left: none;
+  }
+
+  body.nav-shown {
+    min-height: 100%;
+  }
+
+  body.nav-shown #banner {
+    position: static;
+    height: auto;
+    overflow: hidden;
+    min-height: 100%;
+    padding-bottom: 29px;
+    margin-bottom: -29px;
+  }
+
+  body.nav-shown #wrapper {
+    display: none;
+  }
+
+  #nav-pull {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 33px;
+    font-size: 25px;
+  }
+  #nav-pull:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    content: '\e80d';
+  }
+
+  body.nav-shown #nav-pull:before {
+    content: '\e80e';
+  }
+}
 #main-nav .dropdown {
   background-color: #333333;
   overflow: hidden;
@@ -1152,6 +1344,34 @@ body {
   background: none;
 }
 
+@media all and (max-width: 1195px) {
+  #main-nav li.has-dropdown, #main-nav li.has-dropdown:hover {
+    background: none;
+  }
+  #main-nav li.has-dropdown .dropdown, #main-nav li.has-dropdown:hover .dropdown {
+    display: none;
+  }
+  #main-nav li.has-dropdown.show-dropdown .dropdown, #main-nav li.has-dropdown:hover.show-dropdown .dropdown {
+    display: block;
+  }
+
+  #main-nav .dropdown {
+    position: static;
+    text-align: left;
+  }
+  #main-nav .dropdown .feature-container {
+    display: none;
+  }
+  #main-nav .dropdown ul {
+    width: 33%;
+  }
+}
+@media all and (max-width: 700px) {
+  #main-nav .dropdown ul {
+    width: 100%;
+    float: none;
+  }
+}
 #main-nav .dropdown .feature-container a {
   color: #1899cb;
   padding: 0;

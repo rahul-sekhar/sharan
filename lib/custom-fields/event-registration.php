@@ -7,6 +7,36 @@ if(function_exists("register_field_group"))
     'title' => 'Event Registration',
     'fields' => array (
       array (
+        'key' => 'field_5384318406dff',
+        'label' => 'Early bird',
+        'name' => 'early_bird',
+        'type' => 'true_false',
+        'message' => '',
+        'default_value' => 0,
+      ),
+      array (
+        'key' => 'field_5384319806e00',
+        'label' => 'Early bird end date',
+        'name' => 'early_bird_end_date',
+        'type' => 'date_picker',
+        'instructions' => 'The early bird period will include the picked date',
+        'required' => 1,
+        'conditional_logic' => array (
+          'status' => 1,
+          'rules' => array (
+            array (
+              'field' => 'field_5384318406dff',
+              'operator' => '==',
+              'value' => '1',
+            ),
+          ),
+          'allorany' => 'all',
+        ),
+        'date_format' => 'yymmdd',
+        'display_format' => 'dd/mm/yy',
+        'first_day' => 1,
+      ),
+      array (
         'key' => 'field_537f8a6a72624',
         'label' => 'Price Options',
         'name' => 'price_options',
@@ -40,6 +70,31 @@ if(function_exists("register_field_group"))
             'prepend' => '',
             'append' => '',
             'min' => 1,
+            'max' => '',
+            'step' => '',
+          ),
+          array (
+            'key' => 'field_538431c106e02',
+            'label' => 'Early bird price',
+            'name' => 'early_bird_price',
+            'type' => 'number',
+            'conditional_logic' => array (
+              'status' => 1,
+              'rules' => array (
+                array (
+                  'field' => 'field_5384318406dff',
+                  'operator' => '==',
+                  'value' => '1',
+                ),
+              ),
+              'allorany' => 'all',
+            ),
+            'column_width' => '',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'min' => '',
             'max' => '',
             'step' => '',
           ),

@@ -1,5 +1,6 @@
 .container {
-  max-width: $page-width;
+  max-width: $page-width + (2 * $page-padding);
+  padding: 0 $page-padding;
   margin: 0 auto;
   position: relative;
 }

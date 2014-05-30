@@ -1,3 +1,5 @@
+<a href="#" class="side-nav-pull"></a>
+
 <nav class="news side-nav">
   <h3>Archives</h3>
 

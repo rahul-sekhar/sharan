@@ -19,6 +19,18 @@
       "src": "fontawesome"
     },
     {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel",
+      "code": 59406,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 59405,
+      "src": "fontawesome"
+    },
+    {
       "uid": "8e04c98c8f5ca0a035776e3001ad2638",
       "css": "facebook",
       "code": 59394,
@@ -64,6 +76,12 @@
       "uid": "37f6cfbb4062ed0d01b351ec35c334ff",
       "css": "right-open-mini",
       "code": 59398,
+      "src": "entypo"
+    },
+    {
+      "uid": "004882ab2d5c418c5b2060e80596279b",
+      "css": "right-open-big",
+      "code": 59407,
       "src": "entypo"
     },
     {

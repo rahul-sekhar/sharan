@@ -73,12 +73,47 @@
 
 #main-nav li.has-dropdown:hover {
   background: image-url('nav-arrow.png') no-repeat center bottom;
-
-  .dropdown {
-    display: block;
-  }
+  .dropdown { display: block; }
 }
 
 #main-nav li li:hover {
   background: none;
+}
+
+
+@media all and (max-width: $breakpoint-width) {
+  #main-nav li.has-dropdown {
+    &, &:hover {
+      background: none;
+      .dropdown { display: none; }
+
+      &.show-dropdown {
+        // background: image-url('nav-arrow.png') no-repeat center bottom;
+        .dropdown { display: block; }
+      }
+    }
+  }
+
+  #main-nav .dropdown {
+    position: static;
+    text-align: left;
+
+    .feature-container {
+      display: none;
+    }
+
+    ul {
+      width: 33%;
+    }
+  }
+}
+
+$dropdown-single-column-width: 700px;
+@media all and (max-width: $dropdown-single-column-width) {
+  #main-nav .dropdown {
+    ul {
+      width: 100%;
+      float: none;
+    }
+  }
 }

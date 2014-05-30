@@ -1,3 +1,5 @@
+<a href="#" class="side-nav-pull"></a>
+
 <nav class="page side-nav">
   <?php $page_nav = sharan_get_page_nav() ?>
   <?php if ($page_nav) : ?>
