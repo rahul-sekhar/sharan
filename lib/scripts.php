@@ -51,6 +51,7 @@ function roots_scripts() {
   wp_enqueue_script('resources');
   wp_enqueue_script('newsArchives');
   wp_enqueue_script('extLinks');
+  wp_enqueue_script('newsletter');
   wp_enqueue_script('registration');
   wp_enqueue_script('navPull');
 }

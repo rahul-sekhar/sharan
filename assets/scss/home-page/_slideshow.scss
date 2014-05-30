@@ -1,14 +1,17 @@
 $slideshow-height: 600px;
 
+#slideshow-wrapper {
+  margin: 0 -1 * $page-padding;
+}
+
 #slideshow {
   position: relative;
-  margin: 0 -1 * $page-padding;
+  margin: 0 auto;
+  max-width: $page-width;
   @include clearfix;
 
   ul.slides {
     @include reset-list;
-    margin: 0 auto;
-    max-width: $page-width;
 
     li {
       width: 100%;
