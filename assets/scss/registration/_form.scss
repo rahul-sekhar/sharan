@@ -21,7 +21,11 @@
       font-size: 13px;
     }
 
-    li {
+    table {
+      width: 100%;
+    }
+
+    td {
       line-height: 30px;
       vertical-align: middle;
     }
@@ -31,11 +35,7 @@
     }
 
     .price {
-      margin-left: 50px;
-    }
-
-    ul {
-      @include reset-list;
+      padding-left: 20px;
     }
   }
 

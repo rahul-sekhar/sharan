@@ -5,13 +5,18 @@ else :
   $options = get_field('price_options');
 endif;
 ?>
-<ul>
+<table>
 <?php foreach($options as $index => $option) : ?>
-  <li>
-    <label>
-      <input type="radio" name="price_option" value="<?php echo $index ?>" <?php if ($index == 0) echo 'checked="checked" '; ?>/>
-      <?php echo $option['name'] ?><span class="price">Rs. <?php echo $option['price'] ?></span>
-    </label>
-  </li>
+  <tr>
+    <td class="option">
+      <label>
+        <input type="radio" name="price_option" value="<?php echo $index ?>" <?php if ($index == 0) echo 'checked="checked" '; ?>/>
+        <?php echo $option['name'] ?>
+      </label>
+    </td>
+    <td class="price">
+      Rs. <?php echo $option['price'] ?>
+    </td>
+  </tr>
 <?php endforeach; ?>
-</ul>
+</table>

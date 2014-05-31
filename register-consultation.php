@@ -3,7 +3,8 @@
   if (isset($_POST['submitted'])) :
     get_template_part('templates/registration', 'confirmation-consultation');
   else :
-  ?>
+    get_template_part('templates/sidebar', 'registration');
+    ?>
     <div class="content register">
       <h2>Registration</h2>
 

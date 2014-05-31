@@ -2475,7 +2475,10 @@ body.home .view-all:after {
   margin-bottom: 15px;
   font-size: 13px;
 }
-#registration-form .options li {
+#registration-form .options table {
+  width: 100%;
+}
+#registration-form .options td {
   line-height: 30px;
   vertical-align: middle;
 }
@@ -2483,12 +2486,7 @@ body.home .view-all:after {
   margin-right: 15px;
 }
 #registration-form .options .price {
-  margin-left: 50px;
-}
-#registration-form .options ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  padding-left: 20px;
 }
 #registration-form .contact input, #registration-form .contact textarea {
   border: 1px solid #f1f1f1;
