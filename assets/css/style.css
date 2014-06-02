@@ -2115,7 +2115,7 @@ body.home .view-all:after {
 }
 .inner-container#resources .resource-filters {
   margin-bottom: 24px;
-  margin-right: -37px;
+  margin-right: 27px;
 }
 .inner-container#resources ul.books, .inner-container#resources ul.links {
   margin: 0;
@@ -2288,7 +2288,7 @@ body.home .view-all:after {
   padding: 0 10px;
   line-height: 30px;
   background-color: #1899cb;
-  font-size: 13px;
+  font-size: 11px;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
@@ -2653,4 +2653,34 @@ body.home .view-all:after {
 #gallery ul.albums .date, #gallery ul.albums .num-photos {
   color: #333333;
   font-size: 11px;
+}
+
+.custom-search {
+  width: 500px;
+}
+.custom-search *, .custom-search *:before, .custom-search *:after {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.custom-search .gsc-search-box-tools .gsc-search-box td.gsc-input {
+  padding-right: 40px;
+}
+.custom-search .gsc-control-cse {
+  padding: 0;
+}
+.custom-search input.gsc-search-button {
+  width: auto;
+  height: auto;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #1899cb;
+  padding: 10px 20px;
+}
+.custom-search input.gsc-search-button:hover, .custom-search input.gsc-search-button:focus {
+  background-color: #1899cb;
 }

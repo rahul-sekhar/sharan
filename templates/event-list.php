@@ -5,7 +5,7 @@
     <div class="city">
       <span class="button">Search by City</span>
       <ul>
-        <?php foreach (get_terms('city') as $city) : ?>
+        <?php foreach (get_terms('city', array( 'hide_empty' => false )) as $city) : ?>
           <li><a href="#" data-id="<?php echo $city->term_id; ?>"><?php echo $city->name; ?></a></li>
         <?php endforeach; ?>
       </ul>
@@ -14,7 +14,7 @@
     <div class="type">
       <span class="button">Type of Event</span>
       <ul>
-        <?php foreach (get_terms('event_type') as $type) : ?>
+        <?php foreach (get_terms('event_type', array( 'hide_empty' => false )) as $type) : ?>
           <li><a href="#" data-id="<?php echo $type->term_id; ?>"><?php echo $type->name; ?></a></li>
         <?php endforeach; ?>
       </ul>

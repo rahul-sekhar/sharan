@@ -5,17 +5,24 @@ jQuery(function ($) {
 
   var requiredFields = form.find('input[required], textarea[required]').parent('.field');
 
-  var checkField = function () {
-    var val = $.trim(this.value);
+  var checkFields = function () {
     var input = $(this);
     var field = input.parent('.field');
-    var type = input.attr('type');
 
-    if (val && (!(type == 'email') || val.match(/.+@.+\..+/i))) {
-      field.removeClass('invalid').addClass('valid');
-    } else {
-      field.removeClass('valid').addClass('invalid')
-    }
+    field.addClass('focussed');
+
+    requiredFields.each(function () {
+      var field = $(this);
+      var input = field.find('input, textarea')
+      var val = $.trim(input.val());
+      var type = input.attr('type');
+
+      if (val && (!(type == 'email') || val.match(/.+@.+\..+/i))) {
+        field.removeClass('invalid').addClass('valid');
+      } else if (field.hasClass('focussed')) {
+        field.removeClass('valid').addClass('invalid')
+      }
+    })
 
     // Check if all fields are valid
     if (!requiredFields.is(':not(.valid)')) {
@@ -25,8 +32,8 @@ jQuery(function ($) {
     }
   }
 
-  form.on('keydown', '.invalid input[required],.invalid textarea[required]', checkField);
-  form.on('blur', 'input[required], textarea[required]', checkField);
+  form.on('keydown', '.invalid input[required],.invalid textarea[required]', checkFields);
+  form.on('blur', 'input[required], textarea[required]', checkFields);
 
   // Debounce
   submit.on('click', function () {
