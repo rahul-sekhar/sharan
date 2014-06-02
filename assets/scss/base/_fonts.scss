@@ -22,18 +22,6 @@
   font-style: normal;
 }
 
-@mixin whitney-semibold {
-  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
-  font-style: normal;
-}
-
-@mixin whitney-semibold-italic {
-  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
-  font-style: italic;
-}
-
 @mixin sentinel-book {
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;

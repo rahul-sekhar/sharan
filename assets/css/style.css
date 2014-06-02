@@ -726,14 +726,14 @@ img {
   margin: 24px 0;
 }
 .content p strong, .content p b, .content ul strong, .content ul b, .content ol strong, .content ol b {
-  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
   font-style: normal;
 }
 .content p strong em, .content p strong i, .content p b em, .content p b i, .content ul strong em, .content ul strong i, .content ul b em, .content ul b i, .content ol strong em, .content ol strong i, .content ol b em, .content ol b i {
-  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
-  font-style: italic;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
 }
 .content p em, .content p i, .content ul em, .content ul i, .content ol em, .content ol i {
   font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
@@ -741,8 +741,8 @@ img {
   font-style: italic;
 }
 .content p em strong, .content p em b, .content p i strong, .content p i b, .content ul em strong, .content ul em b, .content ul i strong, .content ul i b, .content ol em strong, .content ol em b, .content ol i strong, .content ol i b {
-  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
   font-style: italic;
 }
 .content ul, .content ol {
@@ -2294,8 +2294,8 @@ body.home .view-all:after {
   margin: 0;
 }
 .inner-container#resources ul.links p.name {
-  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
   font-style: normal;
 }
 

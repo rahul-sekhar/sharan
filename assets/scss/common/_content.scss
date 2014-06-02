@@ -10,18 +10,20 @@
     margin: 24px 0;
 
     strong, b {
-      @include whitney-semibold;
+      @include whitney-medium;
 
+      // Do not support bold + italic text
       em, i {
-        @include whitney-semibold-italic;
+        @include whitney-medium;
       }
     }
 
     em, i {
       @include whitney-book-italic;
 
+      // Do not support bold + italic text
       strong, b {
-        @include whitney-semibold-italic;
+        @include whitney-book-italic;
       }
     }
   }

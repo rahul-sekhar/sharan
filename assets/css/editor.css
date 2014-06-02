@@ -672,14 +672,14 @@ body p, body ul, body ol {
   margin: 24px 0;
 }
 body p strong, body p b, body ul strong, body ul b, body ol strong, body ol b {
-  font-family: 'Whitney SSm 6r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
   font-style: normal;
 }
 body p strong em, body p strong i, body p b em, body p b i, body ul strong em, body ul strong i, body ul b em, body ul b i, body ol strong em, body ol strong i, body ol b em, body ol b i {
-  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
-  font-style: italic;
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
 }
 body p em, body p i, body ul em, body ul i, body ol em, body ol i {
   font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
@@ -687,8 +687,8 @@ body p em, body p i, body ul em, body ul i, body ol em, body ol i {
   font-style: italic;
 }
 body p em strong, body p em b, body p i strong, body p i b, body ul em strong, body ul em b, body ul i strong, body ul i b, body ol em strong, body ol em b, body ol i strong, body ol i b {
-  font-family: 'Whitney SSm 6i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 600;
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
   font-style: italic;
 }
 body ul, body ol {
