@@ -5,7 +5,7 @@
     $default_image = get_field('default_sidebar_image', 'options');
   endif;
   ?>
-    <img src="<?php echo $default_image['sizes']['post-thumbnail'] ?>" alt="" />
+    <img src="<?php echo check_ssl( $default_image['sizes']['post-thumbnail'] ); ?>" alt="" />
   <?php
   get_template_part('templates/newsletter-box');
 

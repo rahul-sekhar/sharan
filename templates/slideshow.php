@@ -7,7 +7,7 @@ if ($slides) :
       <ul class="slides">
         <?php foreach($slides as $slide) : ?>
           <li class="slide">
-            <img src="<?php echo $slide['image']['sizes']['slideshow'] ?>" alt="" />
+            <img src="<?php echo check_ssl( $slide['image']['sizes']['slideshow'] ); ?>" alt="" />
 
             <div class="text">
               <?php if ($slide['text']) : ?>

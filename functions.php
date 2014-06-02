@@ -60,3 +60,4 @@ require_once locate_template('/lib/subscription-type.php');       // Post type f
 require_once locate_template('/lib/registration-type.php');       // Post type for registrations
 require_once locate_template('/lib/mail-wrapper.php');            // Wrapper for development mail debugging
 require_once locate_template('/lib/clean-admin-interface.php');   // Change admin menu items and clean up
+require_once locate_template('/lib/ssl.php');                     // Force SSL urls when required

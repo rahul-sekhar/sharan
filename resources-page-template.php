@@ -35,7 +35,7 @@ Template Name: Resources page
     <ul class="books">
       <?php while($books->have_posts()) : $books->the_post(); ?><li class="resource <?php the_resource_tag_classes() ?>">
           <?php $image = get_field('cover'); ?>
-          <img src="<?php echo $image['sizes']['book']; ?>" alt="" />
+          <img src="<?php echo check_ssl( $image['sizes']['book'] ); ?>" alt="" />
 
           <div class="info">
             <p class="name"><?php the_title(); ?></p>

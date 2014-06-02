@@ -8,7 +8,7 @@ if (get_sub_field('sections')):
         if ($image): ?>
           <a href="<?php the_sub_field('feature_link_url'); ?>">
             <div class="image">
-              <img src="<?php echo $image['sizes']['nav-feature']; ?>" alt="" />
+              <img src="<?php echo check_ssl( $image['sizes']['nav-feature'] ); ?>" alt="" />
             </div>
 
             <?php if (get_sub_field('caption')): ?>

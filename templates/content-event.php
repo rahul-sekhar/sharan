@@ -17,7 +17,7 @@
   $image = get_field('image');
   if ($image) : ?>
     <div class="image">
-      <img src="<?php echo $image['sizes']['event-medium'] ?>" alt="" />
+      <img src="<?php echo check_ssl( $image['sizes']['event-medium'] ); ?>" alt="" />
     </div>
   <?php endif; ?>
 

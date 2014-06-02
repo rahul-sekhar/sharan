@@ -4,7 +4,7 @@
       <?php
       $image = get_field('image');
       if ($image) : ?>
-        <img src="<?php echo $image['sizes']['event-small'] ?>" alt="" />
+        <img src="<?php echo check_ssl( $image['sizes']['event-small'] ); ?>" alt="" />
       <?php endif; ?>
     </div>
 
