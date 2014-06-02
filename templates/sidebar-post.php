@@ -1,7 +1,8 @@
 <aside class="post sidebar">
   <?php
-  if (has_post_thumbnail()) :
-    $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail' )[0];
+  if (get_field('image')) :
+    $image = get_field('image');
+    $image_src = $image['sizes']['post-thumbnail'];
   else :
     $posts_page_id = get_option( 'page_for_posts');
     if (has_post_thumbnail($posts_page_id)) :

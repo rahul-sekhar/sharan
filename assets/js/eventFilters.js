@@ -2,6 +2,7 @@ jQuery(function ($) {
 
   var eventList = $('.event-list').first();
   var eventFilters = eventList.find('.filters');
+  var body = $('body');
 
   // Get filtered events by AJAX
   function filterEvents() {
@@ -18,6 +19,10 @@ jQuery(function ($) {
     type = eventFilters.find('.type .selected');
     if (type.length > 0) {
       data['type_id'] = type.data('id');
+    }
+
+    if (body.hasClass('home')) {
+      data['home_page'] = true
     }
 
     eventList.addClass('loading');

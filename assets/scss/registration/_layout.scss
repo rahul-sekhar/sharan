@@ -6,6 +6,7 @@
   .sidebar {
     width: 450px;
     padding: 6px 24px;
+    font-size: 14px;
 
     h3 {
       @include whitney-medium;
@@ -22,8 +23,16 @@
     p {
       margin: 18px 0;
       @include whitney-book;
-      font-size: 14px;
       line-height: 160%;
+    }
+
+    h4, h5, h6 {
+      @include whitney-medium;
+      font-size: inherit;
+
+      & + p {
+        margin-top: 12px
+      }
     }
 
     strong, b {

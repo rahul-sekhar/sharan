@@ -8,7 +8,7 @@
  * Remove self-closing tag and change ''s to "'s on rel_canonical()
  */
 
-define("POST_EXCERPT_LENGTH", 55);
+define("POST_EXCERPT_LENGTH", 30);
 
 function roots_head_cleanup() {
   // Originally from http://wpengineer.com/1438/wordpress-header/

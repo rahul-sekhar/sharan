@@ -4,6 +4,7 @@
 function sharan_event_list($show_no_results = true, $tag_ids = null) {
   $city_id = isset($_GET['city_id']) ? $_GET['city_id'] : null;
   $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : null;
+  $front_page = is_front_page() || (isset($_GET['home_page']) && $_GET['home_page']);
 
   $tax_query = array();
   if ($city_id) {
@@ -41,6 +42,7 @@ function sharan_event_list($show_no_results = true, $tag_ids = null) {
     'meta_key' => 'from',
     'orderby' => 'meta_value_num',
     'order' => 'ASC',
+    'post_status' => 'publish',
     'meta_query' => array(
       array(
         'key' => 'to',
@@ -50,6 +52,9 @@ function sharan_event_list($show_no_results = true, $tag_ids = null) {
       )
     )
   );
+  if ( $front_page ) :
+    $args['posts_per_page'] = 5;
+  endif;
   $events = new WP_Query($args);
 
   if ($events->have_posts()) :
