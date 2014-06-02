@@ -19,6 +19,23 @@ function sharan_event_registration_rewrite_rules($rules) {
 add_filter('rewrite_rules_array', 'sharan_event_registration_rewrite_rules');
 
 function sharan_event_registration_templates() {
+  define("SSL", true);
+
+  if (defined('SSL')) :
+    if ( get_query_var('register')) :
+      if (!is_ssl()) :
+        // header('HTTP/1.1 301 Moved Permanently');
+        header("Location: https://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]);
+        exit();
+      endif;
+    else :
+      if (is_ssl()) :
+        // header('HTTP/1.1 301 Moved Permanently');
+        header("Location: http://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]);
+        exit();
+      endif;
+    endif;
+  endif;
 
   if ( get_query_var( 'register' ) == 'event') {
     add_filter( 'template_include', function() {
