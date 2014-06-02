@@ -12,18 +12,16 @@
     strong, b {
       @include whitney-medium;
 
-      // Do not support bold + italic text
       em, i {
-        @include whitney-medium;
+        @include whitney-medium-italic;
       }
     }
 
     em, i {
       @include whitney-book-italic;
 
-      // Do not support bold + italic text
       strong, b {
-        @include whitney-book-italic;
+        @include whitney-medium-italic;
       }
     }
   }
@@ -45,6 +43,12 @@
 
     & + p {
       margin-top: 12px
+    }
+  }
+
+  h3, h4, h5, h6 {
+    em, i {
+      @include whitney-medium-italic;
     }
   }
 

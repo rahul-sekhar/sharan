@@ -8,17 +8,17 @@
   @include clearfix;
 
   .info {
-    width: 600px;
+    width: 520px;
     float: left;
 
     p {
       margin: 0;
       line-height: 170%;
-      font-size: 18px;
+      font-size: 15px;
       @include sentinel-book;
 
-      strong {
-        @include sentinel-semibold;
+      strong, b {
+        @include sentinel-book;
       }
     }
   }
@@ -45,7 +45,7 @@
 
   .lower {
     clear: both;
-    padding-top: 60px;
+    padding-top: 50px;
     @include clearfix;
   }
 
@@ -82,7 +82,7 @@
   }
 
   #subscribe-form .archive {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 20px;
     display: block;
     @include whitney-medium;

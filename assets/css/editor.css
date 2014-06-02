@@ -677,9 +677,9 @@ body p strong, body p b, body ul strong, body ul b, body ol strong, body ol b {
   font-style: normal;
 }
 body p strong em, body p strong i, body p b em, body p b i, body ul strong em, body ul strong i, body ul b em, body ul b i, body ol strong em, body ol strong i, body ol b em, body ol b i {
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
 }
 body p em, body p i, body ul em, body ul i, body ol em, body ol i {
   font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
@@ -687,8 +687,8 @@ body p em, body p i, body ul em, body ul i, body ol em, body ol i {
   font-style: italic;
 }
 body p em strong, body p em b, body p i strong, body p i b, body ul em strong, body ul em b, body ul i strong, body ul i b, body ol em strong, body ol em b, body ol i strong, body ol i b {
-  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 400;
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
   font-style: italic;
 }
 body ul, body ol {
@@ -710,6 +710,11 @@ body h4, body h5, body h6 {
 }
 body h4 + p, body h5 + p, body h6 + p {
   margin-top: 12px;
+}
+body h3 em, body h3 i, body h4 em, body h4 i, body h5 em, body h5 i, body h6 em, body h6 i {
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: italic;
 }
 body .button {
   display: inline-block;

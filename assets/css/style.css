@@ -731,9 +731,9 @@ img {
   font-style: normal;
 }
 .content p strong em, .content p strong i, .content p b em, .content p b i, .content ul strong em, .content ul strong i, .content ul b em, .content ul b i, .content ol strong em, .content ol strong i, .content ol b em, .content ol b i {
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
 }
 .content p em, .content p i, .content ul em, .content ul i, .content ol em, .content ol i {
   font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
@@ -741,8 +741,8 @@ img {
   font-style: italic;
 }
 .content p em strong, .content p em b, .content p i strong, .content p i b, .content ul em strong, .content ul em b, .content ul i strong, .content ul i b, .content ol em strong, .content ol em b, .content ol i strong, .content ol i b {
-  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 400;
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
   font-style: italic;
 }
 .content ul, .content ol {
@@ -764,6 +764,11 @@ img {
 }
 .content h4 + p, .content h5 + p, .content h6 + p {
   margin-top: 12px;
+}
+.content h3 em, .content h3 i, .content h4 em, .content h4 i, .content h5 em, .content h5 i, .content h6 em, .content h6 i {
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: italic;
 }
 .content .button {
   display: inline-block;
@@ -1064,8 +1069,8 @@ body {
   font-size: 13px;
 }
 #content-info .credit {
-  font-family: 'Sentinel SSm 6r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 600;
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
   font-style: normal;
   font-size: 15px;
 }
@@ -2003,20 +2008,20 @@ body.home .view-all:after {
   *zoom: 1;
 }
 #home-footer .info {
-  width: 600px;
+  width: 520px;
   float: left;
 }
 #home-footer .info p {
   margin: 0;
   line-height: 170%;
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
   font-weight: 400;
   font-style: normal;
 }
-#home-footer .info p strong {
-  font-family: 'Sentinel SSm 6r', 'Sentinel SSm A', 'Sentinel SSm B';
-  font-weight: 600;
+#home-footer .info p strong, #home-footer .info p b {
+  font-family: 'Sentinel SSm 4r', 'Sentinel SSm A', 'Sentinel SSm B';
+  font-weight: 400;
   font-style: normal;
 }
 #home-footer .support {
@@ -2040,7 +2045,7 @@ body.home .view-all:after {
 }
 #home-footer .lower {
   clear: both;
-  padding-top: 60px;
+  padding-top: 50px;
   overflow: hidden;
   *zoom: 1;
 }
@@ -2072,7 +2077,7 @@ body.home .view-all:after {
   margin-left: 0;
 }
 #home-footer #subscribe-form .archive {
-  font-size: 13px;
+  font-size: 11px;
   margin-top: 20px;
   display: block;
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
@@ -2125,7 +2130,7 @@ body.home .view-all:after {
 }
 .recent-news .excerpt {
   padding-top: 5px;
-  margin-left: 130px;
+  margin-left: 135px;
   font-size: 12px;
   line-height: 160%;
 }
@@ -2582,10 +2587,67 @@ body.home .view-all:after {
   padding: 6px 24px;
   font-size: 14px;
 }
+.register.inner-container .sidebar h2 {
+  font-family: 'Whitney SSm 3r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 44px;
+  margin: 30px 0;
+}
+.register.inner-container .sidebar p, .register.inner-container .sidebar ul, .register.inner-container .sidebar ol {
+  line-height: 160%;
+  margin: 24px 0;
+}
+.register.inner-container .sidebar p strong, .register.inner-container .sidebar p b, .register.inner-container .sidebar ul strong, .register.inner-container .sidebar ul b, .register.inner-container .sidebar ol strong, .register.inner-container .sidebar ol b {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+}
+.register.inner-container .sidebar p strong em, .register.inner-container .sidebar p strong i, .register.inner-container .sidebar p b em, .register.inner-container .sidebar p b i, .register.inner-container .sidebar ul strong em, .register.inner-container .sidebar ul strong i, .register.inner-container .sidebar ul b em, .register.inner-container .sidebar ul b i, .register.inner-container .sidebar ol strong em, .register.inner-container .sidebar ol strong i, .register.inner-container .sidebar ol b em, .register.inner-container .sidebar ol b i {
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: italic;
+}
+.register.inner-container .sidebar p em, .register.inner-container .sidebar p i, .register.inner-container .sidebar ul em, .register.inner-container .sidebar ul i, .register.inner-container .sidebar ol em, .register.inner-container .sidebar ol i {
+  font-family: 'Whitney SSm 4i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 400;
+  font-style: italic;
+}
+.register.inner-container .sidebar p em strong, .register.inner-container .sidebar p em b, .register.inner-container .sidebar p i strong, .register.inner-container .sidebar p i b, .register.inner-container .sidebar ul em strong, .register.inner-container .sidebar ul em b, .register.inner-container .sidebar ul i strong, .register.inner-container .sidebar ul i b, .register.inner-container .sidebar ol em strong, .register.inner-container .sidebar ol em b, .register.inner-container .sidebar ol i strong, .register.inner-container .sidebar ol i b {
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: italic;
+}
+.register.inner-container .sidebar ul, .register.inner-container .sidebar ol {
+  margin: 16px 0;
+}
 .register.inner-container .sidebar h3 {
   font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
   font-weight: 500;
   font-style: normal;
+  font-size: 18px;
+  margin: 39px 0 24px 0;
+}
+.register.inner-container .sidebar h4, .register.inner-container .sidebar h5, .register.inner-container .sidebar h6 {
+  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: normal;
+  font-size: inherit;
+  margin: 24px 0 12px 0;
+}
+.register.inner-container .sidebar h4 + p, .register.inner-container .sidebar h5 + p, .register.inner-container .sidebar h6 + p {
+  margin-top: 12px;
+}
+.register.inner-container .sidebar h3 em, .register.inner-container .sidebar h3 i, .register.inner-container .sidebar h4 em, .register.inner-container .sidebar h4 i, .register.inner-container .sidebar h5 em, .register.inner-container .sidebar h5 i, .register.inner-container .sidebar h6 em, .register.inner-container .sidebar h6 i {
+  font-family: 'Whitney SSm 5i', 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: 500;
+  font-style: italic;
+}
+.register.inner-container .sidebar .button {
+  display: inline-block;
+  margin: 24px 0;
+}
+.register.inner-container .sidebar h3 {
   font-size: 16px;
   padding-top: 10px;
   margin: 0;
@@ -2600,20 +2662,6 @@ body.home .view-all:after {
   font-weight: 400;
   font-style: normal;
   line-height: 160%;
-}
-.register.inner-container .sidebar h4, .register.inner-container .sidebar h5, .register.inner-container .sidebar h6 {
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
-  font-size: inherit;
-}
-.register.inner-container .sidebar h4 + p, .register.inner-container .sidebar h5 + p, .register.inner-container .sidebar h6 + p {
-  margin-top: 12px;
-}
-.register.inner-container .sidebar strong, .register.inner-container .sidebar b {
-  font-family: 'Whitney SSm 5r', 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 500;
-  font-style: normal;
 }
 
 #gallery .content.gallery {
