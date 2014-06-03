@@ -143,7 +143,7 @@ function register_consultation() {
   $amount = $price_option['price'];
 
   // Send a registration email
-  $to = get_field('consultation_email', 'options');
+  $to = get_field('consultation_registration_email', 'options');
   $subject = 'Consultation registration';
   $message = <<<EOT
 Payment option: $price_option_name
