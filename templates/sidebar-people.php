@@ -1,11 +1,15 @@
 <aside class="person sidebar">
   <?php
-  $default_image = get_field('people_default_sidebar_image', 'options');
-  if (!$default_image) :
-    $default_image = get_field('default_sidebar_image', 'options');
+  $image = get_field('people_default_sidebar_image', 'options');
+  if (!$image) :
+    $image = get_field('default_sidebar_image', 'options');
   endif;
+  $thumb_src = $image['sizes']['post-thumbnail'];
+  $image_src = $image['url'];
   ?>
-    <img src="<?php echo check_ssl( $default_image['sizes']['post-thumbnail'] ); ?>" alt="" />
+  <a href="<?php echo $image_src; ?>" target="_blank">
+    <img src="<?php echo check_ssl( $thumb_src ); ?>" alt="" />
+  </a>
   <?php
   get_template_part('templates/newsletter-box');
 
