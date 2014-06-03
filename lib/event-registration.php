@@ -174,8 +174,8 @@ EOT;
 
   // Send a confirmation mail
   $to = $email;
-  $subject = get_field('consultation_email_subject', 'options');
-  $message = get_field('consultation_email_message', 'options');
+  $subject = get_field('consultation_registration_email_subject', 'options');
+  $message = get_field('consultation_registration_email_message', 'options');
   $message = html_entity_decode($message);
 
   // Message replacements
@@ -183,11 +183,7 @@ EOT;
   $message_replacements = array($name, $price_option_name, $amount);
   $message = str_replace($message_placeholders, $message_replacements, $message);
 
-  var_dump($to);
-  var_dump($subject);
-  var_dump($message);
   $success = sharan_mail($to, $subject, $message);
-  var_dump($success);
 
   // Add a registration to the database
   $registration = array(
