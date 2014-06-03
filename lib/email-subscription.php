@@ -35,7 +35,7 @@ function sharan_ajax_subscribe() {
   $subject = get_field('subscription_email_subject', 'options');
   $message = get_field('subscription_email_message', 'options');
   $message = html_entity_decode($message);
-  $success = sharan_mail($to, $subject, $message, sharan_from_header());
+  $success = sharan_mail($to, $subject, $message);
 
   // Add a subscription to the database
   $subscription = array(

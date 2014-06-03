@@ -14,7 +14,7 @@ Message:
 $message
 
 EOT;
-    // echo $debug_mail;
+    echo $debug_mail;
     return true;
   else :
     return wp_mail($to, $subject, $message, sharan_from_header());
