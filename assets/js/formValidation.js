@@ -1,16 +1,15 @@
 jQuery(function ($) {
-  var form = $('#registration-form');
+  var form = $('.inner-container.form form');
+  if (form.length == 0) {
+    return;
+  }
+
   var submit = form.find('input[type="submit"]');
   submit.attr('disabled', true).addClass('disabled');
 
   var requiredFields = form.find('input[required], textarea[required]').parent('.field');
 
   var checkFields = function () {
-    var input = $(this);
-    var field = input.parent('.field');
-
-    field.addClass('focussed');
-
     requiredFields.each(function () {
       var field = $(this);
       var input = field.find('input, textarea')
@@ -18,11 +17,11 @@ jQuery(function ($) {
       var type = input.attr('type');
 
       if (val && (!(type == 'email') || val.match(/.+@.+\..+/i))) {
-        field.removeClass('invalid').addClass('valid');
-      } else if (field.hasClass('focussed')) {
-        field.removeClass('valid').addClass('invalid')
+        field.removeClass('invalid').removeClass('invalid-silent').addClass('valid');
+      } else {
+        field.removeClass('valid').addClass('invalid-silent')
       }
-    })
+    });
 
     // Check if all fields are valid
     if (!requiredFields.is(':not(.valid)')) {
@@ -32,8 +31,14 @@ jQuery(function ($) {
     }
   }
 
-  form.on('keydown', '.invalid input[required],.invalid textarea[required]', checkFields);
-  form.on('blur', 'input[required], textarea[required]', checkFields);
+  form.on('keyup', 'input[required],textarea[required]', checkFields);
+  form.on('blur', 'input[required],textarea[required]', function () {
+    checkFields();
+    var field = $(this).parent('.field');
+    if (field.hasClass('invalid-silent')) {
+      field.addClass('invalid');
+    }
+  });
 
   // Debounce
   form.on('submit', function () {

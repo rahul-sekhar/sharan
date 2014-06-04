@@ -36,6 +36,7 @@ if(function_exists("register_field_group"))
         'label' => 'Message for newsletter subscription confirmation email',
         'name' => 'subscription_email_message',
         'type' => 'textarea',
+        'instructions' => ':name and :email will be replaced with the actual values from the subscription',
         'default_value' => '',
         'placeholder' => '',
         'maxlength' => '',

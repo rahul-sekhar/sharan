@@ -1,4 +1,4 @@
-<div class="register inner-container">
+<div class="register form inner-container">
   <?php
   $post = get_page_by_path(get_query_var('event'), OBJECT, 'events');
   $registrations_allowed = registrations_allowed($post);

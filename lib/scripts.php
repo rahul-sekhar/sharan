@@ -37,8 +37,7 @@ function roots_scripts() {
   wp_register_script('resources', get_template_directory_uri() . '/assets/js/resources.js', array(), $version, false);
   wp_register_script('newsArchives', get_template_directory_uri() . '/assets/js/newsArchives.js', array(), $version, false);
   wp_register_script('extLinks', get_template_directory_uri() . '/assets/js/extLinks.js', array(), $version, false);
-  wp_register_script('newsletter', get_template_directory_uri() . '/assets/js/newsletter.js', array(), $version, false);
-  wp_register_script('registration', get_template_directory_uri() . '/assets/js/registration.js', array(), $version, false);
+  wp_register_script('formValidation', get_template_directory_uri() . '/assets/js/formValidation.js', array(), $version, false);
   wp_register_script('navPull', get_template_directory_uri() . '/assets/js/navPull.js', array(), $version, false);
 
   wp_enqueue_script('modernizr');
@@ -51,8 +50,7 @@ function roots_scripts() {
   wp_enqueue_script('resources');
   wp_enqueue_script('newsArchives');
   wp_enqueue_script('extLinks');
-  wp_enqueue_script('newsletter');
-  wp_enqueue_script('registration');
+  wp_enqueue_script('formValidation');
   wp_enqueue_script('navPull');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);

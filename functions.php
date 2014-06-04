@@ -21,9 +21,11 @@ require_once locate_template('/lib/custom-fields/default-resource-tag.php');
 require_once locate_template('/lib/custom-fields/event-registration.php');
 require_once locate_template('/lib/custom-fields/consultation-registration.php');
 require_once locate_template('/lib/custom-fields/registration-options.php');
+require_once locate_template('/lib/custom-fields/subscription-options.php');
 require_once locate_template('/lib/custom-fields/gallery.php');
 require_once locate_template('/lib/custom-fields/email.php');
 require_once locate_template('/lib/custom-fields/registrations.php');
+require_once locate_template('/lib/custom-fields/subscriptions.php');
 
 require_once locate_template('/lib/utils.php');                   // Utility functions
 require_once locate_template('/lib/init.php');                    // Initial theme setup and constants
@@ -54,11 +56,11 @@ require_once locate_template('/lib/book-type.php');               // Custom post
 require_once locate_template('/lib/link-type.php');               // Custom post type for links
 require_once locate_template('/lib/people-page.php');             // Function to retrieve the people page
 require_once locate_template('/lib/email-subscription.php');      // Handlers for subscription
-require_once locate_template('/lib/event-registration-rewrites.php');  // URL rewrites for event registration
-require_once locate_template('/lib/event-registration.php');      // Handlers for event registration
+require_once locate_template('/lib/form-rewrites.php');           // URL rewrites for registration and subscriptions
+require_once locate_template('/lib/registration.php');            // Handlers for event and consultation registration
 require_once locate_template('/lib/subscription-type.php');       // Post type for newsletter subscriptions
 require_once locate_template('/lib/registration-type.php');       // Post type for registrations
 require_once locate_template('/lib/mail-wrapper.php');            // Wrapper for development mail debugging
 require_once locate_template('/lib/clean-admin-interface.php');   // Change admin menu items and clean up
 require_once locate_template('/lib/ssl.php');                     // Force SSL urls when required
-require_once locate_template('/lib/recipe-type.php');       // Post type for recipes
+require_once locate_template('/lib/recipe-type.php');             // Post type for recipes

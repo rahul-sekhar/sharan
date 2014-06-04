@@ -1,33 +1,44 @@
 <?php
 
-function sharan_ajax_subscribe() {
+function sharan_subscribe() {
   global $wpdb, $post;
 
-  $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : null;
+  $name = isset($_POST['name']) ? filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING) : null;
+  $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : null;
+  $city = isset($_POST['city']) ? filter_var(trim($_POST['city']), FILTER_SANITIZE_STRING) : null;
+  $country = isset($_POST['country']) ? filter_var(trim($_POST['country']), FILTER_SANITIZE_STRING) : null;
+  $mobile = isset($_POST['mobile']) ? filter_var(trim($_POST['mobile']), FILTER_SANITIZE_STRING) : null;
+  $comments = isset($_POST['comments']) ? filter_var(trim($_POST['comments']), FILTER_SANITIZE_STRING) : null;
 
-  if (!$email) {
-    die(0);
-  }
-
-  // Check if subscription exists
-  $exists = get_page_by_title($email, OBJECT, 'subscription');
-  if ($exists && $exists->post_status != 'trash') {
-    $message = 'You are already subscribed';
-    echo $message;
-    die();
+  // Check required fields
+  if (!$name || !$city || !$country || !$email) {
+    return false;
   }
 
   // Send a subscription email
   $to = get_field('subscription_email', 'options');
   $subject = 'Newsletter subscription';
-  $message = $email . ' has subscribed to the newsletter.';
-  $success = sharan_mail($to, $subject, $message, sharan_from_header());
+  $message = <<<EOT
+Name: $name
+
+Email: $email
+
+City: $city
+
+Country: $country
+
+Mobile: $mobile
+
+Comments:
+$comments
+EOT;
+  $success = sharan_mail($to, $subject, $message);
 
   /* Exit if sending the mail fails
    * This is top priority, it does not matter as much if the confirmation email
    * or adding of the item fail */
   if (!$success) {
-    die(0);
+    return false;
   }
 
   // Send a confirmation mail
@@ -35,21 +46,28 @@ function sharan_ajax_subscribe() {
   $subject = get_field('subscription_email_subject', 'options');
   $message = get_field('subscription_email_message', 'options');
   $message = html_entity_decode($message);
+
+  // Message replacements
+  $message_placeholders = array(':name', ':email');
+  $message_replacements = array($name, $email);
+  $message = str_replace($message_placeholders, $message_replacements, $message);
+
   $success = sharan_mail($to, $subject, $message);
 
   // Add a subscription to the database
   $subscription = array(
-    'post_title' => $email,
+    'post_title' => $name,
     'post_status' => 'publish',
     'post_type' => 'subscription'
   );
   $id = wp_insert_post($subscription);
 
-  $message = 'Thank you for subscribing';
-  echo $message;
+  // Set fields
+  update_field('field_sub_53835a5b38d7e', $email, $id);
+  update_field('field_sub_53835a4938d7d', $city, $id);
+  update_field('field_sub_53835a6a38d80', $country, $id);
+  update_field('field_sub_53835a6338d7f', $mobile, $id);
+  update_field('field_sub_53835a7238d81', $comments, $id);
 
-  die(); // this is required to return a proper result
+  return true;
 }
-
-add_action( 'wp_ajax_nopriv_subscribe', 'sharan_ajax_subscribe' );
-add_action( 'wp_ajax_subscribe', 'sharan_ajax_subscribe' );

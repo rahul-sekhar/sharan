@@ -1,4 +1,4 @@
-<div class="register inner-container">
+<div class="register form inner-container">
   <?php
   if (isset($_POST['submitted'])) :
     get_template_part('templates/registration', 'confirmation-consultation');

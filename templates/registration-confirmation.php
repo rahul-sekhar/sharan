@@ -8,7 +8,7 @@ if (register_event()) : ?>
   <script>
     setTimeout(function () {
        window.location.href = "<?php the_permalink(); ?>";
-    }, 5000);
+    }, 3000);
   </script>
 
 <?php else : ?>

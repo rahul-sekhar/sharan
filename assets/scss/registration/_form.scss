@@ -1,10 +1,4 @@
 #registration-form {
-  .field {
-    overflow: hidden;
-    margin-bottom: 20px;
-    clear: left;
-  }
-
   .options {
     background-color: $dark-grey;
     @include whitney-medium;
@@ -36,49 +30,6 @@
 
     .price {
       padding-left: 20px;
-    }
-  }
-
-  .contact {
-    input, textarea {
-      border: 1px solid $near-white;
-      @include whitney-book;
-      font-size: 13px;
-      @include border-radius(4px);
-      outline: none;
-      padding: 15px;
-      width: 500px;
-    }
-
-    .field.invalid {
-      position: relative;
-
-      input, textarea {
-        border: 1px solid lighten(red, 40);
-        background-color: lighten(red, 47);
-      }
-
-      &:after {
-        @include font-icon;
-        line-height: 47px;
-        content: '\e80c';
-        font-size: 25px;
-        color: lighten(red, 20);
-        position: absolute;
-        left: 500px + 10px;
-        top: 0;
-      }
-    }
-
-    textarea {
-      resize: none;
-    }
-
-    label {
-      display: block;
-      float: left;
-      width: 120px;
-      padding: 6px 0;
     }
   }
 }
