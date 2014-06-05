@@ -1,13 +1,13 @@
 <?php
-if (register_event()) : ?>
+if (sharan_register()) : ?>
   <div class="content register">
     <p>Thank you for registering. We have sent you a confirmation email.
-    You will be redirected back to the <a href="<?php the_permalink(); ?>">event page</a> in a few seconds.</p>
+    You will be redirected back to the <a href="<?php echo registration_return_path(); ?>">event page</a> in a few seconds.</p>
   </div>
 
   <script>
     setTimeout(function () {
-       window.location.href = "<?php the_permalink(); ?>";
+       window.location.href = "<?php echo registration_return_path(); ?>";
     }, 3000);
   </script>
 

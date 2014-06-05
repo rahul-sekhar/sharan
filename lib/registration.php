@@ -26,6 +26,38 @@ function registrations_allowed( $event ) {
   return (bool)get_field('price_options', $event->ID);
 }
 
+function registration_return_path() {
+  if ( get_query_var( 'register' ) == 'event') {
+    return get_the_permalink();
+  } else {
+    return '/consultation';
+  }
+}
+
+function get_registration_options() {
+  if (get_query_var('register') == 'event') :
+    return get_field('price_options');
+  else :
+    return get_field('consultation_price_options', 'options');
+  endif;
+}
+
+function get_registration_name() {
+  if (get_query_var('register') == 'event') :
+    return get_the_title();
+  else :
+    return 'Consultation';
+  endif;
+}
+
+function sharan_register() {
+  if ( get_query_var( 'register' ) == 'event') {
+    return register_event();
+  } else {
+    return register_consultation();
+  }
+}
+
 function sanitize_registration_fields() {
   $_POST['price_option'] = isset($_POST['price_option']) ? (int)$_POST['price_option'] : 0;
   $_POST['name'] = isset($_POST['name']) ? filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING) : null;
@@ -91,6 +123,7 @@ EOT;
   // Send a confirmation mail
   $to = $email;
   $subject = get_field('event_registration_email_subject', 'options');
+  $subject = html_entity_decode($subject);
   $message = get_field('event_registration_email_message', 'options');
   $message = html_entity_decode($message);
 
@@ -175,6 +208,7 @@ EOT;
   // Send a confirmation mail
   $to = $email;
   $subject = get_field('consultation_registration_email_subject', 'options');
+  $subject = html_entity_decode($subject);
   $message = get_field('consultation_registration_email_message', 'options');
   $message = html_entity_decode($message);
 

@@ -28,6 +28,17 @@ if(function_exists("register_field_group"))
             'maxlength' => '',
           ),
           array (
+            'key' => 'field_5390649a0b8de',
+            'label' => 'Description',
+            'name' => 'description',
+            'type' => 'textarea',
+            'default_value' => '',
+            'placeholder' => '',
+            'maxlength' => '',
+            'rows' => '',
+            'formatting' => 'br',
+          ),
+          array (
             'key' => 'field_538426ea614f1',
             'label' => 'Price',
             'name' => 'price',

@@ -59,6 +59,17 @@ if(function_exists("register_field_group"))
             'maxlength' => '',
           ),
           array (
+            'key' => 'field_e_5390649a0b8de',
+            'label' => 'Description',
+            'name' => 'description',
+            'type' => 'textarea',
+            'default_value' => '',
+            'placeholder' => '',
+            'maxlength' => '',
+            'rows' => '',
+            'formatting' => 'br',
+          ),
+          array (
             'key' => 'field_537f8bbc72626',
             'label' => 'Price',
             'name' => 'price',

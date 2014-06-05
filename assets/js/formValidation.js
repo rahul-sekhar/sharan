@@ -4,10 +4,13 @@ jQuery(function ($) {
     return;
   }
 
+  var requiredFields = form.find('input[required], textarea[required]').parent('.field');
+  if (requiredFields.length == 0) {
+    return;
+  }
+
   var submit = form.find('input[type="submit"]');
   submit.attr('disabled', true).addClass('disabled');
-
-  var requiredFields = form.find('input[required], textarea[required]').parent('.field');
 
   var checkFields = function () {
     requiredFields.each(function () {

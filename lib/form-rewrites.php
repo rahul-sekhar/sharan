@@ -5,7 +5,6 @@ function sharan_form_query_vars( $vars ){
   $vars[] = "event";
   $vars[] = "register";
   $vars[] = "subscribe";
-  $vars[] = "email";
   return $vars;
 }
 add_filter( 'query_vars', 'sharan_form_query_vars' );

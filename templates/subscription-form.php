@@ -1,5 +1,5 @@
 <?php
-$email = get_query_var('email');
+$email = isset($_GET['email']) ? filter_var(trim($_GET['email']), FILTER_SANITIZE_EMAIL) : null;
 ?>
 <form id="subscription-form" method="POST" action="">
   <div class="contact">

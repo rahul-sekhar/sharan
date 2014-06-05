@@ -44,6 +44,7 @@ EOT;
   // Send a confirmation mail
   $to = $email;
   $subject = get_field('subscription_email_subject', 'options');
+  $subject = html_entity_decode($subject);
   $message = get_field('subscription_email_message', 'options');
   $message = html_entity_decode($message);
 

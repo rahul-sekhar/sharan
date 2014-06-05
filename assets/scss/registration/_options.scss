@@ -1,0 +1,63 @@
+#registration-form {
+  padding-top: 10px;
+
+  .name {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    @include whitney-medium;
+  }
+
+  .options {
+    width: 500px;
+
+    label {
+      @include whitney-medium;
+      font-size: 18px;
+    }
+
+    .description {
+      padding-left: 30px;
+      margin: 0;
+      padding-bottom: 20px;
+    }
+
+    td {
+      line-height: 30px;
+      vertical-align: middle;
+    }
+
+    input {
+      margin-right: 15px;
+      width: 15px;
+    }
+
+    .price {
+      vertical-align: top;
+      padding-left: 20px;
+    }
+  }
+
+  .chosen-title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .chosen {
+    width: 500px;
+    background-color: $dark-grey;
+    padding: 30px;
+    color: white;
+    margin-bottom: 40px;
+
+    table {
+      width: 500px - (2 * 30px);
+    }
+
+    .description {
+      padding-left: 0;
+    }
+  }
+}
