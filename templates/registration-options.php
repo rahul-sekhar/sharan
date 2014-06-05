@@ -5,7 +5,7 @@ get_template_part('templates/sidebar', 'registration');
 ?>
 
 <div class="content register">
-  <h2>Register</h2>
+  <h2>Choose an option</h2>
 
   <form id="registration-form" method="POST" action="">
     <table class="options">

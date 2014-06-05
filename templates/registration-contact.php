@@ -6,7 +6,7 @@ get_template_part('templates/sidebar', 'registration');
 ?>
 
 <div class="content register">
-  <h2>Checkout</h2>
+  <h2>Check out</h2>
 
   <form id="registration-form" method="POST" action="">
     <div class="chosen">
@@ -61,7 +61,7 @@ get_template_part('templates/sidebar', 'registration');
 
     <div class="buttons">
       <input type="hidden" name="submitted" value="true" />
-      <input class="submit button" type="submit" value="Checkout" />
+      <input class="submit button" type="submit" value="Check out" />
     </div>
   </form>
 </div>
