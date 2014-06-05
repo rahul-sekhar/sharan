@@ -2,7 +2,7 @@
   padding-top: 10px;
 
   .options {
-    width: 550px;
+    width: 600px;
 
     .name {
       text-transform: uppercase;
@@ -22,12 +22,28 @@
     .description {
       padding-left: 30px;
       margin: 0;
-      padding-bottom: 20px;
+    }
+
+    thead tr {
+      border: none;
+    }
+
+    & {
+      border-bottom: 1px solid $near-white;
+    }
+
+    tr {
+      border-top: 1px solid $near-white;
+    }
+
+    thead td {
+      padding-top: 0;
     }
 
     td {
       line-height: 30px;
       vertical-align: middle;
+      padding: 30px 0;
     }
 
     input {
@@ -37,7 +53,7 @@
 
     .price {
       vertical-align: top;
-      padding-left: 20px;
+      padding-left: 40px;
       width: 120px;
     }
   }
@@ -48,14 +64,24 @@
   }
 
   .chosen {
-    width: 550px;
+    width: 600px;
     background-color: $dark-grey;
     padding: 30px;
     color: white;
     margin-bottom: 40px;
 
     table {
-      width: 550px - (2 * 30px);
+      width: 600px - (2 * 30px);
+      border: none;
+    }
+
+    tr {
+      border: none;
+    }
+
+    td {
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     .description {
