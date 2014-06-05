@@ -8,12 +8,10 @@ get_template_part('templates/sidebar', 'registration');
   <h2>Register</h2>
 
   <form id="registration-form" method="POST" action="">
-    <p class="name"><?php echo get_registration_name(); ?></p>
-
     <table class="options">
       <thead>
         <tr>
-          <td></td>
+          <td class="name"><?php echo get_registration_name(); ?></td>
           <td class="price">Pay now</td>
         </tr>
       </thead>

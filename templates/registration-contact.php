@@ -12,12 +12,10 @@ get_template_part('templates/sidebar', 'registration');
     <p class="chosen-title">You have chosen:</p>
 
     <div class="chosen">
-      <p class="name"><?php echo get_registration_name(); ?></p>
-
       <table class="options">
         <thead>
           <tr>
-            <td></td>
+            <td class="name"><?php echo get_registration_name(); ?></td>
             <td class="price">Pay now</td>
           </tr>
         </thead>

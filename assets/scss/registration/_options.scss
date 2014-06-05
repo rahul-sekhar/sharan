@@ -1,17 +1,18 @@
 #registration-form {
   padding-top: 10px;
 
-  .name {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 16px;
-    margin-bottom: 0;
-    margin-top: 0;
-    @include whitney-medium;
-  }
-
   .options {
-    width: 500px;
+    width: 550px;
+
+    .name {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 0;
+      @include whitney-medium;
+      padding-bottom: 40px;
+    }
 
     label {
       @include whitney-medium;
@@ -37,6 +38,7 @@
     .price {
       vertical-align: top;
       padding-left: 20px;
+      width: 120px;
     }
   }
 
@@ -46,14 +48,14 @@
   }
 
   .chosen {
-    width: 500px;
+    width: 550px;
     background-color: $dark-grey;
     padding: 30px;
     color: white;
     margin-bottom: 40px;
 
     table {
-      width: 500px - (2 * 30px);
+      width: 550px - (2 * 30px);
     }
 
     .description {
