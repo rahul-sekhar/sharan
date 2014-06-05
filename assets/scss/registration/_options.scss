@@ -58,11 +58,6 @@
     }
   }
 
-  .chosen-title {
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
   .chosen {
     width: 600px;
     background-color: $dark-grey;
@@ -71,12 +66,22 @@
     margin-bottom: 40px;
 
     .name {
-      padding-bottom: 30px;
+      padding-bottom: 20px;
+    }
+
+    tbody {
+      .option, .price {
+        padding-top: 20px;
+      }
     }
 
     table {
       width: 600px - (2 * 30px);
       border: none;
+    }
+
+    thead tr {
+      border-bottom: 1px solid $near-white;
     }
 
     tr {
