@@ -11,7 +11,8 @@
       margin-bottom: 0;
       margin-top: 0;
       @include whitney-medium;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
+      padding-top: 10px;
     }
 
     label {
@@ -66,6 +67,7 @@
     margin-bottom: 40px;
 
     .name {
+      padding-top: 0;
       padding-bottom: 20px;
     }
 
