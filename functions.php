@@ -26,6 +26,7 @@ require_once locate_template('/lib/custom-fields/gallery.php');
 require_once locate_template('/lib/custom-fields/email.php');
 require_once locate_template('/lib/custom-fields/registrations.php');
 require_once locate_template('/lib/custom-fields/subscriptions.php');
+require_once locate_template('/lib/custom-fields/news.php');
 
 require_once locate_template('/lib/utils.php');                   // Utility functions
 require_once locate_template('/lib/init.php');                    // Initial theme setup and constants
