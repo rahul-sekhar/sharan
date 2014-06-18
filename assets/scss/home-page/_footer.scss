@@ -26,6 +26,7 @@
   .support {
     float: right;
     font-size: 15px;
+    width: 200px;
 
     p {
       margin: 0;
@@ -44,8 +45,8 @@
   }
 
   .lower {
-    clear: both;
-    padding-top: 50px;
+    clear: left;
+    padding-top: 60px;
     @include clearfix;
   }
 

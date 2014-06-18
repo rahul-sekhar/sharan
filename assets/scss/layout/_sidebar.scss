@@ -60,3 +60,9 @@ $sidebar-padding: 15px;
     }
   }
 }
+
+.error404 .sidebar {
+  .custom-search {
+    display: none;
+  }
+}

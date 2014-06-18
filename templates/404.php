@@ -6,7 +6,7 @@
   <div class="custom-search">
     <script>
       (function() {
-        var cx = '010054414114663210811:uv2sb-zbdvk';
+        var cx = '<?php echo GOOGLE_CUSTOM_SEARCH_ID; ?>';
         var gcse = document.createElement('script');
         gcse.type = 'text/javascript';
         gcse.async = true;
