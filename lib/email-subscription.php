@@ -32,6 +32,8 @@ Mobile: $mobile
 Comments:
 $comments
 EOT;
+  $message = html_entity_decode($message);
+
   $success = sharan_mail($to, $subject, $message);
 
   /* Exit if sending the mail fails
@@ -46,12 +48,12 @@ EOT;
   $subject = get_field('subscription_email_subject', 'options');
   $subject = html_entity_decode($subject);
   $message = get_field('subscription_email_message', 'options');
-  $message = html_entity_decode($message);
 
   // Message replacements
   $message_placeholders = array(':name', ':email');
   $message_replacements = array($name, $email);
   $message = str_replace($message_placeholders, $message_replacements, $message);
+  $message = html_entity_decode($message);
 
   $success = sharan_mail($to, $subject, $message);
 

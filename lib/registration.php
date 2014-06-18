@@ -195,6 +195,7 @@ $address
 Comments:
 $comments
 EOT;
+  $message = html_entity_decode($message);
 
   $success = sharan_mail($to, $subject, $message);
 
@@ -210,12 +211,12 @@ EOT;
   $subject = get_field('consultation_registration_email_subject', 'options');
   $subject = html_entity_decode($subject);
   $message = get_field('consultation_registration_email_message', 'options');
-  $message = html_entity_decode($message);
 
   // Message replacements
   $message_placeholders = array(':name', ':price_option_name', ':amount');
   $message_replacements = array($name, $price_option_name, $amount);
   $message = str_replace($message_placeholders, $message_replacements, $message);
+  $message = html_entity_decode($message);
 
   $success = sharan_mail($to, $subject, $message);
 
