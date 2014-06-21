@@ -1,12 +1,6 @@
-.recent-news {
-  ul {
-    @include reset-list;
-  }
-
-  li {
-    margin-top: 40px;
-    overflow: hidden;
-  }
+.post.short {
+  margin-top: 40px;
+  overflow: hidden;
 
   h3 {
     @include whitney-medium;
@@ -16,6 +10,7 @@
 
   .date {
     margin-top: 5px;
+    margin-bottom: 10px;
     @include whitney-book-italic;
     font-size: 10px;
   }

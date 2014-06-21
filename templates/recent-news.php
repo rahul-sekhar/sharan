@@ -10,7 +10,7 @@
   ?>
     <ul class="post">
     <?php while($posts->have_posts()) : $posts->the_post(); ?>
-      <li>
+      <li class="post short">
         <?php get_template_part('templates/short', 'post'); ?>
       </li>
     <?php endwhile; ?>

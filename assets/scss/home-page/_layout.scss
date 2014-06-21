@@ -31,4 +31,10 @@ body.home {
       content: '\e806';
     }
   }
+
+  .recent-news {
+    ul {
+      @include reset-list;
+    }
+  }
 }

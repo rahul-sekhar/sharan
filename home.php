@@ -5,13 +5,13 @@
 
   <div class="content">
     <h2>News</h2>
-  </div>
 
   <?php while (have_posts()) : the_post(); ?>
-    <div class="post content">
-      <?php get_template_part('templates/content', 'post'); ?>
-    </div><!-- /.post-content -->
+    <div class="post short">
+      <?php get_template_part('templates/short', 'post'); ?>
+    </div>
   <?php endwhile; ?>
+  </div>
 
   <?php get_template_part('templates/navigation', 'page'); ?>
 </div>
