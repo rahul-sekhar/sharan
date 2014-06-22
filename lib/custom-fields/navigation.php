@@ -1,5 +1,26 @@
 <?php
 
+// Save navigation fields in a single database column
+function sharan_save_navigation($post_id) {
+  if ($post_id == 'options' && array_keys($_POST['fields'])[0] == 'field_531869b392ddd') {
+    $nav = json_encode(get_field('field_531869b392ddd', 'options'));
+    update_option('main_navigation', $nav);
+  }
+}
+add_action('acf/save_post', 'sharan_save_navigation', 20);
+
+// Get the navigation fields as an array
+function sharan_get_navigation() {
+
+  $nav = get_option('main_navigation');
+  if ($nav) {
+    return json_decode($nav, true);
+  }
+
+  return get_field('field_531869b392ddd', 'options');
+}
+
+
 // Field groups for navigation
 
 if(function_exists("register_field_group"))

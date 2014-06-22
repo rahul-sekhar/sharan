@@ -1,11 +1,5 @@
 <?php
 
-function sharan_get_breadcrumbs() {
-  $ancestors = new PageAncestors(get_the_ID());
-
-  return $ancestors->breadcrumbs();
-}
-
 function sharan_get_page_nav() {
   $ancestors = new PageAncestors(get_the_ID());
 
@@ -51,7 +45,7 @@ class PageAncestors {
     $root_page_id = $this->parent_ids()[0];
     $root_page_url = get_permalink($root_page_id);
 
-    $nav = get_field('main_nav', 'options');
+    $nav = sharan_get_navigation();
     // Loop through nav items
     if ($nav) : foreach ($nav as $nav_item) :
 

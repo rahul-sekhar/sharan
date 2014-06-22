@@ -1,18 +1,18 @@
 <?php
-if (get_sub_field('sections')):
+if ($nav_item['sections']):
   ?>
   <div class="dropdown">
     <div class="feature-container">
-      <?php if (get_sub_field('navigation_feature_type') == 'Image'):
-        $image = get_sub_field('feature_image');
+      <?php if ($nav_item['navigation_feature_type'] == 'Image'):
+        $image = $nav_item['feature_image'];
         if ($image): ?>
-          <a href="<?php the_sub_field('feature_link_url'); ?>">
+          <a href="<?php echo $nav_item['feature_link_url']; ?>">
             <div class="image">
               <img src="<?php echo check_ssl( $image['sizes']['nav-feature'] ); ?>" alt="" />
             </div>
 
-            <?php if (get_sub_field('caption')): ?>
-              <p class="caption"><?php the_sub_field('caption'); ?></p>
+            <?php if ($nav_item['caption']): ?>
+              <p class="caption"><?php echo $nav_item['caption']; ?></p>
             <?php endif; ?>
           </a>
         <?php else: ?>
@@ -21,22 +21,22 @@ if (get_sub_field('sections')):
       <?php endif; ?>
     </div>
 
-    <?php while (has_sub_field('sections')): ?>
+    <?php foreach ($nav_item['sections'] as $section) : ?>
       <ul>
-        <li class="name"><?php the_sub_field('name'); ?></li>
+        <li class="name"><?php echo $section['name']; ?></li>
 
         <?php
-        if (get_sub_field('links')):
-          while (has_sub_field('links')):
+        if ($section['links']):
+          foreach($section['links'] as $link) :
           ?>
             <li>
-              <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('name'); ?></a>
+              <a href="<?php echo $link['url']; ?>"><?php echo $link['name']; ?></a>
             </li>
           <?php
-          endwhile;
+          endforeach;
         endif;
         ?>
       </ul>
-    <?php endwhile; ?>
+    <?php endforeach; ?>
   </div>
 <?php endif; ?>
