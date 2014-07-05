@@ -7,6 +7,9 @@ require_once locate_template('/lib/acf-flexible-content/acf-flexible-content.php
 
 require_once locate_template('/lib/acf-config.php');
 
+require_once locate_template('/lib/payzippy-sdk/ChargingRequest.php');
+require_once locate_template('/lib/payzippy-sdk/ChargingResponse.php');
+
 require_once locate_template('/lib/custom-fields/navigation.php');
 require_once locate_template('/lib/custom-fields/events.php');
 require_once locate_template('/lib/custom-fields/people.php');
@@ -65,3 +68,4 @@ require_once locate_template('/lib/mail-wrapper.php');            // Wrapper for
 require_once locate_template('/lib/clean-admin-interface.php');   // Change admin menu items and clean up
 require_once locate_template('/lib/ssl.php');                     // Force SSL urls when required
 require_once locate_template('/lib/recipe-type.php');             // Post type for recipes
+require_once locate_template('/lib/payment.php');             // Payment with payzippy

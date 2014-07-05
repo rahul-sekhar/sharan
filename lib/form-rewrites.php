@@ -5,6 +5,7 @@ function sharan_form_query_vars( $vars ){
   $vars[] = "event";
   $vars[] = "register";
   $vars[] = "subscribe";
+  $vars[] = "confirmation";
   return $vars;
 }
 add_filter( 'query_vars', 'sharan_form_query_vars' );
@@ -13,6 +14,7 @@ function sharan_form_rewrite_rules($rules) {
   $newRules = array(
     'events/([^/]*)/register/?$' => 'index.php?register=event&event=$matches[1]',
     'consultation/register/?$' => 'index.php?register=consultation',
+    'confirmation/?$' => 'index.php?confirmation=true',
     'subscribe/?$' => 'index.php?subscribe=true'
   );
   $rules = $newRules + $rules;
@@ -38,6 +40,12 @@ function sharan_form_templates() {
       return get_template_directory() . '/subscribe.php';
     });
   }
+
+  if ( get_query_var( 'confirmation' )) {
+    add_filter( 'template_include', function() {
+      return get_template_directory() . '/confirmation.php';
+    });
+  }
 }
 add_action( 'template_redirect', 'sharan_form_templates' );
 
@@ -55,6 +63,9 @@ function sharan_form_wp_title( $title, $sep) {
 
   } elseif ( get_query_var( 'subscribe' )) {
     $base_title = 'Subscribe to our newsletter';
+
+  } elseif ( get_query_var( 'confirmation' )) {
+    $base_title = 'Payment confirmation';
   }
 
   if (isset($base_title)) {

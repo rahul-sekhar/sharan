@@ -5,7 +5,7 @@ function sharan_from_header() {
 }
 
 function sharan_mail($to, $subject, $message) {
-  if (defined('DEVELOPMENT') && DEVELOPMENT) :
+  if ($email_debug || (defined('DEVELOPMENT') && DEVELOPMENT)) :
     $debug_mail = <<<EOT
 
 To: $to
@@ -14,7 +14,7 @@ Message:
 $message
 
 EOT;
-    echo $debug_mail;
+    echo '<pre>' . $debug_mail . '</pre>';
     return true;
   else :
     return wp_mail($to, $subject, $message, sharan_from_header());

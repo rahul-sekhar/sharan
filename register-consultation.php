@@ -1,7 +1,7 @@
 <div class="register form inner-container">
   <?php
   if (isset($_POST['submitted'])) :
-    get_template_part('templates/registration', 'confirmation');
+    get_template_part('templates/registration', 'payment');
   elseif(isset($_POST['options_submitted'])) :
     get_template_part('templates/registration', 'contact');
   else :

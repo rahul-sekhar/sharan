@@ -1,8 +1,8 @@
 jQuery(function ($) {
 
   $('#slideshow ul.slides').responsiveSlides({
-    timeout: 8000,
-    pause: true,
+    timeout: 5000,
+    pause: false,
     pager: true
   });
 });

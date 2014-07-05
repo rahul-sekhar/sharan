@@ -5,3 +5,5 @@ cache
 config/sensitive.rb
 
 .DS_Store
+
+lib/payzippy-sdk/Config.php
