@@ -5,7 +5,7 @@ function sharan_from_header() {
 }
 
 function sharan_mail($to, $subject, $message) {
-  if ($email_debug || (defined('DEVELOPMENT') && DEVELOPMENT)) :
+  if (defined('DEVELOPMENT') && DEVELOPMENT) :
     $debug_mail = <<<EOT
 
 To: $to
