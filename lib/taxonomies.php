@@ -8,6 +8,8 @@ function sharan_remove_taxonomy_metaboxes() {
 
   remove_meta_box( 'tagsdiv-resource_tag', 'books', 'side' );
   remove_meta_box( 'tagsdiv-resource_tag', 'links', 'side' );
+
+  remove_meta_box( 'recipe_categorydiv', 'recipes', 'side' );
 }
 add_action( 'admin_menu' , 'sharan_remove_taxonomy_metaboxes' );
 
