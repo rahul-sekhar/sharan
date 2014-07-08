@@ -59,9 +59,39 @@ get_template_part('templates/sidebar', 'registration');
       </div>
     </div>
 
-    <div class="buttons">
+    <table class="method">
+      <tbody>
+        <tr>
+          <td class="option">
+            <label>
+              <input type="radio" name="method" value="gateway" checked="checked"
+              />Pay online
+            </label>
+            <p class="description">
+              Pay by credit card, debit card or net banking.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="option">
+            <label>
+              <input type="radio" name="method" value="manual"
+              />Pay offline
+            </label>
+            <p class="description">
+              Deposit cash or a cheque directly to our account by depositing in your local ICICI bank.
+              The cheque must be in favour of SHARAN.
+              Our bank details are: Acc no 000401139883, ICICI Nariman Point Branch, Mumbai.
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="buttons checkout">
       <input type="hidden" name="submitted" value="true" />
-      <input class="submit button" type="submit" value="Check out" />
+      <input class="submit button" type="submit" value="Checkout" />
     </div>
   </form>
 </div>

@@ -28,7 +28,9 @@ jQuery(function ($) {
 
     // Check if all fields are valid
     if (!requiredFields.is(':not(.valid)')) {
-      submit.attr('disabled', false).removeClass('disabled');
+      if (!submit.hasClass('submitted')) {
+        submit.attr('disabled', false).removeClass('disabled');
+      }
     } else {
       submit.attr('disabled', true).addClass('disabled');
     }
@@ -44,9 +46,14 @@ jQuery(function ($) {
   });
 
   // Debounce
-  form.on('submit', function () {
-    if(!submit.hasClass('disabled')) {
-      submit.attr('disabled', true).addClass('disabled');
+  form.on('click', 'input[type="submit"]', function () {
+    button = $(this);
+    form.find('input.submit-val').remove();
+    form.append('<input type="hidden" class="submit-val" name="' + button.attr('name') + '" value="true" />');
+    if(!button.hasClass('disabled')) {
+      submit.attr('disabled', true).addClass('submitted disabled');
     }
+
+    form.submit();
   });
 });

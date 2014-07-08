@@ -51,9 +51,9 @@ function get_registration_name() {
 }
 
 // Sends registration emails, given a registration object
-function sharan_registration_mails($registration) {
-  $id = $registration->ID;
+function sharan_registration_mails($id) {
   $is_event = !get_field('consultation', $id);
+  $gateway = !(get_field('status', $id) == 'Manual payment');
 
   $name = get_field('name', $id);
   $email = get_field('email', $id);
@@ -64,22 +64,23 @@ function sharan_registration_mails($registration) {
   $amount = get_field('amount', $id);
   $transaction_id = get_field('transaction_id', $id);
 
+  $payment_type = $gateway ? '(Payzippy)' : '(Manual)';
+
   if ($is_event) :
     $event_id = get_field('event', $id);
     $event_name = get_the_title($event_id);
     $event_link = get_permalink($event_id);
 
     $to = get_field('event_registration_email', 'options');
-    $subject = 'Event registration';
-    $message = "Event: $event_name ($event_link)";
+    $subject = 'Event registration ' . $payment_type;
+    $message = "Event: $event_name ($event_link)\n";
   else :
     $to = get_field('consultation_registration_email', 'options');
-    $subject = 'Consultation registration';
+    $subject = 'Consultation registration ' . $payment_type;
     $message = "";
   endif;
 
   $message .= <<<EOT
-
 Transaction ID: $transaction_id
 
 Payment option: $price_option_name
@@ -106,13 +107,23 @@ EOT;
   $message_placeholders = array(':name', ':price_option_name', ':amount', ':transaction_id');
   $message_replacements = array($name, $price_option_name, $amount, $transaction_id);
   if ($is_event) :
-    $subject = get_field('event_registration_email_subject', 'options');
-    $message = get_field('event_registration_email_message', 'options');
+    if ($gateway) :
+      $subject = get_field('event_registration_email_subject', 'options');
+      $message = get_field('event_registration_email_message', 'options');
+    else :
+      $subject = get_field('manual_event_registration_email_subject', 'options');
+      $message = get_field('manual_event_registration_email_message', 'options');
+    endif;
     array_push($message_placeholders, ':event_name', ':event_link');
     array_push($message_replacements, $event_name, $event_link);
   else :
-    $subject = get_field('consultation_registration_email_subject', 'options');
-    $message = get_field('consultation_registration_email_message', 'options');
+    if ($gateway) :
+      $subject = get_field('consultation_registration_email_subject', 'options');
+      $message = get_field('consultation_registration_email_message', 'options');
+    else :
+      $subject = get_field('manual_consultation_registration_email_subject', 'options');
+      $message = get_field('manual_consultation_registration_email_message', 'options');
+    endif;
   endif;
 
   $subject = html_entity_decode($subject);

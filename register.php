@@ -9,7 +9,11 @@
       get_template_part('templates/registration', 'closed');
     else :
       if (isset($_POST['submitted'])) :
-        get_template_part('templates/registration', 'payment');
+        if (isset($_POST['method']) && $_POST['method'] == 'manual') :
+          get_template_part('templates/registration', 'manual-payment');
+        else :
+          get_template_part('templates/registration', 'gateway-payment');
+        endif;
       elseif(isset($_POST['options_submitted'])) :
         get_template_part('templates/registration', 'contact');
       else :

@@ -14,10 +14,6 @@
       <p><a href="<?php echo $response['return_url'] ?>">Return</a>
     </div>
 
-    <script>
-      document.getElementById("payment-form").submit();
-    </script>
-
   <?php else : ?>
 
     <div class="content confirmation">

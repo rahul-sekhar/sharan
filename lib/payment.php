@@ -1,37 +1,45 @@
 <?php
 
-function sharan_get_charging_object() {
-  $is_event = (get_query_var( 'register' ) == 'event');
-  $pz_charging = new ChargingRequest();
+function sharan_registration_is_event() {
+  return (get_query_var( 'register' ) == 'event');
+}
+
+function sharan_registration_data() {
+  $data = array();
 
   $_POST['price_option'] = isset($_POST['price_option']) ? (int)$_POST['price_option'] : 0;
-  if ($is_event) :
-    $price_option = get_field('price_options')[$_POST['price_option']];
+  if (sharan_registration_is_event()) :
+    $data['price_option'] = get_field('price_options')[$_POST['price_option']];
   else :
-    $price_option = get_field('consultation_price_options', 'options')[$_POST['price_option']];
+    $data['price_option'] = get_field('consultation_price_options', 'options')[$_POST['price_option']];
   endif;
 
-  $name = isset($_POST['name']) ? filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING) : null;
-  $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : null;
-  $phone = isset($_POST['phone']) ? filter_var(trim($_POST['phone']), FILTER_SANITIZE_STRING) : null;
-  $address = isset($_POST['address']) ? filter_var(trim($_POST['address']), FILTER_SANITIZE_STRING) : null;
-  $comments = isset($_POST['comments']) ? filter_var(trim($_POST['comments']), FILTER_SANITIZE_STRING) : null;
+  $data['name'] = isset($_POST['name']) ? filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING) : null;
+  $data['email'] = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : null;
+  $data['phone'] = isset($_POST['phone']) ? filter_var(trim($_POST['phone']), FILTER_SANITIZE_STRING) : null;
+  $data['address'] = isset($_POST['address']) ? filter_var(trim($_POST['address']), FILTER_SANITIZE_STRING) : null;
+  $data['comments'] = isset($_POST['comments']) ? filter_var(trim($_POST['comments']), FILTER_SANITIZE_STRING) : null;
+  $data['gateway'] = !isset($_POST['method']) || $_POST['method'] == 'gateway';
 
-  if ($is_event) :
-    $event_name = get_the_title();
+  if (sharan_registration_is_event()) :
+    $data['event_name'] = get_the_title();
   else :
-    $event_name = 'Consultation';
+    $data['event_name'] = 'Consultation';
   endif;
 
   // Check required fields
-  if (!$name || !$email || !$phone || !$address || !$price_option) return false;
+  if (!$data['name'] || !$data['email'] || !$data['phone'] || !$data['address'] || !$data['price_option']) return false;
 
-  $price_option_name = $price_option['name'];
-  $amount = $price_option['price'];
+  $data['price_option_name'] = $data['price_option']['name'];
+  $data['amount'] = $data['price_option']['price'];
 
+  return $data;
+}
+
+function sharan_add_registration_data($data) {
   // Add a registration to the database
   $registration = array(
-    'post_title' => $event_name . ' - ' . $name,
+    'post_title' => $data['event_name'] . ' - ' . $data['name'],
     'post_status' => 'publish',
     'post_type' => 'registration'
   );
@@ -41,43 +49,86 @@ function sharan_get_charging_object() {
   $digits = 3;
   $transaction_id = (string)rand(pow(10, $digits-1), pow(10, $digits)-1) . (string)$id;
 
+  $data['status'] = $data['gateway'] ? 'In progress/incomplete' : 'Manual payment';
+
   $updated_title = array(
     'ID' => $id,
-    'post_title' => $event_name . ' - ' . $transaction_id . ' - ' . $name . ' [In progress]',
+    'post_title' => $data['event_name'] . ' - ' . $transaction_id . ' - ' . $data['name'] . ' [' . $data['status'] . ']',
   );
   wp_update_post($updated_title);
 
   // Set fields
   update_field('field_reg_transaction_id', $transaction_id, $id);
-  update_field('field_reg_status', 'Payment incomplete', $id);
-  update_field('field_53835a4938d7d', $name, $id);
-  update_field('field_53835a5b38d7e', $email, $id);
-  update_field('field_53835a6338d7f', $phone, $id);
-  update_field('field_53835a6a38d80', $address, $id);
-  update_field('field_53835a7238d81', $comments, $id);
+  update_field('field_reg_status', $data['status'], $id);
+  update_field('field_53835a4938d7d', $data['name'], $id);
+  update_field('field_53835a5b38d7e', $data['email'], $id);
+  update_field('field_53835a6338d7f', $data['phone'], $id);
+  update_field('field_53835a6a38d80', $data['address'], $id);
+  update_field('field_53835a7238d81', $data['comments'], $id);
 
-  update_field('field_53835a8c38d82', !$is_event, $id);
-  if ($is_event) {
+  update_field('field_53835a8c38d82', !sharan_registration_is_event(), $id);
+  if (sharan_registration_is_event()) {
     update_field('field_53835a9c38d83', get_the_ID(), $id);
   }
 
-  update_field('field_5383609e116b2', $price_option_name, $id);
-  update_field('field_538360ef116b3', $amount, $id);
+  update_field('field_5383609e116b2', $data['price_option_name'], $id);
+  update_field('field_538360ef116b3', $data['amount'], $id);
+
+  $data['transaction_id'] = $transaction_id;
+  $data['id'] = $id;
+  return $data;
+}
+
+function sharan_registration_return_url($id) {
+  if (get_field('consultation', $id)) :
+    return '/consultation';
+  else :
+    $event_id = get_field('event', $id);
+    return get_permalink($event_id);
+  endif;
+}
+
+
+function sharan_manual_payment() {
+  $response = array();
+
+  $data = sharan_registration_data();
+  if (!$data) :
+    $response['success'] = false;
+    return $response;
+  endif;
+
+  $data = sharan_add_registration_data($data);
+  if (!$data) :
+    $response['success'] = false;
+    return $response;
+  endif;
+
+  sharan_registration_mails($data['id']);
+
+  $response['transaction_id'] = $data['transaction_id'];
+  $response['return_url'] = sharan_registration_return_url($data['id']);
+  $response['success'] = true;
+  return $response;
+}
+
+function sharan_get_charging_object() {
+  $pz_charging = new ChargingRequest();
+  $data = sharan_registration_data();
+  if (!$data) return false;
+  $data = sharan_add_registration_data($data);
+  if (!$data) return false;
 
   // Create payzippy object
-  $pz_charging->set_buyer_email_address($email)
-              ->set_merchant_transaction_id($transaction_id)
-              ->set_transaction_amount($amount * 100)
+  $pz_charging->set_buyer_email_address($data['email'])
+              ->set_merchant_transaction_id($data['transaction_id'])
+              ->set_transaction_amount($data['amount'] * 100)
               ->set_payment_method('PAYZIPPY')
               ->set_ui_mode('REDIRECT')
-              ->set_billing_name($name)
-              ->set_buyer_phone_no($phone)
-              ->set_shipping_address($address)
-              ->set_udf1($id);
-
-  if ($is_event) {
-    $pz_charging->set_product_info2($event_name);
-  }
+              ->set_billing_name($data['name'])
+              ->set_buyer_phone_no($data['phone'])
+              ->set_shipping_address($data['address'])
+              ->set_udf1($data['id']);
 
   $charging_object = $pz_charging->charge();
 
@@ -101,26 +152,14 @@ function sharan_get_charging_response() {
   $response['id'] = $pz_charging_response->get_udf1();
   $id = $response['id'];
 
-  $registration = get_post($id);
-  if (get_field('consultation', $id)) :
-    $response['return_url'] = '/consultation';
-  else :
-    $event_id = get_field('event', $id);
-    $response['return_url'] = get_permalink($event_id);
-  endif;
+  $response['return_url'] = sharan_registration_return_url($id);
+  $status = ($response['success']) ? 'Successful' : 'Failed';
 
-  if ($response['success']) :
-    update_field('field_reg_status', 'Successful', $id);
-    $status = '[Success]';
-  else :
-    update_field('field_reg_status', 'Failed', $id);
-    $status = '[Failed]';
-  endif;
-
+  update_field('field_reg_status', $status, $id);
   $old_title = get_the_title($id);
   $updated_title = array(
     'ID' => $id,
-    'post_title' => str_replace('[In progress]', $status, $old_title),
+    'post_title' => str_replace('In progress/incomplete', $status, $old_title),
   );
   wp_update_post($updated_title);
 
@@ -129,7 +168,7 @@ function sharan_get_charging_response() {
   update_field('field_reg_pz_id', $response['payzippy_id'], $id);
 
   if ($response['success']) :
-    sharan_registration_mails($registration);
+    sharan_registration_mails($id);
   endif;
 
   return $response;

@@ -43,7 +43,7 @@ if(function_exists("register_field_group"))
         'row_min' => '',
         'row_limit' => '',
         'layout' => 'table',
-        'button_label' => 'Add Category',
+        'button_label' => 'Add category to page',
       ),
     ),
     'location' => array (

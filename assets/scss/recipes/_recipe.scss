@@ -1,0 +1,58 @@
+.dropdown-container.recipe {
+  .dropdown-title {
+    background-color: $near-white;
+
+    a {
+      display: block;
+      padding-left: 30px;
+      overflow: hidden;
+      display: table;
+      width: 100%;
+    }
+
+    h4 {
+      display: table-cell;
+      color: black;
+      vertical-align: middle;
+      @include sentinel-book;
+      font-size: 18px;
+    }
+
+    .image-container {
+      display: table-cell;
+      vertical-align: middle;
+      width: 128px;
+    }
+
+    img {
+      width: 100%;
+      width: auto;
+      display: block;
+      opacity: 1;
+      @include transition(opacity 300ms ease 300ms, visibility 300ms ease 300ms);
+    }
+
+    &.expanded img {
+      visibility: hidden;
+      opacity: 0;
+      @include transition(opacity 300ms ease, visibility 300ms ease);
+    }
+
+    a:after, &.expanded a:after {
+      content: none;
+    }
+  }
+
+  .dropdown-content {
+    padding: 30px;
+    padding-top: 0;
+    background-color: $near-white;
+
+    .image-container {
+      img {
+        width: 350px;
+        height: auto;
+      }
+    }
+  }
+}
