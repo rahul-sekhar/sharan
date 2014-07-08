@@ -53,7 +53,7 @@ function get_registration_name() {
 // Sends registration emails, given a registration object
 function sharan_registration_mails($id) {
   $is_event = !get_field('consultation', $id);
-  $gateway = !(get_field('status', $id) == 'Manual payment');
+  $gateway = !(get_field('status', $id) == 'Offline payment');
 
   $name = get_field('name', $id);
   $email = get_field('email', $id);

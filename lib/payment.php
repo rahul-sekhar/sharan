@@ -49,7 +49,7 @@ function sharan_add_registration_data($data) {
   $digits = 3;
   $transaction_id = (string)rand(pow(10, $digits-1), pow(10, $digits)-1) . (string)$id;
 
-  $data['status'] = $data['gateway'] ? 'In progress/incomplete' : 'Manual payment';
+  $data['status'] = $data['gateway'] ? 'In progress/incomplete' : 'Offline payment';
 
   $updated_title = array(
     'ID' => $id,
