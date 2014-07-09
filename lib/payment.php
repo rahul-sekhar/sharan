@@ -47,7 +47,7 @@ function sharan_add_registration_data($data) {
   if (!$id) return false;
 
   $digits = 3;
-  $transaction_id = (string)rand(pow(10, $digits-1), pow(10, $digits)-1) . (string)$id;
+  $transaction_id = (string)$id . (string)rand(pow(10, $digits-1), pow(10, $digits)-1);
 
   $data['status'] = $data['gateway'] ? 'In progress/incomplete' : 'Offline payment';
 
