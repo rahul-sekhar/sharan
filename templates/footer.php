@@ -5,7 +5,7 @@
     </div>
 
     <p class="credit">
-      Made by <span class="credit">S</span> <span class="credit-sep">&amp;</span> <span class="credit">R</span>
+      Made by <a class="m" href="#"><span class="credit">S</span> <span class="credit-sep">&amp;</span> <span class="credit">R</span></a>
     </p>
   </div>
 </footer>

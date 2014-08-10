@@ -29,6 +29,10 @@
     color: $near-white;
     @include whitney-medium;
     font-size: 13px;
+
+    a {
+      color: $near-white;
+    }
   }
 
   .credit {

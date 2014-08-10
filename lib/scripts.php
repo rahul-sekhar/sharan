@@ -40,6 +40,7 @@ function roots_scripts() {
   wp_register_script('formValidation', get_template_directory_uri() . '/assets/js/formValidation.js', array(), $version, false);
   wp_register_script('navPull', get_template_directory_uri() . '/assets/js/navPull.js', array(), $version, false);
   wp_register_script('search', get_template_directory_uri() . '/assets/js/search.js', array(), $version, false);
+  wp_register_script('credit', get_template_directory_uri() . '/assets/js/credit.js', array(), $version, false);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');
@@ -54,6 +55,7 @@ function roots_scripts() {
   wp_enqueue_script('formValidation');
   wp_enqueue_script('navPull');
   wp_enqueue_script('search');
+  wp_enqueue_script('credit');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 
