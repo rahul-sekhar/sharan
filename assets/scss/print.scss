@@ -1,0 +1,46 @@
+#banner {
+  display: none;
+}
+
+#wrapper {
+  padding: 0;
+}
+
+.inner-container {
+  margin: 0;
+
+  .content {
+    margin: 0;
+    max-width: none;
+  }
+
+  &.with-side-nav {
+    padding: 0;
+
+    .content {
+      margin: 0;
+    }
+  }
+}
+
+.side-nav {
+  display: none;
+}
+
+.side-nav-pull {
+  display: none;
+}
+
+.sidebar {
+  display: none;
+}
+
+#content-info {
+  display: none;
+}
+
+.content.recipe {
+  .bar {
+    display: none;
+  }
+}

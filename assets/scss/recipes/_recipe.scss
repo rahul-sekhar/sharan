@@ -1,58 +1,49 @@
-.dropdown-container.recipe {
-  .dropdown-title {
-    background-color: $near-white;
+ul.recipes {
+  @include whitney-medium;
+  @include reset-list;
 
-    a {
-      display: block;
-      padding-left: 30px;
-      overflow: hidden;
-      display: table;
-      width: 100%;
-    }
+  li {
+    margin-bottom: 24px;
+  }
+}
 
-    h4 {
-      display: table-cell;
-      color: black;
-      vertical-align: middle;
-      @include sentinel-book;
-      font-size: 18px;
-    }
+.content.recipe {
+  .bar {
+    border-bottom: 1px solid $grey;
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 60px;
 
-    .image-container {
-      display: table-cell;
-      vertical-align: middle;
-      width: 128px;
-    }
-
-    img {
-      width: 100%;
-      width: auto;
-      display: block;
-      opacity: 1;
-      @include transition(opacity 300ms ease 300ms, visibility 300ms ease 300ms);
-    }
-
-    &.expanded img {
-      visibility: hidden;
-      opacity: 0;
-      @include transition(opacity 300ms ease, visibility 300ms ease);
-    }
-
-    a:after, &.expanded a:after {
-      content: none;
+    &.bottom {
+      border-bottom: none;
+      border-top: 1px solid $grey;
+      margin-bottom: 0;
+      margin-top: 50px;
     }
   }
 
-  .dropdown-content {
-    padding: 30px;
-    padding-top: 0;
-    background-color: $near-white;
+  .back {
+    display: inline-block;
+    @include whitney-medium;
+    font-size: 14px;
 
-    .image-container {
-      img {
-        width: 350px;
-        height: auto;
-      }
+    &:before {
+      @include font-icon;
+      content: '\e809';
+    }
+  }
+
+  .print {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    display: inline-block;
+    color: $dark-grey;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      color: $blue;
     }
   }
 }

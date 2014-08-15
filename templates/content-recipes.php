@@ -1,3 +1,5 @@
+<?php set_query_var('recipe_page_id', get_the_ID()); ?>
+
 <h2><?php the_title(); ?></h2>
 
 <?php // the_content(); ?>
@@ -21,9 +23,11 @@ $recipes = new WP_Query($args);
 if ($recipes->have_posts()) :
 ?>
 <div class="category">
+  <ul class="recipes">
   <?php while($recipes->have_posts()) : $recipes->the_post(); ?>
-    <?php get_template_part('templates/content', 'recipe'); ?>
+    <li><?php get_template_part('templates/short', 'recipe'); ?></li>
   <?php endwhile; ?>
+  </ul>
 </div>
 <?php
 endif;
@@ -52,9 +56,11 @@ wp_reset_postdata();
   ?>
   <div class="category">
     <h3><?php echo $category['object']->name ?></h3>
+    <ul class="recipes">
     <?php while($recipes->have_posts()) : $recipes->the_post(); ?>
-      <?php get_template_part('templates/content', 'recipe'); ?>
+      <li><?php get_template_part('templates/short', 'recipe'); ?></li>
     <?php endwhile; ?>
+    </ul>
   </div>
   <?php
   endif;

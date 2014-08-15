@@ -1,5 +1,26 @@
 <?php
 
+function get_recipe_parent_page() {
+  $recipe_category = get_field('category')[0];
+  $top_level_category = get_term_top_most_parent($recipe_category, 'recipe_category');
+  $pages = get_pages(array(
+    'number'  => 1,
+    'meta_key'    => 'main_category',
+    'meta_value'    => $top_level_category->term_id
+  ));
+  if (!$pages) {
+    return false;
+  }
+  return $pages[0];
+}
+
+// Add query var for recipes
+function add_recipe_query_var( $vars ){
+  $vars[] = "recipe_page";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_recipe_query_var' );
+
 function register_recipe_custom_type() {
 
   $labels = array(
