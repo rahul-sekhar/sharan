@@ -21,7 +21,9 @@ function sharan_process_recipes() {
     echo "Created category: $category_name\n";
   endif;
 
-  update_field('main_category', $category->term_id, $page->ID);
+  update_field('field_53ba7905283d7', $category->term_id, $page->ID);
+
+  $subcategories = [];
 
   echo "Parsing data for " . sizeof($data) . " recipes";
 
@@ -35,6 +37,10 @@ function sharan_process_recipes() {
         $subcategory = get_term_by( 'name', $subcategory_name, 'recipe_category' );
         echo "Created subcategory: $subcategory_name\n";
       endif;
+
+      if(!in_array($subcategory->term_id, $subcategories)) {
+        $subcategories[] = $subcategory->term_id;
+      }
 
     } else {
       $subcategory = $category;
@@ -57,6 +63,15 @@ function sharan_process_recipes() {
       echo "Created recipe: $title\n";
     endif;
   }
+
+  // Update subcategories
+  $subcategories = array_map(function ($item) { return array('object' => $item); }, $subcategories);
+  update_field('field_53ba794c283d8', $subcategories, $page->ID);
+
+  wp_update_post(array(
+      'ID' => $page->ID,
+      'post_content' => ''
+    ));
 
   die(); // this is required to return a proper result
 }
