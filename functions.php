@@ -70,5 +70,3 @@ require_once locate_template('/lib/clean-admin-interface.php');   // Change admi
 require_once locate_template('/lib/ssl.php');                     // Force SSL urls when required
 require_once locate_template('/lib/recipe-type.php');             // Post type for recipes
 require_once locate_template('/lib/payment.php');                 // Payment with payzippy
-
-require_once locate_template('/lib/process-recipes.php');
