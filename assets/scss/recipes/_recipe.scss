@@ -7,8 +7,9 @@ ul.recipes {
   }
 
   .recipe {
-    padding-top: $banner-full-height + 10px;
-    margin-top: -1 * ($banner-full-height + 10px);
+    $extra-spacing: 80px;
+    padding-top: $banner-full-height + $extra-spacing;
+    margin-top: -1 * ($banner-full-height + $extra-spacing);
   }
 }
 
