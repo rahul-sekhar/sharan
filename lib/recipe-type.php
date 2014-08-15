@@ -1,8 +1,8 @@
 <?php
 
 function get_recipe_parent_page() {
-  $recipe_category = get_field('category')[0];
-  $top_level_category = get_term_top_most_parent($recipe_category, 'recipe_category');
+  $recipe_category = wp_get_post_terms(get_the_ID(), 'recipe_category')[0];
+  $top_level_category = get_term_top_most_parent($recipe_category->term_id, 'recipe_category');
   $pages = get_pages(array(
     'number'  => 1,
     'meta_key'    => 'main_category',

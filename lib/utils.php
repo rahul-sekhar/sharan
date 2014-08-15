@@ -23,6 +23,8 @@ function is_current_domain($url) {
 function get_term_top_most_parent($term_id, $taxonomy){
     // start from the current term
     $parent  = get_term_by( 'id', $term_id, $taxonomy);
+
+    if (!$parent) return false;
     // climb up the hierarchy until we reach a term with parent = '0'
     while ($parent->parent != '0'){
         $term_id = $parent->parent;
