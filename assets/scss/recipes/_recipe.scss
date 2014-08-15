@@ -5,6 +5,11 @@ ul.recipes {
   li {
     margin-bottom: 24px;
   }
+
+  .recipe {
+    padding-top: $banner-full-height + 10px;
+    margin-top: -1 * ($banner-full-height + 10px);
+  }
 }
 
 .content.recipe {

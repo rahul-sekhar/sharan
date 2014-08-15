@@ -33,3 +33,12 @@ function get_term_top_most_parent($term_id, $taxonomy){
     }
     return $parent;
 }
+
+function get_slug() {
+  global $post;
+  return $post->post_name;
+}
+
+function the_slug() {
+  echo get_slug();
+}

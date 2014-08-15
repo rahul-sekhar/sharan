@@ -15,7 +15,7 @@
     <div class="recipe content">
       <div class="bar">
         <?php if( $parent_page ) : ?>
-          <a href="<?php echo get_permalink($parent_page->ID) ?>" class="back">Back to <?php echo get_the_title($parent_page->ID); ?></a>
+          <a href="<?php echo get_permalink($parent_page->ID) . '#' . get_slug(); ?>" class="back">Back to <?php echo get_the_title($parent_page->ID); ?></a>
         <?php endif; ?>
         <a href="javascript:window.print()" class="icon-print print"></a>
       </div>
@@ -24,7 +24,7 @@
 
       <div class="bar bottom">
         <?php if( $parent_page ) : ?>
-          <a href="<?php echo get_permalink($parent_page->ID) ?>" class="back">Back to <?php echo get_the_title($parent_page->ID); ?></a>
+          <a href="<?php echo get_permalink($parent_page->ID) . '#' . get_slug(); ?>" class="back">Back to <?php echo get_the_title($parent_page->ID); ?></a>
         <?php endif; ?>
       </div>
     </div><!-- /.post-content -->
