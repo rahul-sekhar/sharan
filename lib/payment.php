@@ -128,7 +128,9 @@ function sharan_get_charging_object() {
               ->set_billing_name($data['name'])
               ->set_buyer_phone_no($data['phone'])
               ->set_shipping_address($data['address'])
-              ->set_udf1($data['id']);
+              ->set_udf1($data['id'])
+              ->set_item_total($data['amount'] * 100)
+              ->set_item_vertical('Registration');
 
   $charging_object = $pz_charging->charge();
 

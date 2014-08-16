@@ -1,6 +1,6 @@
 SHARAN Theme
 ============
-This is a wordpress theme for the SHARAN website. It contains only the theme code, and must be added to the themes folder of a wordpress install and activated as a theme. Built and tested on wordpress 3.9.2. The theme is based partially on the [roots starter theme](http://roots.io/), and uses the [roots wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/) for templates.
+This is a wordpress theme for the SHARAN website. It must be added to a wordpress install and activated as a theme. Built and tested with wordpress 3.9.2. The theme is based partially on the [roots starter theme](http://roots.io/), and uses the [roots wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/) for templates.
 
 Requirements
 ------------
