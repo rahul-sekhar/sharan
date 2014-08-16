@@ -1,0 +1,3 @@
+[submodule "util/update-fontello"]
+	path = util/update-fontello
+	url = https://github.com/rahul-sekhar/update-fontello.git
