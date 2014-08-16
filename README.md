@@ -18,9 +18,9 @@ Directory Structure
 - `/lib` contains PHP libraries and files with theme functions. This is where the core theme functionality is located
 - `/templates` contains PHP templates that are included into other templates using the wordpress function `get_template_part`
 - `/util/` contains utility scripts, for example to quickly update fontello icons
-- `/`, the root directory, contains mainly wordpress template files.
+- `/`, the root directory, contains mainly wordpress template files. Basic knowledge of the [roots wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/) is useful.
 - `/style.css` is a placeholder stylesheet with the theme version and author info. It is not used to actually style the theme, but is required by wordpress.
-- `/Guardfile` is a configuration file that can be used with [guard-livereload](https://github.com/guard/guard-livereload) to livereload a browser when css files are modified.
+- `/Guardfile` is a configuration file that can be used with [guard-livereload](https://github.com/guard/guard-livereload) to livereload a browser when css files are modified. This is entirely optional, and just makes it quicker to work on styling.
 
 Asset caching
 -------------
